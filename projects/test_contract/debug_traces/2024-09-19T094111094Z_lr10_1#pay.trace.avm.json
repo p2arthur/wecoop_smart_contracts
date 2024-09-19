@@ -1,0 +1,306 @@
+{
+  "last-round": 10,
+  "txn-groups": [
+    {
+      "txn-results": [
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "amt": 200000,
+                "fee": 2000,
+                "fv": 5,
+                "gen": "dockernet-v1",
+                "gh": "C+dyZyxrZL0q1x+rsatnxDFWTK+F7IPoaJ62ZcRkLbI=",
+                "grp": "NnOL+qKoTxKeabTuQlU1w7JXWPRLS8ixQSF7TZU59cY=",
+                "lv": 1005,
+                "rcv": "9f90u8W+5HorTqL56AYDk13vxAVXnf2pI+Iq5k5ORgA=",
+                "snd": "HY/ofz2zpu43ayXuiXlNqs559SH5hXWQKpgewjAGCH8=",
+                "type": "pay"
+              }
+            }
+          }
+        },
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "apaa": [
+                  "L44LZw==",
+                  "AAAAAAAAA+8="
+                ],
+                "apid": 1008,
+                "fee": 1000,
+                "fv": 10,
+                "gen": "dockernet-v1",
+                "gh": "C+dyZyxrZL0q1x+rsatnxDFWTK+F7IPoaJ62ZcRkLbI=",
+                "grp": "NnOL+qKoTxKeabTuQlU1w7JXWPRLS8ixQSF7TZU59cY=",
+                "lv": 1010,
+                "snd": "HY/ofz2zpu43ayXuiXlNqs559SH5hXWQKpgewjAGCH8=",
+                "type": "appl"
+              }
+            }
+          },
+          "app-budget-consumed": 30,
+          "exec-trace": {
+            "approval-program-hash": "Z8EIGwlqqRp3XgmyeQAerTSfOz0ovI+7HyCa2EwjHWs=",
+            "approval-program-trace": [
+              {
+                "pc": 1
+              },
+              {
+                "pc": 6
+              },
+              {
+                "pc": 35,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1008
+                  }
+                ]
+              },
+              {
+                "pc": 37,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ],
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 38,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 6
+                  }
+                ]
+              },
+              {
+                "pc": 40,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 41,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 43,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 44,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 349,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "L44LZw=="
+                  }
+                ]
+              },
+              {
+                "pc": 355,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "pcpLpw=="
+                  }
+                ]
+              },
+              {
+                "pc": 361,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "L44LZw=="
+                  }
+                ]
+              },
+              {
+                "pc": 364,
+                "stack-pop-count": 3
+              },
+              {
+                "pc": 97,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "AAAAAAAAA+8="
+                  }
+                ]
+              },
+              {
+                "pc": 100,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1007
+                  }
+                ],
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 101,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ]
+              },
+              {
+                "pc": 103,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ]
+              },
+              {
+                "pc": 104,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 105,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  },
+                  {
+                    "type": 2
+                  }
+                ],
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 106,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ],
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 108,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ]
+              },
+              {
+                "pc": 109,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 110,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 111
+              },
+              {
+                "pc": 116
+              },
+              {
+                "pc": 119,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 121,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "9f90u8W+5HorTqL56AYDk13vxAVXnf2pI+Iq5k5ORgA="
+                  }
+                ],
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 123,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "vEr7LMM0ii/StM8YU4xDqqXTPWPK7dcLwKGsr2CUvno="
+                  }
+                ]
+              },
+              {
+                "pc": 125,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 126,
+                "stack-pop-count": 1
+              }
+            ]
+          }
+        }
+      ],
+      "app-budget-added": 700,
+      "app-budget-consumed": 30,
+      "failed-at": [
+        1
+      ],
+      "failure-message": "transaction JDBKBWTT7GIY7KDIKVGD6RK4X55HR4IBWFT35NHSIGYOFMLIJ5BA: logic eval error: assert failed pc=126. Details: app=1008, pc=126, opcodes=global CurrentApplicationAddress; ==; assert"
+    }
+  ],
+  "version": 2,
+  "eval-overrides": {
+    "allow-empty-signatures": true,
+    "max-log-calls": 2048,
+    "max-log-size": 65536
+  },
+  "exec-trace-config": {
+    "enable": true,
+    "scratch-change": true,
+    "stack-change": true,
+    "state-change": true
+  },
+  "initial-states": {}
+}

@@ -1,57 +1,100 @@
 import { Contract } from '@algorandfoundation/tealscript';
 
+type PollId = { nonce: uint64 };
+
+type PollInfo = {
+  creator: Address;
+  selected_asset: AssetID;
+  question: string;
+  totalVotes: uint64;
+  yesVotes: uint64;
+  deposited: uint64;
+};
+
+//0.0025 Algo per box
+//0.0004 per byte in the box
+//Poll_mbr
+// => (8) => (32 + 8 + 8 + 8 + 8 + 8) = 8 + 72 = (80 bits * 0.0004) + 0.0025 = 0.032 + 0.0025 = 0.03450
+
+const pollMbr = 3_450;
+
 export class WecoopDao extends Contract {
-  /**
-   * Calculates the sum of two numbers
-   *
-   * @param a
-   * @param b
-   * @returns The sum of a and b
-   */
-  private getSum(a: uint64, b: uint64): uint64 {
-    return a + b;
+  totalPolls = GlobalStateKey<uint64>();
+  totalVotes = GlobalStateKey<uint64>();
+
+  poll = BoxMap<PollId, PollInfo>({ prefix: 'poll_' });
+
+  createApplication(): void {
+    this.totalPolls.value = 0;
+    this.totalVotes.value = 0;
   }
 
-  /**
-   * Calculates the difference between two numbers
-   *
-   * @param a
-   * @param b
-   * @returns The difference between a and b.
-   */
-  private getDifference(a: uint64, b: uint64): uint64 {
-    return a >= b ? a - b : b - a;
+  //This method opts in the contract account to the asset that will be then be used to fund the polls
+  optinToAsset(mbrTxn: PayTxn, asset: AssetID): void {
+    // Verify if the one calling this function is the app creator
+    assert(this.txn.sender === this.app.creator, 'Error: Not the creator trying to optin to an asset');
+
+    //Verify if the receiver of the mbr transaction is the application address
+    assert(mbrTxn.receiver === this.app.address, 'Receiver is not the app address');
+
+    //Verify that the app address is not opted in to the asset provided
+    assert(!this.app.address.isOptedInToAsset(asset));
+
+    //Verify that the mbr transaction fulfills the minimum balane requirements
+    verifyPayTxn(mbrTxn, { amount: { greaterThanEqualTo: globals.minBalance + globals.assetOptInMinBalance } });
+
+    // Opt the application address to the given asset
+    sendAssetTransfer({ assetReceiver: this.app.address, assetAmount: 0, xferAsset: asset });
   }
 
-  /**
-   * A method that takes two numbers and does either addition or subtraction
-   *
-   * @param a The first uint64
-   * @param b The second uint64
-   * @param operation The operation to perform. Can be either 'sum' or 'difference'
-   *
-   * @returns The result of the operation
-   */
-  doMath(a: uint64, b: uint64, operation: string): uint64 {
-    let result: uint64;
+  /*
+  
+  */
+  createPoll(mbrTxn: PayTxn, axfer: AssetTransferTxn, question: string): PollInfo {
+    //Check if the contract account is opted in to the deposited asset
+    assert(this.app.address.isOptedInToAsset(axfer.xferAsset), 'Application not opted in to the asset');
 
-    if (operation === 'sum') {
-      result = this.getSum(a, b);
-    } else if (operation === 'difference') {
-      result = this.getDifference(a, b);
-    } else throw Error('Invalid operation');
+    //Check if the the receiver of the deposit is the app address
+    assert(axfer.assetReceiver === this.app.address, 'Deposit transaction not to the app wallet');
 
-    return result;
+    //Define the wallet address creating the poll
+    const creatorAddress: Address = axfer.sender;
+
+    //Get the current nonce for identifying the poll
+    const currentNonce: uint64 = this.totalPolls.value;
+
+    //Define a new nonce to be applied to the new poll that just got created
+    const newNonce: uint64 = currentNonce === 0 ? currentNonce + 1 : 0;
+
+    //Check if the current poll bein created does not already exists
+    assert(!this.poll({ nonce: newNonce }).exists, 'This poll already exists!');
+
+    //Check if the mbr transaction has enough funds to create the needed
+    verifyPayTxn(mbrTxn, { amount: pollMbr });
+
+    //Add one to the total polls of the contract global state
+    this.totalPolls.value += 1;
+
+    //Get deposited amount and selected asset
+    const deposited = axfer.assetAmount;
+    const selecteAsset = axfer.xferAsset;
+
+    //Create the poll box
+    this.poll({ nonce: newNonce }).value = {
+      question: question,
+      creator: creatorAddress,
+      totalVotes: 0,
+      yesVotes: 0,
+      deposited: deposited,
+      selected_asset: selecteAsset,
+    };
+
+    //Return the poll info
+    return this.poll({ nonce: newNonce }).value;
   }
 
-  /**
-   * A demonstration method used in the AlgoKit fullstack template.
-   * Greets the user by name.
-   *
-   * @param name The name of the user to greet.
-   * @returns A greeting message to the user.
-   */
-  hello(name: string): string {
-    return 'Hello, ' + name;
+  getPollById(pollId: PollId): PollInfo {
+    assert(this.poll(pollId).exists, 'Searched poll does not exist');
+    return this.poll(pollId).value;
   }
 }

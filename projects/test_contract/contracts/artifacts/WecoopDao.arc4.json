@@ -1,0 +1,61 @@
+{
+  "name": "WecoopDao",
+  "desc": "",
+  "methods": [
+    {
+      "name": "createApplication",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "optinToAsset",
+      "args": [
+        {
+          "name": "mbrTxn",
+          "type": "pay"
+        },
+        {
+          "name": "asset",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "createPoll",
+      "args": [
+        {
+          "name": "mbrTxn",
+          "type": "pay"
+        },
+        {
+          "name": "axfer",
+          "type": "axfer"
+        },
+        {
+          "name": "question",
+          "type": "string"
+        }
+      ],
+      "returns": {
+        "type": "(address,uint64,string,uint64,uint64,uint64)"
+      }
+    },
+    {
+      "name": "getPollById",
+      "args": [
+        {
+          "name": "pollId",
+          "type": "(uint64)"
+        }
+      ],
+      "returns": {
+        "type": "(address,uint64,string,uint64,uint64,uint64)"
+      }
+    }
+  ]
+}
