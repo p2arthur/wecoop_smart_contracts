@@ -46,7 +46,31 @@
       }
     },
     {
-      "name": "getPollById",
+      "name": "makeVote",
+      "args": [
+        {
+          "name": "pollId",
+          "type": "(uint64)"
+        },
+        {
+          "name": "axfer",
+          "type": "axfer"
+        },
+        {
+          "name": "mbrTxn",
+          "type": "pay"
+        },
+        {
+          "name": "inFavor",
+          "type": "bool"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "getPollByPollId",
       "args": [
         {
           "name": "pollId",
@@ -55,6 +79,18 @@
       ],
       "returns": {
         "type": "(address,uint64,string,uint64,uint64,uint64)"
+      }
+    },
+    {
+      "name": "getVoteByVoteId",
+      "args": [
+        {
+          "name": "voteId",
+          "type": "(uint64,(uint64))"
+        }
+      ],
+      "returns": {
+        "type": "(bool,address)"
       }
     }
   ]

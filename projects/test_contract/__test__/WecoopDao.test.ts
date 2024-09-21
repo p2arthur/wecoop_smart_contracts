@@ -9,9 +9,9 @@ algokit.Config.configure({ populateAppCallResources: true });
 
 //------------------------------------------------------------------------------------------------------------
 let appClient: WecoopDaoClient;
-let algorandClient: algokit.AlgorandClient;
+
 let appAddress: string;
-let algodClient: Algodv2;
+
 //------------------------------------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------------------------------------
@@ -20,6 +20,8 @@ const daoQuestion2 = 'Are there two different polls on this wecoop contract?';
 //------------------------------------------------------------------------------------------------------------
 
 describe('WecoopDao', () => {
+  let algorandClient: algokit.AlgorandClient;
+  let algodClient: Algodv2;
   beforeEach(fixture.beforeEach);
   let assetCreator: algosdk.Account;
   let daoAsset: bigint;
@@ -75,76 +77,103 @@ describe('WecoopDao', () => {
   test('Positive - User should create a poll and return the created poll box', async () => {
     const { appAddress } = await appClient.appClient.getAppReference();
 
-    //Create the mbr transaction for creating the poll box
+    // Create the MBR transaction for creating the poll box
     const mbrTxn = algorandClient.send.payment({
       sender: assetCreator.addr,
       amount: algokit.microAlgos(3_450),
       receiver: appAddress,
     });
 
-    //Create the asset funding transaction
+    // Create the asset funding transaction (axfer)
     const axfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
       from: assetCreator.addr,
       suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
       to: appAddress,
-      amount: 1,
+      amount: 2,
       assetIndex: Number(daoAsset),
     });
 
-    //Send transactions to the createPoll contract call and create the poll box
-    const result = await appClient.createPoll({
-      mbrTxn,
-      axfer: axfer,
-      question: daoQuestion1,
-    });
+    // Send transactions to the createPoll contract call (this sends axfer internally)
+    const result = await appClient.createPoll(
+      {
+        mbrTxn,
+        axfer: axfer, // The asset transfer happens here, so you don't need to send it again
+        question: daoQuestion1,
+      },
+      {
+        sender: assetCreator,
+        sendParams: {
+          fee: algokit.microAlgos(3_000),
+        },
+      }
+    );
 
     console.log('Create poll result: Poll created successfully');
+
+    // Check the app's account to confirm the asset was transferred
+    try {
+      const appAccountAfter = await algodClient.accountInformation(appAddress).do();
+
+      console.log('appAccountAfter', appAccountAfter);
+
+      const assetHoldingAfter = appAccountAfter.assets.find((asset: any) => asset['asset-id'] == daoAsset);
+      const balanceAfter = assetHoldingAfter ? assetHoldingAfter.amount : 0;
+
+      console.log('Balance after', balanceAfter);
+
+      // Assert that the balance has increased by the deposited amount
+      expect(balanceAfter).toBe(2);
+    } catch (error) {
+      console.error('Error fetching asset balance:', error);
+    }
   });
-  //------------------------------------------------------------------------------------------------------------
-
-  test('Positive - User should create a poll and return the created poll box', async () => {
-    const { appAddress } = await appClient.appClient.getAppReference();
-
-    //Create the mbr transaction for creating the poll box
-    const mbrTxn = algorandClient.send.payment({
-      sender: assetCreator.addr,
-      amount: algokit.microAlgos(3_450),
-      receiver: appAddress,
-    });
-
-    //Create the asset funding transaction
-    const axfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
-      from: assetCreator.addr,
-      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
-      to: appAddress,
-      amount: 1,
-      assetIndex: Number(daoAsset),
-    });
-
-    //Send transactions to the createPoll contract call and create the poll box
-    const result = await appClient.createPoll({
-      mbrTxn,
-      axfer: axfer,
-      question: daoQuestion2,
-    });
-
-    console.log('Create poll result: Poll created successfully');
-  });
-  //------------------------------------------------------------------------------------------------------------
 
   //------------------------------------------------------------------------------------------------------------
   test('Positive - Should return the poll with the id 0', async () => {
-    const result = await appClient.getPollById({ pollId: [0] });
+    const result = await appClient.getPollByPollId({ pollId: [1] });
 
     console.log('Poll 1 data:', result.return);
   });
   //------------------------------------------------------------------------------------------------------------
 
   //------------------------------------------------------------------------------------------------------------
-  test('Positive - Should return the poll with the id 1', async () => {
-    const result = await appClient.getPollById({ pollId: [1] });
+  test('Positive - User makes a vote', async () => {
+    const { appAddress } = await appClient.appClient.getAppReference();
 
-    console.log('Poll 2 data:', result.return);
+    // Create the MBR transaction for creating the poll box
+    const mbrTxn = algorandClient.send.payment({
+      sender: assetCreator.addr,
+      amount: algokit.microAlgos(3_450),
+      receiver: appAddress,
+    });
+
+    // Create the asset funding transaction (axfer)
+    const axfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+      from: assetCreator.addr,
+      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
+      to: appAddress,
+      amount: 2,
+      assetIndex: Number(daoAsset),
+    });
+
+    const result = await appClient.makeVote({ pollId: [1], axfer, mbrTxn, inFavor: true });
+    const appAccountAfter = await algodClient.accountInformation(appAddress).do();
+
+    console.log('appAccountAfter', appAccountAfter);
+
+    const assetHoldingAfter = appAccountAfter.assets.find((asset: any) => asset['asset-id'] == daoAsset);
+    const balanceAfter = assetHoldingAfter ? assetHoldingAfter.amount : 0;
+
+    console.log('Balance after', balanceAfter);
   });
-  //------------------------------------------------------------------------------------------------------------
+
+  test('Positive - Get vote with nonce 1 on poll with nonce 1', async () => {
+    const result = await appClient.getVoteByVoteId({ voteId: [1, [1]] });
+    console.log('vote result', result.return);
+  });
+
+  test('Positive - Get poll with nonce 1 - check if theres one vote on the counter', async () => {
+    const result = await appClient.getPollByPollId({ pollId: [1] });
+    console.log('Poll after vote', result.return);
+  });
 });

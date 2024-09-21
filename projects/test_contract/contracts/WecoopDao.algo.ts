@@ -11,6 +11,7 @@ type PollInfo = {
   deposited: uint64;
 };
 
+// -------------------------------------------------------------------------------------------------------------
 //0.0025 Algo per box
 //0.0004 per byte in the box
 //Poll_mbr
@@ -18,11 +19,21 @@ type PollInfo = {
 
 const pollMbr = 3_450;
 
+type VoteId = { nonce: uint64; pollId: PollId };
+
+type VoteInfo = { claimed: boolean; voter: Address };
+
+//Vote_mbr
+// => (8, 8) => (8, 32) = 16bits + 40bits = (56bits * 0.0004) + 0.0025 = 0.0212 + 0.0025 = 0.0237
+
+const voteMbr = 2_370;
+// -------------------------------------------------------------------------------------------------------------
 export class WecoopDao extends Contract {
   totalPolls = GlobalStateKey<uint64>();
   totalVotes = GlobalStateKey<uint64>();
 
   poll = BoxMap<PollId, PollInfo>({ prefix: 'poll_' });
+  vote = BoxMap<VoteId, VoteInfo>({ prefix: 'vote_' });
 
   createApplication(): void {
     this.totalPolls.value = 0;
@@ -93,8 +104,48 @@ export class WecoopDao extends Contract {
     return this.poll({ nonce: newNonce }).value;
   }
 
-  getPollById(pollId: PollId): PollInfo {
+  /*This method is used for a user to cast a vote into a poll
+  Checks:
+  - Poll with poll id exists
+  - Vote with nonce does not already exist
+  - If user haven't already voted
+  */
+  makeVote(pollId: PollId, axfer: AssetTransferTxn, mbrTxn: PayTxn, inFavor: boolean) {
+    //Check if the contract account is opted in to the deposited asset
+    assert(this.app.address.isOptedInToAsset(axfer.xferAsset), 'Application not opted in to the asset');
+
+    //Check if the the receiver of the deposit is the app address
+    assert(axfer.assetReceiver === this.app.address, 'Deposit transaction not to the app wallet');
+
+    //Check if the poll the user is voting in exists
+    assert(this.poll(pollId).exists, 'Poll user is trying to vote in does not exist');
+
+    const currentNonce: uint64 = this.poll(pollId).value.totalVotes;
+
+    const newNonce: uint64 = currentNonce === 0 ? currentNonce + 1 : 0;
+
+    //Check if the vote with the current pollId and nonce does not already exist
+    assert(!this.vote({ pollId: pollId, nonce: newNonce }).exists, 'Vote with new nonce already exists');
+
+    //Create box with the vote nonce and pollId
+    this.vote({ pollId: pollId, nonce: newNonce }).value = { voter: this.txn.sender, claimed: false };
+
+    //Add vote to the poll total votes counter
+    this.poll(pollId).value.totalVotes += 1;
+
+    if (inFavor) {
+      //If in favor add to the poll inFavor counter
+      this.poll(pollId).value.yesVotes += 1;
+    }
+  }
+
+  getPollByPollId(pollId: PollId): PollInfo {
     assert(this.poll(pollId).exists, 'Searched poll does not exist');
     return this.poll(pollId).value;
+  }
+
+  getVoteByVoteId(voteId: VoteId): VoteInfo {
+    assert(this.vote(voteId).exists, 'searched vote does not exist');
+    return this.vote(voteId).value;
   }
 }
