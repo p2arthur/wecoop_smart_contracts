@@ -3,6 +3,9 @@ import { algorandFixture } from '@algorandfoundation/algokit-utils/testing';
 import * as algokit from '@algorandfoundation/algokit-utils';
 import { WecoopDaoClient } from '../contracts/clients/WecoopDaoClient';
 import algosdk, { Algodv2 } from 'algosdk';
+import AlgodClient from 'algosdk/dist/types/client/v2/algod/algod';
+import { algos, getOrCreateKmdWalletAccount } from '@algorandfoundation/algokit-utils';
+import { TransactionSignerAccount } from '@algorandfoundation/algokit-utils/types/account';
 
 const fixture = algorandFixture();
 algokit.Config.configure({ populateAppCallResources: true });
@@ -18,27 +21,44 @@ let appAddress: string;
 const daoQuestion1 = 'Is this the first ever question on wecoop.xyz polls?';
 const daoQuestion2 = 'Are there two different polls on this wecoop contract?';
 //------------------------------------------------------------------------------------------------------------
-
+let algorandClient: algokit.AlgorandClient;
+let algodClient: Algodv2;
 describe('WecoopDao', () => {
-  let algorandClient: algokit.AlgorandClient;
-  let algodClient: Algodv2;
   beforeEach(fixture.beforeEach);
   let assetCreator: algosdk.Account;
+  let daoVoter: TransactionSignerAccount;
   let daoAsset: bigint;
+  let daoFakeAsset: bigint;
 
   beforeAll(async () => {
     await fixture.beforeEach();
-    const { testAccount } = fixture.context;
+    const { testAccount, kmd } = fixture.context;
     assetCreator = testAccount;
 
     const { algorand } = fixture;
 
     algorandClient = algorand;
 
+    // Create a new wallet
+
+    daoVoter = await algorandClient.account.kmd.getOrCreateWalletAccount('tealscript-dao-sender', algos(10));
+
+    // Fund the new wallet with some algos
+    await algorandClient.send.payment({
+      sender: assetCreator.addr,
+      receiver: daoVoter.addr,
+      amount: algokit.microAlgos(1_000_000), // Send 1 Algo to the new wallet
+    });
+
     const createdAsset = (await algorand.send.assetCreate({ sender: assetCreator.addr, total: BigInt(10_000) }))
       .confirmation.assetIndex;
 
+    const createdAsset2 = (
+      await algorand.send.assetCreate({ sender: daoVoter.addr, total: BigInt(10_000), signer: daoVoter.signer })
+    ).confirmation.assetIndex;
+
     daoAsset = BigInt(createdAsset!);
+    daoFakeAsset = BigInt(createdAsset2!);
     algodClient = algorand.client.algod;
 
     appClient = new WecoopDaoClient(
@@ -139,24 +159,48 @@ describe('WecoopDao', () => {
   //------------------------------------------------------------------------------------------------------------
   test('Positive - User makes a vote', async () => {
     const { appAddress } = await appClient.appClient.getAppReference();
+    const optinAxfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+      from: daoVoter.addr,
+      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
+      to: daoVoter.addr,
+      amount: 0,
+      assetIndex: Number(daoAsset),
+    });
+    await algokit.sendTransaction({ transaction: optinAxfer, from: daoVoter }, algodClient); // daoVoter should be the signer
+    // ----------------------------------------------------------------------------------------
+    //Send dao Token so voter can use it to vote
+    const fundAxfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+      from: assetCreator.addr,
+      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
+      to: daoVoter.addr,
+      amount: 20,
+      assetIndex: Number(daoAsset),
+    });
+
+    await algokit.sendTransaction({ transaction: fundAxfer, from: assetCreator }, algodClient);
 
     // Create the MBR transaction for creating the poll box
     const mbrTxn = algorandClient.send.payment({
-      sender: assetCreator.addr,
+      sender: daoVoter.addr,
       amount: algokit.microAlgos(3_450),
       receiver: appAddress,
+      signer: daoVoter.signer,
     });
+
+    console.log('Dao voter&%567', daoVoter);
 
     // Create the asset funding transaction (axfer)
     const axfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
-      from: assetCreator.addr,
+      from: daoVoter.addr,
       suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
       to: appAddress,
       amount: 2,
       assetIndex: Number(daoAsset),
     });
 
-    const result = await appClient.makeVote({ pollId: [1], axfer, mbrTxn, inFavor: true });
+    console.log('axfer', axfer);
+
+    const result = await appClient.makeVote({ pollId: [1], axfer, mbrTxn, inFavor: true }, { sender: daoVoter });
     const appAccountAfter = await algodClient.accountInformation(appAddress).do();
 
     console.log('appAccountAfter', appAccountAfter);
@@ -166,14 +210,116 @@ describe('WecoopDao', () => {
 
     console.log('Balance after', balanceAfter);
   });
+  //--------------------------------------------------------------------------------------
 
+  //--------------------------------------------------------------------------------------
+  test('Negative - Creator cant vote', async () => {
+    const { appAddress } = await appClient.appClient.getAppReference();
+
+    const mbrTxn = algorandClient.send.payment({
+      sender: assetCreator.addr,
+      amount: algokit.microAlgos(3_450),
+      receiver: appAddress,
+    });
+
+    console.log('Dao voter&%567', assetCreator);
+
+    // Create the asset funding transaction (axfer)
+    const axfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+      from: assetCreator.addr,
+      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
+      to: appAddress,
+      amount: 1,
+      assetIndex: Number(daoAsset),
+    });
+
+    console.log('axfer', axfer);
+
+    expect(
+      await appClient.makeVote({ pollId: [1], axfer, mbrTxn, inFavor: true }, { sender: assetCreator })
+    ).rejects.toThrow();
+  });
+  //--------------------------------------------------------------------------------------
+
+  //--------------------------------------------------------------------------------------
+  test('Negative - dao voter cant vote with wrong coin', async () => {
+    const { appAddress } = await appClient.appClient.getAppReference();
+
+    // Create mbr transaction to opt contract to the poll asset (using the correct asset initially)
+    const mbrOptinTxn = algorandClient.send.payment({
+      sender: assetCreator.addr,
+      amount: algokit.algos(0.1 + 0.1),
+      receiver: appAddress,
+      extraFee: algokit.algos(0.001),
+    });
+
+    // Opt the contract into the fake asset (daoFakeAsset) instead of the correct one
+    await appClient.optinToAsset({ mbrTxn: mbrOptinTxn, asset: daoFakeAsset });
+
+    const mbrTxn = algorandClient.send.payment({
+      sender: assetCreator.addr,
+      amount: algokit.microAlgos(3_450),
+      receiver: appAddress,
+    });
+
+    // Create the asset funding transaction (axfer) using the wrong asset (daoFakeAsset)
+    const axfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+      from: daoVoter.addr,
+      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
+      to: appAddress,
+      amount: 1,
+      assetIndex: Number(daoFakeAsset), // Using the fake asset here
+    });
+
+    console.log('axfer', axfer);
+
+    // Expect the makeVote call to fail with the wrong asset
+    await expect(
+      appClient.makeVote({ pollId: [1], axfer, mbrTxn, inFavor: true }, { sender: assetCreator })
+    ).rejects.toThrow();
+  });
+
+  //--------------------------------------------------------------------------------------
+
+  //--------------------------------------------------------------------------------------
+  test('Positive - Dao voter votes again - against this time', async () => {
+    const { appAddress } = await appClient.appClient.getAppReference();
+
+    const mbrTxn = algorandClient.send.payment({
+      sender: daoVoter.addr,
+      amount: algokit.microAlgos(3_450),
+      receiver: appAddress,
+      signer: daoVoter.signer,
+    });
+
+    console.log('Dao voter&%567', daoVoter);
+
+    // Create the asset funding transaction (axfer)
+    const axfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+      from: daoVoter.addr,
+      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
+      to: appAddress,
+      amount: 1,
+      assetIndex: Number(daoAsset),
+    });
+
+    console.log('axfer', axfer);
+
+    const result = await appClient.makeVote({ pollId: [1], axfer, mbrTxn, inFavor: false }, { sender: daoVoter });
+  });
+
+  //--------------------------------------------------------------------------------------
+
+  //--------------------------------------------------------------------------------------
   test('Positive - Get vote with nonce 1 on poll with nonce 1', async () => {
     const result = await appClient.getVoteByVoteId({ voteId: [1, [1]] });
     console.log('vote result', result.return);
   });
 
+  //--------------------------------------------------------------------------------------
   test('Positive - Get poll with nonce 1 - check if theres one vote on the counter', async () => {
     const result = await appClient.getPollByPollId({ pollId: [1] });
     console.log('Poll after vote', result.return);
   });
+  //--------------------------------------------------------------------------------------
 });

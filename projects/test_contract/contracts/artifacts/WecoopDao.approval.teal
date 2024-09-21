@@ -412,43 +412,9 @@ makeVote:
 
 	// Push empty bytes after the frame pointer to reserve space for local variables
 	byte 0x
-	dup
+	dupn 3
 
-	// contracts/WecoopDao.algo.ts:115
-	// assert(this.app.address.isOptedInToAsset(axfer.xferAsset), 'Application not opted in to the asset')
-	global CurrentApplicationAddress
-	frame_dig -2 // axfer: AssetTransferTxn
-	gtxns XferAsset
-	asset_holding_get AssetBalance
-	swap
-	pop
-
-	// Application not opted in to the asset
-	assert
-
-	// contracts/WecoopDao.algo.ts:118
-	// assert(axfer.assetReceiver === this.app.address, 'Deposit transaction not to the app wallet')
-	frame_dig -2 // axfer: AssetTransferTxn
-	gtxns AssetReceiver
-	global CurrentApplicationAddress
-	==
-
-	// Deposit transaction not to the app wallet
-	assert
-
-	// contracts/WecoopDao.algo.ts:121
-	// assert(this.poll(pollId).exists, 'Poll user is trying to vote in does not exist')
-	byte 0x706f6c6c5f // "poll_"
-	frame_dig -1 // pollId: PollId
-	concat
-	box_len
-	swap
-	pop
-
-	// Poll user is trying to vote in does not exist
-	assert
-
-	// contracts/WecoopDao.algo.ts:123
+	// contracts/WecoopDao.algo.ts:114
 	// currentNonce: uint64 = this.poll(pollId).value.totalVotes
 	byte 0x706f6c6c5f // "poll_"
 	frame_dig -1 // pollId: PollId
@@ -463,7 +429,7 @@ makeVote:
 	btoi
 	frame_bury 0 // currentNonce: uint64
 
-	// contracts/WecoopDao.algo.ts:125
+	// contracts/WecoopDao.algo.ts:116
 	// newNonce: uint64 = currentNonce === 0 ? currentNonce + 1 : 0
 	frame_dig 0 // currentNonce: uint64
 	int 0
@@ -480,7 +446,90 @@ makeVote:
 *ternary1_end:
 	frame_bury 1 // newNonce: uint64
 
-	// contracts/WecoopDao.algo.ts:128
+	// contracts/WecoopDao.algo.ts:118
+	// depositedAmount: uint64 = axfer.assetAmount
+	frame_dig -2 // axfer: AssetTransferTxn
+	gtxns AssetAmount
+	frame_bury 2 // depositedAmount: uint64
+
+	// contracts/WecoopDao.algo.ts:120
+	// depositedAsset: AssetID = axfer.xferAsset
+	frame_dig -2 // axfer: AssetTransferTxn
+	gtxns XferAsset
+	frame_bury 3 // depositedAsset: AssetID
+
+	// contracts/WecoopDao.algo.ts:122
+	// assert(this.poll(pollId).value.creator !== this.txn.sender, 'Poll creator cant vote')
+	byte 0x706f6c6c5f // "poll_"
+	frame_dig -1 // pollId: PollId
+	concat
+	box_get
+
+	// box value does not exist: this.poll(pollId).value
+	assert
+	store 255 // full array
+	load 255 // full array
+	extract 0 32
+	txn Sender
+	!=
+
+	// Poll creator cant vote
+	assert
+
+	// contracts/WecoopDao.algo.ts:124
+	// assert(this.app.address.isOptedInToAsset(axfer.xferAsset), 'Application not opted in to the asset')
+	global CurrentApplicationAddress
+	frame_dig -2 // axfer: AssetTransferTxn
+	gtxns XferAsset
+	asset_holding_get AssetBalance
+	swap
+	pop
+
+	// Application not opted in to the asset
+	assert
+
+	// contracts/WecoopDao.algo.ts:127
+	// assert(axfer.assetReceiver === this.app.address, 'Deposit transaction not to the app wallet')
+	frame_dig -2 // axfer: AssetTransferTxn
+	gtxns AssetReceiver
+	global CurrentApplicationAddress
+	==
+
+	// Deposit transaction not to the app wallet
+	assert
+
+	// contracts/WecoopDao.algo.ts:130
+	// assert(this.poll(pollId).exists, 'Poll user is trying to vote in does not exist')
+	byte 0x706f6c6c5f // "poll_"
+	frame_dig -1 // pollId: PollId
+	concat
+	box_len
+	swap
+	pop
+
+	// Poll user is trying to vote in does not exist
+	assert
+
+	// contracts/WecoopDao.algo.ts:133
+	// assert(depositedAsset === this.poll(pollId).value.selected_asset, 'using wrong asset to vote into this poll')
+	frame_dig 3 // depositedAsset: AssetID
+	byte 0x706f6c6c5f // "poll_"
+	frame_dig -1 // pollId: PollId
+	concat
+	box_get
+
+	// box value does not exist: this.poll(pollId).value
+	assert
+	store 255 // full array
+	load 255 // full array
+	extract 32 8
+	btoi
+	==
+
+	// using wrong asset to vote into this poll
+	assert
+
+	// contracts/WecoopDao.algo.ts:136
 	// assert(!this.vote({ pollId: pollId, nonce: newNonce }).exists, 'Vote with new nonce already exists')
 	byte 0x766f74655f // "vote_"
 	frame_dig 1 // newNonce: uint64
@@ -496,7 +545,7 @@ makeVote:
 	// Vote with new nonce already exists
 	assert
 
-	// contracts/WecoopDao.algo.ts:131
+	// contracts/WecoopDao.algo.ts:139
 	// this.vote({ pollId: pollId, nonce: newNonce }).value = { voter: this.txn.sender, claimed: false }
 	byte 0x766f74655f // "vote_"
 	frame_dig 1 // newNonce: uint64
@@ -512,7 +561,7 @@ makeVote:
 	concat
 	box_put
 
-	// contracts/WecoopDao.algo.ts:134
+	// contracts/WecoopDao.algo.ts:142
 	// this.poll(pollId).value.totalVotes += 1
 	byte 0x706f6c6c5f // "poll_"
 	frame_dig -1 // pollId: PollId
@@ -549,13 +598,13 @@ makeVote:
 	box_put
 
 	// *if0_condition
-	// contracts/WecoopDao.algo.ts:136
+	// contracts/WecoopDao.algo.ts:144
 	// inFavor
 	frame_dig -4 // inFavor: boolean
 	bz *if0_end
 
 	// *if0_consequent
-	// contracts/WecoopDao.algo.ts:138
+	// contracts/WecoopDao.algo.ts:146
 	// this.poll(pollId).value.yesVotes += 1
 	byte 0x706f6c6c5f // "poll_"
 	frame_dig -1 // pollId: PollId
@@ -620,7 +669,7 @@ makeVote:
 getPollByPollId:
 	proto 1 1
 
-	// contracts/WecoopDao.algo.ts:143
+	// contracts/WecoopDao.algo.ts:151
 	// assert(this.poll(pollId).exists, 'Searched poll does not exist')
 	byte 0x706f6c6c5f // "poll_"
 	frame_dig -1 // pollId: PollId
@@ -632,7 +681,7 @@ getPollByPollId:
 	// Searched poll does not exist
 	assert
 
-	// contracts/WecoopDao.algo.ts:144
+	// contracts/WecoopDao.algo.ts:152
 	// return this.poll(pollId).value;
 	byte 0x706f6c6c5f // "poll_"
 	frame_dig -1 // pollId: PollId
@@ -669,7 +718,7 @@ getPollByPollId:
 getVoteByVoteId:
 	proto 1 1
 
-	// contracts/WecoopDao.algo.ts:148
+	// contracts/WecoopDao.algo.ts:156
 	// assert(this.vote(voteId).exists, 'searched vote does not exist')
 	byte 0x766f74655f // "vote_"
 	frame_dig -1 // voteId: VoteId
@@ -681,7 +730,7 @@ getVoteByVoteId:
 	// searched vote does not exist
 	assert
 
-	// contracts/WecoopDao.algo.ts:149
+	// contracts/WecoopDao.algo.ts:157
 	// return this.vote(voteId).value;
 	byte 0x766f74655f // "vote_"
 	frame_dig -1 // voteId: VoteId

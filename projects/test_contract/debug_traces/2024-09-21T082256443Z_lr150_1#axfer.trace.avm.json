@@ -1,0 +1,89 @@
+{
+  "last-round": 150,
+  "txn-groups": [
+    {
+      "txn-results": [
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "aamt": 2,
+                "arcv": "jC/0e7JqM3yA5pioUr2oE/DbRDjnJRR/KZ21qoS7cHI=",
+                "fee": 1000,
+                "fv": 149,
+                "gen": "dockernet-v1",
+                "gh": "jwIWczDYSPpdA1BRPSZSn7y1ka55fGIb4978p/xBEoA=",
+                "grp": "NDVIXe23iG5v/iiOQNrMZ5Ngp6GWTFLQ1f3X50yfuYI=",
+                "lv": 1149,
+                "snd": "oudfKWyvMaGOhlo5cl5rFWm1pxoOv5X02Ck2zA2k1PQ=",
+                "type": "axfer",
+                "xaid": 1171
+              }
+            }
+          }
+        },
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "amt": 3450,
+                "fee": 1000,
+                "fv": 149,
+                "gen": "dockernet-v1",
+                "gh": "jwIWczDYSPpdA1BRPSZSn7y1ka55fGIb4978p/xBEoA=",
+                "grp": "NDVIXe23iG5v/iiOQNrMZ5Ngp6GWTFLQ1f3X50yfuYI=",
+                "lv": 1149,
+                "rcv": "jC/0e7JqM3yA5pioUr2oE/DbRDjnJRR/KZ21qoS7cHI=",
+                "snd": "oudfKWyvMaGOhlo5cl5rFWm1pxoOv5X02Ck2zA2k1PQ=",
+                "type": "pay"
+              }
+            }
+          }
+        },
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "apaa": [
+                  "/YI72g==",
+                  "AAAAAAAAAAE=",
+                  "gA=="
+                ],
+                "apid": 1172,
+                "fee": 1000,
+                "fv": 150,
+                "gen": "dockernet-v1",
+                "gh": "jwIWczDYSPpdA1BRPSZSn7y1ka55fGIb4978p/xBEoA=",
+                "grp": "NDVIXe23iG5v/iiOQNrMZ5Ngp6GWTFLQ1f3X50yfuYI=",
+                "lv": 1150,
+                "snd": "rgxIaV5QYnr1dZMMV2xOK8uJvP+/0CbbrYTGdCBeQUQ=",
+                "type": "appl"
+              }
+            }
+          }
+        }
+      ],
+      "app-budget-added": 700,
+      "failed-at": [
+        0
+      ],
+      "failure-message": "transaction OLRLID7FWKSJMFQDPZPOWFDC3H77BGCUKB7RBWKPRF7F43S5LJBA: asset 1171 missing from ULTV6KLMV4Y2DDUGLI4XEXTLCVU3LJY2B27ZL5GYFE3MYDNE2T2A73A5Z4"
+    }
+  ],
+  "version": 2,
+  "eval-overrides": {
+    "allow-empty-signatures": true,
+    "max-log-calls": 2048,
+    "max-log-size": 65536
+  },
+  "exec-trace-config": {
+    "enable": true,
+    "scratch-change": true,
+    "stack-change": true,
+    "state-change": true
+  },
+  "initial-states": {}
+}

@@ -111,6 +111,15 @@ export class WecoopDao extends Contract {
   - If user haven't already voted
   */
   makeVote(pollId: PollId, axfer: AssetTransferTxn, mbrTxn: PayTxn, inFavor: boolean) {
+    const currentNonce: uint64 = this.poll(pollId).value.totalVotes;
+
+    const newNonce: uint64 = currentNonce === 0 ? currentNonce + 1 : 0;
+
+    const depositedAmount: uint64 = axfer.assetAmount;
+
+    const depositedAsset: AssetID = axfer.xferAsset;
+
+    assert(this.poll(pollId).value.creator !== this.txn.sender, 'Poll creator cant vote');
     //Check if the contract account is opted in to the deposited asset
     assert(this.app.address.isOptedInToAsset(axfer.xferAsset), 'Application not opted in to the asset');
 
@@ -120,9 +129,8 @@ export class WecoopDao extends Contract {
     //Check if the poll the user is voting in exists
     assert(this.poll(pollId).exists, 'Poll user is trying to vote in does not exist');
 
-    const currentNonce: uint64 = this.poll(pollId).value.totalVotes;
-
-    const newNonce: uint64 = currentNonce === 0 ? currentNonce + 1 : 0;
+    //Check if the deposited asset is the dao asset
+    assert(depositedAsset === this.poll(pollId).value.selected_asset, 'using wrong asset to vote into this poll');
 
     //Check if the vote with the current pollId and nonce does not already exist
     assert(!this.vote({ pollId: pollId, nonce: newNonce }).exists, 'Vote with new nonce already exists');
@@ -133,10 +141,21 @@ export class WecoopDao extends Contract {
     //Add vote to the poll total votes counter
     this.poll(pollId).value.totalVotes += 1;
 
+    //Add vote amount to the deposited of the poll
+    this.poll(pollId).value.deposited += axfer.assetAmount;
+
     if (inFavor) {
       //If in favor add to the poll inFavor counter
       this.poll(pollId).value.yesVotes += 1;
     }
+  }
+
+  withdrawPollShare(poolId: PollId) {
+    const curentPoll: PollInfo = this.poll(poolId).value;
+
+    const depositedAmount: uint64 = curentPoll.deposited;
+
+    const voteShare = depositedAmount / curentPoll.totalVotes;
   }
 
   getPollByPollId(pollId: PollId): PollInfo {
