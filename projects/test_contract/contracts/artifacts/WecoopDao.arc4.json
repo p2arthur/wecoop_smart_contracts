@@ -42,7 +42,7 @@
         }
       ],
       "returns": {
-        "type": "(address,uint64,string,uint64,uint64,uint64)"
+        "type": "void"
       }
     },
     {
@@ -63,6 +63,18 @@
         {
           "name": "inFavor",
           "type": "bool"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "withdrawPollShare",
+      "args": [
+        {
+          "name": "poolId",
+          "type": "(uint64)"
         }
       ],
       "returns": {

@@ -147,12 +147,59 @@ describe('WecoopDao', () => {
       console.error('Error fetching asset balance:', error);
     }
   });
+  //-----------------------------------------------------------------------------
+  test('Positive - User should create a poll and return the created poll box', async () => {
+    const { appAddress } = await appClient.appClient.getAppReference();
 
-  //------------------------------------------------------------------------------------------------------------
-  test('Positive - Should return the poll with the id 0', async () => {
-    const result = await appClient.getPollByPollId({ pollId: [1] });
+    // Create the MBR transaction for creating the poll box
+    const mbrTxn = algorandClient.send.payment({
+      sender: assetCreator.addr,
+      amount: algokit.microAlgos(3_450),
+      receiver: appAddress,
+    });
 
-    console.log('Poll 1 data:', result.return);
+    // Create the asset funding transaction (axfer)
+    const axfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+      from: assetCreator.addr,
+      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
+      to: appAddress,
+      amount: 2,
+      assetIndex: Number(daoAsset),
+    });
+
+    // Send transactions to the createPoll contract call (this sends axfer internally)
+    const result = await appClient.createPoll(
+      {
+        mbrTxn,
+        axfer: axfer, // The asset transfer happens here, so you don't need to send it again
+        question: daoQuestion2,
+      },
+      {
+        sender: assetCreator,
+        sendParams: {
+          fee: algokit.microAlgos(3_000),
+        },
+      }
+    );
+
+    console.log('Create poll result 2: Poll created successfully');
+
+    // Check the app's account to confirm the asset was transferred
+    try {
+      const appAccountAfter = await algodClient.accountInformation(appAddress).do();
+
+      console.log('appAccountAfter', appAccountAfter);
+
+      const assetHoldingAfter = appAccountAfter.assets.find((asset: any) => asset['asset-id'] == daoAsset);
+      const balanceAfter = assetHoldingAfter ? assetHoldingAfter.amount : 0;
+
+      console.log('Balance after', balanceAfter);
+
+      // Assert that the balance has increased by the deposited amount
+      expect(balanceAfter).toBe(2);
+    } catch (error) {
+      console.error('Error fetching asset balance:', error);
+    }
   });
   //------------------------------------------------------------------------------------------------------------
 
@@ -187,8 +234,6 @@ describe('WecoopDao', () => {
       signer: daoVoter.signer,
     });
 
-    console.log('Dao voter&%567', daoVoter);
-
     // Create the asset funding transaction (axfer)
     const axfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
       from: daoVoter.addr,
@@ -198,17 +243,11 @@ describe('WecoopDao', () => {
       assetIndex: Number(daoAsset),
     });
 
-    console.log('axfer', axfer);
-
     const result = await appClient.makeVote({ pollId: [1], axfer, mbrTxn, inFavor: true }, { sender: daoVoter });
     const appAccountAfter = await algodClient.accountInformation(appAddress).do();
 
-    console.log('appAccountAfter', appAccountAfter);
-
     const assetHoldingAfter = appAccountAfter.assets.find((asset: any) => asset['asset-id'] == daoAsset);
     const balanceAfter = assetHoldingAfter ? assetHoldingAfter.amount : 0;
-
-    console.log('Balance after', balanceAfter);
   });
   //--------------------------------------------------------------------------------------
 
@@ -222,8 +261,6 @@ describe('WecoopDao', () => {
       receiver: appAddress,
     });
 
-    console.log('Dao voter&%567', assetCreator);
-
     // Create the asset funding transaction (axfer)
     const axfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
       from: assetCreator.addr,
@@ -232,8 +269,6 @@ describe('WecoopDao', () => {
       amount: 1,
       assetIndex: Number(daoAsset),
     });
-
-    console.log('axfer', axfer);
 
     expect(
       await appClient.makeVote({ pollId: [1], axfer, mbrTxn, inFavor: true }, { sender: assetCreator })
@@ -271,8 +306,6 @@ describe('WecoopDao', () => {
       assetIndex: Number(daoFakeAsset), // Using the fake asset here
     });
 
-    console.log('axfer', axfer);
-
     // Expect the makeVote call to fail with the wrong asset
     await expect(
       appClient.makeVote({ pollId: [1], axfer, mbrTxn, inFavor: true }, { sender: assetCreator })
@@ -292,8 +325,6 @@ describe('WecoopDao', () => {
       signer: daoVoter.signer,
     });
 
-    console.log('Dao voter&%567', daoVoter);
-
     // Create the asset funding transaction (axfer)
     const axfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
       from: daoVoter.addr,
@@ -303,23 +334,26 @@ describe('WecoopDao', () => {
       assetIndex: Number(daoAsset),
     });
 
-    console.log('axfer', axfer);
-
     const result = await appClient.makeVote({ pollId: [1], axfer, mbrTxn, inFavor: false }, { sender: daoVoter });
   });
 
   //--------------------------------------------------------------------------------------
 
-  //--------------------------------------------------------------------------------------
-  test('Positive - Get vote with nonce 1 on poll with nonce 1', async () => {
-    const result = await appClient.getVoteByVoteId({ voteId: [1, [1]] });
-    console.log('vote result', result.return);
-  });
+  //------------------------------------------------------------------------------------------------------------
+  test('Positive get all polls by looping through globalState', async () => {
+    const { totalPolls } = await appClient.appClient.getGlobalState();
 
-  //--------------------------------------------------------------------------------------
-  test('Positive - Get poll with nonce 1 - check if theres one vote on the counter', async () => {
-    const result = await appClient.getPollByPollId({ pollId: [1] });
-    console.log('Poll after vote', result.return);
+    const allPolls = [];
+
+    const totalPollsLimit = Number(totalPolls.value);
+
+    for (let i = 1; i <= totalPollsLimit; i++) {
+      const currentPoll = (await appClient.getPollByPollId({ pollId: [i] })).return;
+
+      allPolls.push(currentPoll);
+    }
+
+    console.log('All polls', allPolls);
   });
-  //--------------------------------------------------------------------------------------
+  //------------------------------------------------------------------------------------------------------------
 });

@@ -61,47 +61,44 @@ export class WecoopDao extends Contract {
   /*
   
   */
-  createPoll(mbrTxn: PayTxn, axfer: AssetTransferTxn, question: string): PollInfo {
-    //Check if the contract account is opted in to the deposited asset
+  createPoll(mbrTxn: PayTxn, axfer: AssetTransferTxn, question: string): void {
+    // Check if the contract account is opted in to the deposited asset
     assert(this.app.address.isOptedInToAsset(axfer.xferAsset), 'Application not opted in to the asset');
 
-    //Check if the the receiver of the deposit is the app address
+    // Check if the receiver of the deposit is the app address
     assert(axfer.assetReceiver === this.app.address, 'Deposit transaction not to the app wallet');
 
-    //Define the wallet address creating the poll
+    // Define the wallet address creating the poll
     const creatorAddress: Address = axfer.sender;
 
-    //Get the current nonce for identifying the poll
+    // Get the current nonce for identifying the poll
     const currentNonce: uint64 = this.totalPolls.value;
 
-    //Define a new nonce to be applied to the new poll that just got created
-    const newNonce: uint64 = currentNonce === 0 ? currentNonce + 1 : 0;
+    // Define a new nonce by incrementing the current one
+    const newNonce: uint64 = currentNonce + 1;
 
-    //Check if the current poll bein created does not already exists
+    // Check if the current poll being created does not already exist
     assert(!this.poll({ nonce: newNonce }).exists, 'This poll already exists!');
 
-    //Check if the mbr transaction has enough funds to create the needed
+    // Verify the MBR transaction has enough funds to create the poll
     verifyPayTxn(mbrTxn, { amount: pollMbr });
 
-    //Add one to the total polls of the contract global state
+    // Increment the total polls in the contract's global state
     this.totalPolls.value += 1;
 
-    //Get deposited amount and selected asset
-    const deposited = axfer.assetAmount;
-    const selecteAsset = axfer.xferAsset;
+    // Get deposited amount and selected asset
+    const deposited: uint64 = axfer.assetAmount;
+    const selectedAsset: AssetID = axfer.xferAsset;
 
-    //Create the poll box
+    // Store the poll information
     this.poll({ nonce: newNonce }).value = {
       question: question,
       creator: creatorAddress,
       totalVotes: 0,
       yesVotes: 0,
       deposited: deposited,
-      selected_asset: selecteAsset,
+      selected_asset: selectedAsset,
     };
-
-    //Return the poll info
-    return this.poll({ nonce: newNonce }).value;
   }
 
   /*This method is used for a user to cast a vote into a poll
