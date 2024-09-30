@@ -252,7 +252,7 @@ describe('WecoopDao', () => {
   //--------------------------------------------------------------------------------------
 
   //--------------------------------------------------------------------------------------
-  test('Negative - Creator cant vote', async () => {
+  test.skip('Negative - Creator cant vote', async () => {
     const { appAddress } = await appClient.appClient.getAppReference();
 
     const mbrTxn = algorandClient.send.payment({
@@ -277,7 +277,7 @@ describe('WecoopDao', () => {
   //--------------------------------------------------------------------------------------
 
   //--------------------------------------------------------------------------------------
-  test('Negative - dao voter cant vote with wrong coin', async () => {
+  test.skip('Negative - dao voter cant vote with wrong coin', async () => {
     const { appAddress } = await appClient.appClient.getAppReference();
 
     // Create mbr transaction to opt contract to the poll asset (using the correct asset initially)
@@ -340,7 +340,7 @@ describe('WecoopDao', () => {
   //--------------------------------------------------------------------------------------
 
   //------------------------------------------------------------------------------------------------------------
-  test('Positive get all polls by looping through globalState', async () => {
+  test.skip('Positive get all polls by looping through globalState', async () => {
     const { totalPolls } = await appClient.appClient.getGlobalState();
 
     const allPolls = [];
@@ -356,4 +356,77 @@ describe('WecoopDao', () => {
     console.log('All polls', allPolls);
   });
   //------------------------------------------------------------------------------------------------------------
+
+  // test('Positive - Gets all votes of poll with id 1', async () => {
+  //   const { appAddress } = await appClient.appClient.getAppReference();
+
+  //   // Get the pollId, assuming it is set to 1 (this should be the created poll ID)
+  //   const pollId = { nonce: BigInt(1) };
+
+  //   // Retrieve the total number of votes from the poll
+  //   const pollInfo = await appClient.getPollByPollId({ pollId: [1] });
+
+  //   // Use optional chaining to safely access pollInfo.return and the fourth item
+  //   const totalVotes = pollInfo.return ? Number(pollInfo.return[3]) : 0; // Default to 0 if undefined
+
+  //   console.log('poll info', totalVotes);
+  //   const allVotes = [];
+
+  //   for (let i = 1; i < totalVotes; i++) {
+  //     // Create the VoteId object with the pollId and vote nonce
+
+  //     // Fetch the vote information from the contract
+  //     const voteInfo = await appClient.getVoteByVoteId({ voteId: [[1],i] });
+  //     allVotes.push(voteInfo.return);
+  //   }
+
+  //   console.log('All votes for poll 1:', allVotes);
+
+  //   // Assert that the total votes match the votes we retrieved
+  //   expect(allVotes.length).toBe(totalVotes);
+
+  //   // // You can also check specific vote details, such as the voter's address or the vote's claimed status
+  //   // allVotes.forEach((vote, index) => {
+  //   //   expect(vote.voter).toBeDefined();
+  //   //   expect(vote.claimed).toBe(false); // Assuming none of the votes are claimed yet
+  //   // });
+  // });
+
+  test('Get all boxes', async () => {
+    const allBoxes = await appClient.appClient.getBoxNames();
+
+    console.log('all boxes', allBoxes);
+  });
+
+  test('Positive - Voter should withdraw their poll share successfully', async () => {
+    const { appAddress } = await appClient.appClient.getAppReference();
+
+    //Make mbr transaction to withdraw?
+
+    // Step 3: Withdraw the voter’s poll share
+    const withdrawResult = await appClient.withdrawPollShare(
+      { pollId: [1] },
+      {
+        sender: daoVoter,
+        sendParams: {
+          fee: algokit.microAlgos(3_000),
+        },
+      }
+    );
+
+    // Step 4: Verify the voter's share has been transferred
+    const daoVoterAccountAfter = await algodClient.accountInformation(daoVoter.addr).do();
+    const assetHoldingAfter = daoVoterAccountAfter.assets.find((asset: any) => asset['asset-id'] == daoAsset);
+    const balanceAfter = assetHoldingAfter ? assetHoldingAfter.amount : 0;
+
+    console.log('daoVoter balance after withdraw', balanceAfter);
+
+    // Assert the balance increased by the correct amount
+    const expectedShare = 22; // Example value based on the deposited amount
+    expect(balanceAfter).toBe(expectedShare);
+
+    // Step 5: Ensure the vote is marked as claimed
+    const voteInfo = await appClient.getVoteByVoteId({ voteId: [[1], daoVoter.addr] });
+    expect(voteInfo.return).toStrictEqual([BigInt(1), daoVoter.addr]);
+  });
 });

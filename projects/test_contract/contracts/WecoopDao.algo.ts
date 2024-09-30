@@ -5,10 +5,11 @@ type PollId = { nonce: uint64 };
 type PollInfo = {
   creator: Address;
   selected_asset: AssetID;
-  question: string;
   totalVotes: uint64;
   yesVotes: uint64;
   deposited: uint64;
+  timestamp: uint64;
+  question: string;
 };
 
 // -------------------------------------------------------------------------------------------------------------
@@ -18,10 +19,9 @@ type PollInfo = {
 // => (8) => (32 + 8 + 8 + 8 + 8 + 8) = 8 + 72 = (80 bits * 0.0004) + 0.0025 = 0.032 + 0.0025 = 0.03450
 
 const pollMbr = 3_450;
+type VoteId = { pollId: PollId; voter: Address };
 
-type VoteId = { nonce: uint64; pollId: PollId };
-
-type VoteInfo = { claimed: boolean; voter: Address };
+type VoteInfo = { claimed: uint64; voter: Address };
 
 //Vote_mbr
 // => (8, 8) => (8, 32) = 16bits + 40bits = (56bits * 0.0004) + 0.0025 = 0.0212 + 0.0025 = 0.0237
@@ -98,8 +98,11 @@ export class WecoopDao extends Contract {
       yesVotes: 0,
       deposited: deposited,
       selected_asset: selectedAsset,
+      timestamp: this.txn.firstValid,
     };
   }
+
+  // VOTER METHODS ---------------------------------------------------
 
   /*This method is used for a user to cast a vote into a poll
   Checks:
@@ -130,10 +133,10 @@ export class WecoopDao extends Contract {
     assert(depositedAsset === this.poll(pollId).value.selected_asset, 'using wrong asset to vote into this poll');
 
     //Check if the vote with the current pollId and nonce does not already exist
-    assert(!this.vote({ pollId: pollId, nonce: newNonce }).exists, 'Vote with new nonce already exists');
+    assert(!this.vote({ pollId: pollId, voter: this.txn.sender }).exists, 'Vote with new nonce already exists');
 
     //Create box with the vote nonce and pollId
-    this.vote({ pollId: pollId, nonce: newNonce }).value = { voter: this.txn.sender, claimed: false };
+    this.vote({ pollId: pollId, voter: this.txn.sender }).value = { voter: this.txn.sender, claimed: 0 };
 
     //Add vote to the poll total votes counter
     this.poll(pollId).value.totalVotes += 1;
@@ -147,13 +150,40 @@ export class WecoopDao extends Contract {
     }
   }
 
-  withdrawPollShare(poolId: PollId) {
-    const curentPoll: PollInfo = this.poll(poolId).value;
+  withdrawPollShare(pollId: PollId): void {
+    assert(this.poll(pollId).exists, 'Poll does not exist');
+    assert(this.vote({ pollId: pollId, voter: this.txn.sender }).exists, 'Vote does not exist');
+    // Retrieve poll information
+    const currentPoll: PollInfo = this.poll(pollId).value;
 
-    const depositedAmount: uint64 = curentPoll.deposited;
+    // Retrieve the voter's address
+    const withdrawRequester: Address = this.txn.sender;
 
-    const voteShare = depositedAmount / curentPoll.totalVotes;
+    // Retrieve the voter's vote for the poll
+    const voteKey: VoteId = { pollId: pollId, voter: withdrawRequester };
+    const vote: VoteInfo = this.vote(voteKey).value;
+
+    // // Ensure the voter has a vote in the poll
+    // assert(vote.exists, 'No vote exists for this user in the poll');
+
+    // Ensure the voter has not already claimed their share
+    assert(!vote.claimed, 'Share already claimed');
+
+    // Calculate the voter's share (total deposit / total votes)
+    const voteShare: uint64 = currentPoll.deposited / currentPoll.totalVotes;
+
+    // Send the voter's share
+    sendAssetTransfer({
+      assetReceiver: withdrawRequester,
+      assetAmount: voteShare,
+      xferAsset: currentPoll.selected_asset,
+    });
+
+    // Mark the vote as claimed
+    this.vote(voteKey).value = { voter: withdrawRequester, claimed: 1 };
   }
+
+  //----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   getPollByPollId(pollId: PollId): PollInfo {
     assert(this.poll(pollId).exists, 'Searched poll does not exist');

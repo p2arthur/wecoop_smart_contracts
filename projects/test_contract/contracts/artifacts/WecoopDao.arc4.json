@@ -73,7 +73,7 @@
       "name": "withdrawPollShare",
       "args": [
         {
-          "name": "poolId",
+          "name": "pollId",
           "type": "(uint64)"
         }
       ],
@@ -90,7 +90,7 @@
         }
       ],
       "returns": {
-        "type": "(address,uint64,string,uint64,uint64,uint64)"
+        "type": "(address,uint64,uint64,uint64,uint64,uint64,string)"
       }
     },
     {
@@ -98,11 +98,11 @@
       "args": [
         {
           "name": "voteId",
-          "type": "(uint64,(uint64))"
+          "type": "((uint64),address)"
         }
       ],
       "returns": {
-        "type": "(bool,address)"
+        "type": "(uint64,address)"
       }
     }
   ]
