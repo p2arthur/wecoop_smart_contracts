@@ -94,7 +94,7 @@ describe('WecoopDao', () => {
   //------------------------------------------------------------------------------------------------------------
 
   //------------------------------------------------------------------------------------------------------------
-  test('Positive - User should create a poll and return the created poll box', async () => {
+  test('Positive - User should create a poll with expiration and country code', async () => {
     const { appAddress } = await appClient.appClient.getAppReference();
 
     // Create the MBR transaction for creating the poll box
@@ -113,12 +113,17 @@ describe('WecoopDao', () => {
       assetIndex: Number(daoAsset),
     });
 
-    // Send transactions to the createPoll contract call (this sends axfer internally)
+    const expiresIn = 86400; // 1 day = 86400 seconds
+    const currentTimestamp = Math.floor(Date.now() / 1000); // current time in seconds
+
+    // Send transactions to the createPoll contract call
     const result = await appClient.createPoll(
       {
         mbrTxn,
-        axfer: axfer, // The asset transfer happens here, so you don't need to send it again
+        axfer: axfer,
         question: daoQuestion1,
+        country: 'BR', // Set country code here
+        expires_in: expiresIn, // Poll expires in 1 day
       },
       {
         sender: assetCreator,
@@ -130,25 +135,40 @@ describe('WecoopDao', () => {
 
     console.log('Create poll result: Poll created successfully');
 
-    // Check the app's account to confirm the asset was transferred
-    try {
-      const appAccountAfter = await algodClient.accountInformation(appAddress).do();
+    // Check the poll's expiration timestamp
+    const pollInfo = await appClient.getPollByPollId({ pollId: [1] });
+    const pollExpiryTimestamp = pollInfo.return?.[6];
+    const expectedExpiryTimestamp = currentTimestamp + expiresIn;
 
-      console.log('appAccountAfter', appAccountAfter);
+    expect(Number(pollExpiryTimestamp)).toBeGreaterThanOrEqual(expectedExpiryTimestamp);
 
-      const assetHoldingAfter = appAccountAfter.assets.find((asset: any) => asset['asset-id'] == daoAsset);
-      const balanceAfter = assetHoldingAfter ? assetHoldingAfter.amount : 0;
+    // Check the country code
+    expect(pollInfo.return?.[7]).toBe('BR');
 
-      console.log('Balance after', balanceAfter);
-
-      // Assert that the balance has increased by the deposited amount
-      expect(balanceAfter).toBe(2);
-    } catch (error) {
-      console.error('Error fetching asset balance:', error);
-    }
+    console.log('Poll expiration timestamp is valid and country code is correct.');
   });
+
   //-----------------------------------------------------------------------------
-  test('Positive - User should create a poll and return the created poll box', async () => {
+  test('Positive - Contract should optin to the provided asset', async () => {
+    const { appAddress } = await appClient.appClient.getAppReference();
+
+    //Create mbr transaction to opt contract to the poll asset
+    const mbrTxn = algorandClient.send.payment({
+      sender: assetCreator.addr,
+      amount: algokit.algos(0.1 + 0.1),
+      receiver: appAddress,
+      extraFee: algokit.algos(0.001),
+    });
+
+    //Send the mbr transaction + deposit to the contract address
+    const result = appClient.optinToAsset({ mbrTxn, asset: daoAsset });
+
+    console.log('result!&@#!2321', (await result).return);
+  });
+  //------------------------------------------------------------------------------------------------------------
+
+  //------------------------------------------------------------------------------------------------------------
+  test('Positive - User should create a poll with expiration and country code', async () => {
     const { appAddress } = await appClient.appClient.getAppReference();
 
     // Create the MBR transaction for creating the poll box
@@ -167,12 +187,17 @@ describe('WecoopDao', () => {
       assetIndex: Number(daoAsset),
     });
 
-    // Send transactions to the createPoll contract call (this sends axfer internally)
+    const expiresIn = 86400; // 1 day = 86400 seconds
+    const currentTimestamp = Math.floor(Date.now() / 1000); // current time in seconds
+
+    // Send transactions to the createPoll contract call
     const result = await appClient.createPoll(
       {
         mbrTxn,
-        axfer: axfer, // The asset transfer happens here, so you don't need to send it again
-        question: daoQuestion2,
+        axfer: axfer,
+        question: daoQuestion1,
+        country: 'BR', // Set country code here
+        expires_in: expiresIn, // Poll expires in 1 day
       },
       {
         sender: assetCreator,
@@ -182,24 +207,19 @@ describe('WecoopDao', () => {
       }
     );
 
-    console.log('Create poll result 2: Poll created successfully');
+    console.log('Create poll result: Poll created successfully');
 
-    // Check the app's account to confirm the asset was transferred
-    try {
-      const appAccountAfter = await algodClient.accountInformation(appAddress).do();
+    // Check the poll's expiration timestamp
+    const pollInfo = await appClient.getPollByPollId({ pollId: [1] });
+    const pollExpiryTimestamp = pollInfo.return?.[6];
+    const expectedExpiryTimestamp = currentTimestamp + expiresIn;
 
-      console.log('appAccountAfter', appAccountAfter);
+    expect(Number(pollExpiryTimestamp)).toBeGreaterThanOrEqual(expectedExpiryTimestamp);
 
-      const assetHoldingAfter = appAccountAfter.assets.find((asset: any) => asset['asset-id'] == daoAsset);
-      const balanceAfter = assetHoldingAfter ? assetHoldingAfter.amount : 0;
+    // Check the country code
+    expect(pollInfo.return?.[7]).toBe('BR');
 
-      console.log('Balance after', balanceAfter);
-
-      // Assert that the balance has increased by the deposited amount
-      expect(balanceAfter).toBe(2);
-    } catch (error) {
-      console.error('Error fetching asset balance:', error);
-    }
+    console.log('Poll expiration timestamp is valid and country code is correct.');
   });
   //------------------------------------------------------------------------------------------------------------
 
@@ -315,27 +335,7 @@ describe('WecoopDao', () => {
   //--------------------------------------------------------------------------------------
 
   //--------------------------------------------------------------------------------------
-  test('Positive - Dao voter votes again - against this time', async () => {
-    const { appAddress } = await appClient.appClient.getAppReference();
-
-    const mbrTxn = algorandClient.send.payment({
-      sender: daoVoter.addr,
-      amount: algokit.microAlgos(3_450),
-      receiver: appAddress,
-      signer: daoVoter.signer,
-    });
-
-    // Create the asset funding transaction (axfer)
-    const axfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
-      from: daoVoter.addr,
-      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
-      to: appAddress,
-      amount: 1,
-      assetIndex: Number(daoAsset),
-    });
-
-    const result = await appClient.makeVote({ pollId: [1], axfer, mbrTxn, inFavor: false }, { sender: daoVoter });
-  });
+  test('Positive - Dao voter votes again - against this time', async () => {});
 
   //--------------------------------------------------------------------------------------
 

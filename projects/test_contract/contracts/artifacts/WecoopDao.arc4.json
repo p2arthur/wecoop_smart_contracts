@@ -39,6 +39,14 @@
         {
           "name": "question",
           "type": "string"
+        },
+        {
+          "name": "country",
+          "type": "string"
+        },
+        {
+          "name": "expires_in",
+          "type": "uint64"
         }
       ],
       "returns": {
@@ -90,7 +98,7 @@
         }
       ],
       "returns": {
-        "type": "(address,uint64,uint64,uint64,uint64,uint64,string)"
+        "type": "(address,uint64,uint64,uint64,uint64,uint64,uint64,string,string)"
       }
     },
     {

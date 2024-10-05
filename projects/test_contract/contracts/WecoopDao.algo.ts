@@ -9,6 +9,8 @@ type PollInfo = {
   yesVotes: uint64;
   deposited: uint64;
   timestamp: uint64;
+  expiry_timestamp: uint64;
+  country: string;
   question: string;
 };
 
@@ -16,7 +18,7 @@ type PollInfo = {
 //0.0025 Algo per box
 //0.0004 per byte in the box
 //Poll_mbr
-// => (8) => (32 + 8 + 8 + 8 + 8 + 8) = 8 + 72 = (80 bits * 0.0004) + 0.0025 = 0.032 + 0.0025 = 0.03450
+// => (8) => (32 + 8 + 8 + 8 + 8 + 8 + 8 + 8) = 8 + 80 = (88 bits * 0.0004) + 0.00352 = 0.032 + 0.0025 = 0.03450
 
 const pollMbr = 3_450;
 type VoteId = { pollId: PollId; voter: Address };
@@ -61,8 +63,8 @@ export class WecoopDao extends Contract {
   /*
   
   */
-  createPoll(mbrTxn: PayTxn, axfer: AssetTransferTxn, question: string): void {
-    // Check if the contract account is opted in to the deposited asset
+  createPoll(mbrTxn: PayTxn, axfer: AssetTransferTxn, question: string, country: string, expires_in: uint64): void {
+    // Check if the contract account is opted in to the deposited assetnumber
     assert(this.app.address.isOptedInToAsset(axfer.xferAsset), 'Application not opted in to the asset');
 
     // Check if the receiver of the deposit is the app address
@@ -90,6 +92,9 @@ export class WecoopDao extends Contract {
     const deposited: uint64 = axfer.assetAmount;
     const selectedAsset: AssetID = axfer.xferAsset;
 
+    //TODO - current timestamp + expires in
+    const expiration_timestamp: uint64 = globals.latestTimestamp + expires_in;
+
     // Store the poll information
     this.poll({ nonce: newNonce }).value = {
       question: question,
@@ -98,7 +103,9 @@ export class WecoopDao extends Contract {
       yesVotes: 0,
       deposited: deposited,
       selected_asset: selectedAsset,
-      timestamp: this.txn.firstValid,
+      timestamp: globals.latestTimestamp,
+      country: country,
+      expiry_timestamp: expiration_timestamp,
     };
   }
 
@@ -135,6 +142,9 @@ export class WecoopDao extends Contract {
     //Check if the vote with the current pollId and nonce does not already exist
     assert(!this.vote({ pollId: pollId, voter: this.txn.sender }).exists, 'Vote with new nonce already exists');
 
+    //Check if the current poll haven't expired yet
+    assert(globals.latestTimestamp <= this.poll(pollId).value.expiry_timestamp, 'Voting on an expired poll');
+
     //Create box with the vote nonce and pollId
     this.vote({ pollId: pollId, voter: this.txn.sender }).value = { voter: this.txn.sender, claimed: 0 };
 
@@ -151,8 +161,15 @@ export class WecoopDao extends Contract {
   }
 
   withdrawPollShare(pollId: PollId): void {
+    //Check if the poll exists
     assert(this.poll(pollId).exists, 'Poll does not exist');
+
+    //Check if withdraw requester really voted
     assert(this.vote({ pollId: pollId, voter: this.txn.sender }).exists, 'Vote does not exist');
+
+    //Check that the poll that the requester is trying to withdraw from already expired
+    assert(globals.latestTimestamp >= this.poll(pollId).value.expiry_timestamp, 'Voting on an expired poll');
+
     // Retrieve poll information
     const currentPoll: PollInfo = this.poll(pollId).value;
 
