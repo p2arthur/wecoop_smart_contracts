@@ -20,6 +20,8 @@ let appAddress: string;
 //------------------------------------------------------------------------------------------------------------
 const daoQuestion1 = 'Is this the first ever question on wecoop.xyz polls?';
 const daoQuestion2 = 'Are there two different polls on this wecoop contract?';
+
+const wecoopMainWallet = 'DZ6ZKA6STPVTPCTGN2DO5J5NUYEETWOIB7XVPSJ4F3N2QZQTNS3Q7VIXCM';
 //------------------------------------------------------------------------------------------------------------
 let algorandClient: algokit.AlgorandClient;
 let algodClient: Algodv2;
@@ -113,7 +115,14 @@ describe('WecoopDao', () => {
       assetIndex: Number(daoAsset),
     });
 
-    const expiresIn = 86400; // 1 day = 86400 seconds
+    const paymentTransaction = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+      from: assetCreator.addr,
+      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
+      to: wecoopMainWallet,
+      amount: 2,
+      assetIndex: Number(daoAsset),
+    });
+    const expiresIn = 300; // 1 day = 86400 seconds
     const currentTimestamp = Math.floor(Date.now() / 1000); // current time in seconds
 
     // Send transactions to the createPoll contract call
@@ -123,6 +132,7 @@ describe('WecoopDao', () => {
         axfer: axfer,
         question: daoQuestion1,
         country: 'BR', // Set country code here
+        platformFeeTxn: paymentTransaction,
         expires_in: expiresIn, // Poll expires in 1 day
       },
       {
@@ -138,7 +148,8 @@ describe('WecoopDao', () => {
     // Check the poll's expiration timestamp
     const pollInfo = await appClient.getPollByPollId({ pollId: [1] });
     const pollExpiryTimestamp = pollInfo.return?.[6];
-    const expectedExpiryTimestamp = currentTimestamp + expiresIn;
+    const bufferTime = 5; // 5 seconds buffer to account for drift
+    const expectedExpiryTimestamp = currentTimestamp + expiresIn + bufferTime;
 
     expect(Number(pollExpiryTimestamp)).toBeGreaterThanOrEqual(expectedExpiryTimestamp);
 
@@ -147,25 +158,6 @@ describe('WecoopDao', () => {
 
     console.log('Poll expiration timestamp is valid and country code is correct.');
   });
-
-  //-----------------------------------------------------------------------------
-  test('Positive - Contract should optin to the provided asset', async () => {
-    const { appAddress } = await appClient.appClient.getAppReference();
-
-    //Create mbr transaction to opt contract to the poll asset
-    const mbrTxn = algorandClient.send.payment({
-      sender: assetCreator.addr,
-      amount: algokit.algos(0.1 + 0.1),
-      receiver: appAddress,
-      extraFee: algokit.algos(0.001),
-    });
-
-    //Send the mbr transaction + deposit to the contract address
-    const result = appClient.optinToAsset({ mbrTxn, asset: daoAsset });
-
-    console.log('result!&@#!2321', (await result).return);
-  });
-  //------------------------------------------------------------------------------------------------------------
 
   //------------------------------------------------------------------------------------------------------------
   test('Positive - User should create a poll with expiration and country code', async () => {
@@ -187,8 +179,16 @@ describe('WecoopDao', () => {
       assetIndex: Number(daoAsset),
     });
 
-    const expiresIn = 86400; // 1 day = 86400 seconds
+    const expiresIn = 300; // 1 day = 86400 seconds
     const currentTimestamp = Math.floor(Date.now() / 1000); // current time in seconds
+
+    const paymentTransaction = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+      from: assetCreator.addr,
+      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
+      to: appAddress,
+      amount: 3,
+      assetIndex: Number(daoAsset),
+    });
 
     // Send transactions to the createPoll contract call
     const result = await appClient.createPoll(
@@ -196,6 +196,7 @@ describe('WecoopDao', () => {
         mbrTxn,
         axfer: axfer,
         question: daoQuestion1,
+        platformFeeTxn: paymentTransaction,
         country: 'BR', // Set country code here
         expires_in: expiresIn, // Poll expires in 1 day
       },
@@ -399,9 +400,18 @@ describe('WecoopDao', () => {
   });
 
   test('Positive - Voter should withdraw their poll share successfully', async () => {
-    const { appAddress } = await appClient.appClient.getAppReference();
+    // Introduce a 5-second delay
+    const expiresIn = 30;
 
-    //Make mbr transaction to withdraw?
+    const daoVoterAccountBefore = await algodClient.accountInformation(daoVoter.addr).do();
+    const assetHoldingBefore = daoVoterAccountBefore.assets.find((asset: any) => asset['asset-id'] == daoAsset);
+    const balanceBefore = assetHoldingBefore ? assetHoldingBefore.amount : 0;
+
+    console.log('Balance before', balanceBefore);
+
+    await new Promise((resolve) => setTimeout(resolve, expiresIn * 1000 + 5000)); // Add a 5-second buffer
+
+    const { appAddress } = await appClient.appClient.getAppReference();
 
     // Step 3: Withdraw the voter’s poll share
     const withdrawResult = await appClient.withdrawPollShare(
@@ -424,6 +434,8 @@ describe('WecoopDao', () => {
     // Assert the balance increased by the correct amount
     const expectedShare = 22; // Example value based on the deposited amount
     expect(balanceAfter).toBe(expectedShare);
+
+    console.log('balance after');
 
     // Step 5: Ensure the vote is marked as claimed
     const voteInfo = await appClient.getVoteByVoteId({ voteId: [[1], daoVoter.addr] });

@@ -1,4 +1,5 @@
 import { Contract } from '@algorandfoundation/tealscript';
+import { WECOOP_MAIN_ADDRESS } from './constants.algo';
 
 type PollId = { nonce: uint64 };
 
@@ -33,6 +34,7 @@ const voteMbr = 2_370;
 export class WecoopDao extends Contract {
   totalPolls = GlobalStateKey<uint64>();
   totalVotes = GlobalStateKey<uint64>();
+  wecoop_main_address = GlobalStateKey<Address>({ key: 'DZ6ZKA6STPVTPCTGN2DO5J5NUYEETWOIB7XVPSJ4F3N2QZQTNS3Q7VIXCM' });
 
   poll = BoxMap<PollId, PollInfo>({ prefix: 'poll_' });
   vote = BoxMap<VoteId, VoteInfo>({ prefix: 'vote_' });
@@ -63,9 +65,19 @@ export class WecoopDao extends Contract {
   /*
   
   */
-  createPoll(mbrTxn: PayTxn, axfer: AssetTransferTxn, question: string, country: string, expires_in: uint64): void {
+  createPoll(
+    mbrTxn: PayTxn,
+    axfer: AssetTransferTxn,
+    platformFeeTxn: AssetTransferTxn,
+    question: string,
+    country: string,
+    expires_in: uint64
+  ): void {
     // Check if the contract account is opted in to the deposited assetnumber
     assert(this.app.address.isOptedInToAsset(axfer.xferAsset), 'Application not opted in to the asset');
+
+    //Check if platform payment transaction is being made to the Wecoop main wallet
+    assert(platformFeeTxn.assetReceiver === this.wecoop_main_address.value, 'payment receiver is not the platform');
 
     // Check if the receiver of the deposit is the app address
     assert(axfer.assetReceiver === this.app.address, 'Deposit transaction not to the app wallet');
@@ -168,7 +180,10 @@ export class WecoopDao extends Contract {
     assert(this.vote({ pollId: pollId, voter: this.txn.sender }).exists, 'Vote does not exist');
 
     //Check that the poll that the requester is trying to withdraw from already expired
-    assert(globals.latestTimestamp >= this.poll(pollId).value.expiry_timestamp, 'Voting on an expired poll');
+    assert(
+      globals.latestTimestamp >= this.poll(pollId).value.expiry_timestamp,
+      'withdrawing from a poll that is still running'
+    );
 
     // Retrieve poll information
     const currentPoll: PollInfo = this.poll(pollId).value;

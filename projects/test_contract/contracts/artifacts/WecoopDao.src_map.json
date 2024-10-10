@@ -1,7 +1,7 @@
 [
   {
     "teal": 1,
-    "source": 33,
+    "source": 34,
     "pc": [
       0,
       1,
@@ -56,7 +56,7 @@
   },
   {
     "teal": 13,
-    "source": 33,
+    "source": 34,
     "pc": [
       49,
       50
@@ -64,14 +64,14 @@
   },
   {
     "teal": 14,
-    "source": 33,
+    "source": 34,
     "pc": [
       51
     ]
   },
   {
     "teal": 15,
-    "source": 33,
+    "source": 34,
     "pc": [
       52,
       53
@@ -79,14 +79,14 @@
   },
   {
     "teal": 16,
-    "source": 33,
+    "source": 34,
     "pc": [
       54
     ]
   },
   {
     "teal": 17,
-    "source": 33,
+    "source": 34,
     "pc": [
       55,
       56
@@ -94,14 +94,14 @@
   },
   {
     "teal": 18,
-    "source": 33,
+    "source": 34,
     "pc": [
       57
     ]
   },
   {
     "teal": 19,
-    "source": 33,
+    "source": 34,
     "pc": [
       58,
       59,
@@ -133,7 +133,7 @@
   },
   {
     "teal": 23,
-    "source": 33,
+    "source": 34,
     "errorMessage": "The requested action is not implemented in this contract. Are you using the correct OnComplete? Did you set your app ID?",
     "pc": [
       84
@@ -141,7 +141,7 @@
   },
   {
     "teal": 28,
-    "source": 40,
+    "source": 42,
     "pc": [
       85,
       86,
@@ -150,21 +150,21 @@
   },
   {
     "teal": 29,
-    "source": 40,
+    "source": 42,
     "pc": [
       88
     ]
   },
   {
     "teal": 30,
-    "source": 40,
+    "source": 42,
     "pc": [
       89
     ]
   },
   {
     "teal": 34,
-    "source": 40,
+    "source": 42,
     "pc": [
       90,
       91,
@@ -173,28 +173,28 @@
   },
   {
     "teal": 38,
-    "source": 41,
+    "source": 43,
     "pc": [
       93
     ]
   },
   {
     "teal": 39,
-    "source": 41,
+    "source": 43,
     "pc": [
       94
     ]
   },
   {
     "teal": 40,
-    "source": 41,
+    "source": 43,
     "pc": [
       95
     ]
   },
   {
     "teal": 44,
-    "source": 42,
+    "source": 44,
     "pc": [
       96,
       97,
@@ -212,28 +212,28 @@
   },
   {
     "teal": 45,
-    "source": 42,
+    "source": 44,
     "pc": [
       108
     ]
   },
   {
     "teal": 46,
-    "source": 42,
+    "source": 44,
     "pc": [
       109
     ]
   },
   {
     "teal": 47,
-    "source": 40,
+    "source": 42,
     "pc": [
       110
     ]
   },
   {
     "teal": 52,
-    "source": 46,
+    "source": 48,
     "pc": [
       111,
       112,
@@ -242,14 +242,14 @@
   },
   {
     "teal": 53,
-    "source": 46,
+    "source": 48,
     "pc": [
       114
     ]
   },
   {
     "teal": 56,
-    "source": 46,
+    "source": 48,
     "pc": [
       115,
       116
@@ -257,28 +257,28 @@
   },
   {
     "teal": 57,
-    "source": 46,
+    "source": 48,
     "pc": [
       117
     ]
   },
   {
     "teal": 58,
-    "source": 46,
+    "source": 48,
     "pc": [
       118
     ]
   },
   {
     "teal": 59,
-    "source": 46,
+    "source": 48,
     "pc": [
       119
     ]
   },
   {
     "teal": 60,
-    "source": 46,
+    "source": 48,
     "pc": [
       120,
       121
@@ -286,21 +286,21 @@
   },
   {
     "teal": 61,
-    "source": 46,
+    "source": 48,
     "pc": [
       122
     ]
   },
   {
     "teal": 62,
-    "source": 46,
+    "source": 48,
     "pc": [
       123
     ]
   },
   {
     "teal": 65,
-    "source": 46,
+    "source": 48,
     "errorMessage": "argument 1 (mbrTxn) for optinToAsset must be a pay transaction",
     "pc": [
       124
@@ -308,7 +308,7 @@
   },
   {
     "teal": 68,
-    "source": 46,
+    "source": 48,
     "pc": [
       125,
       126,
@@ -317,21 +317,21 @@
   },
   {
     "teal": 69,
-    "source": 46,
+    "source": 48,
     "pc": [
       128
     ]
   },
   {
     "teal": 70,
-    "source": 46,
+    "source": 48,
     "pc": [
       129
     ]
   },
   {
     "teal": 74,
-    "source": 46,
+    "source": 48,
     "pc": [
       130,
       131,
@@ -340,7 +340,7 @@
   },
   {
     "teal": 78,
-    "source": 48,
+    "source": 50,
     "pc": [
       133,
       134
@@ -348,7 +348,7 @@
   },
   {
     "teal": 79,
-    "source": 48,
+    "source": 50,
     "pc": [
       135,
       136,
@@ -357,7 +357,7 @@
   },
   {
     "teal": 80,
-    "source": 48,
+    "source": 50,
     "pc": [
       138,
       139
@@ -365,21 +365,21 @@
   },
   {
     "teal": 81,
-    "source": 48,
+    "source": 50,
     "pc": [
       140
     ]
   },
   {
     "teal": 82,
-    "source": 48,
+    "source": 50,
     "pc": [
       141
     ]
   },
   {
     "teal": 85,
-    "source": 48,
+    "source": 50,
     "errorMessage": "Error: Not the creator trying to optin to an asset",
     "pc": [
       142
@@ -387,7 +387,7 @@
   },
   {
     "teal": 89,
-    "source": 51,
+    "source": 53,
     "pc": [
       143,
       144
@@ -395,7 +395,7 @@
   },
   {
     "teal": 90,
-    "source": 51,
+    "source": 53,
     "pc": [
       145,
       146
@@ -403,7 +403,7 @@
   },
   {
     "teal": 91,
-    "source": 51,
+    "source": 53,
     "pc": [
       147,
       148
@@ -411,14 +411,14 @@
   },
   {
     "teal": 92,
-    "source": 51,
+    "source": 53,
     "pc": [
       149
     ]
   },
   {
     "teal": 95,
-    "source": 51,
+    "source": 53,
     "errorMessage": "Receiver is not the app address",
     "pc": [
       150
@@ -426,7 +426,7 @@
   },
   {
     "teal": 99,
-    "source": 54,
+    "source": 56,
     "pc": [
       151,
       152
@@ -434,7 +434,7 @@
   },
   {
     "teal": 100,
-    "source": 54,
+    "source": 56,
     "pc": [
       153,
       154
@@ -442,7 +442,7 @@
   },
   {
     "teal": 101,
-    "source": 54,
+    "source": 56,
     "pc": [
       155,
       156
@@ -450,35 +450,35 @@
   },
   {
     "teal": 102,
-    "source": 54,
+    "source": 56,
     "pc": [
       157
     ]
   },
   {
     "teal": 103,
-    "source": 54,
+    "source": 56,
     "pc": [
       158
     ]
   },
   {
     "teal": 104,
-    "source": 54,
+    "source": 56,
     "pc": [
       159
     ]
   },
   {
     "teal": 105,
-    "source": 54,
+    "source": 56,
     "pc": [
       160
     ]
   },
   {
     "teal": 110,
-    "source": 57,
+    "source": 59,
     "pc": [
       161,
       162
@@ -486,7 +486,7 @@
   },
   {
     "teal": 111,
-    "source": 57,
+    "source": 59,
     "pc": [
       163,
       164
@@ -494,7 +494,7 @@
   },
   {
     "teal": 112,
-    "source": 57,
+    "source": 59,
     "pc": [
       165,
       166
@@ -502,7 +502,7 @@
   },
   {
     "teal": 113,
-    "source": 57,
+    "source": 59,
     "pc": [
       167,
       168
@@ -510,21 +510,21 @@
   },
   {
     "teal": 114,
-    "source": 57,
+    "source": 59,
     "pc": [
       169
     ]
   },
   {
     "teal": 115,
-    "source": 57,
+    "source": 59,
     "pc": [
       170
     ]
   },
   {
     "teal": 118,
-    "source": 57,
+    "source": 59,
     "errorMessage": "transaction verification failed: {\"txn\":\"mbrTxn\",\"field\":\"amount\",\"condition\":\"greaterThanEqualTo\",\"expected\":\">=globals.minBalance + globals.assetOptInMinBalance\"}",
     "pc": [
       171
@@ -532,21 +532,21 @@
   },
   {
     "teal": 122,
-    "source": 60,
+    "source": 62,
     "pc": [
       172
     ]
   },
   {
     "teal": 123,
-    "source": 60,
+    "source": 62,
     "pc": [
       173
     ]
   },
   {
     "teal": 124,
-    "source": 60,
+    "source": 62,
     "pc": [
       174,
       175
@@ -554,7 +554,7 @@
   },
   {
     "teal": 128,
-    "source": 60,
+    "source": 62,
     "pc": [
       176,
       177
@@ -562,7 +562,7 @@
   },
   {
     "teal": 129,
-    "source": 60,
+    "source": 62,
     "pc": [
       178,
       179
@@ -570,14 +570,14 @@
   },
   {
     "teal": 133,
-    "source": 60,
+    "source": 62,
     "pc": [
       180
     ]
   },
   {
     "teal": 134,
-    "source": 60,
+    "source": 62,
     "pc": [
       181,
       182
@@ -585,7 +585,7 @@
   },
   {
     "teal": 138,
-    "source": 60,
+    "source": 62,
     "pc": [
       183,
       184
@@ -593,7 +593,7 @@
   },
   {
     "teal": 139,
-    "source": 60,
+    "source": 62,
     "pc": [
       185,
       186
@@ -601,14 +601,14 @@
   },
   {
     "teal": 142,
-    "source": 60,
+    "source": 62,
     "pc": [
       187
     ]
   },
   {
     "teal": 143,
-    "source": 60,
+    "source": 62,
     "pc": [
       188,
       189
@@ -616,21 +616,21 @@
   },
   {
     "teal": 146,
-    "source": 60,
+    "source": 62,
     "pc": [
       190
     ]
   },
   {
     "teal": 147,
-    "source": 46,
+    "source": 48,
     "pc": [
       191
     ]
   },
   {
     "teal": 152,
-    "source": 66,
+    "source": 74,
     "pc": [
       192,
       193,
@@ -639,14 +639,14 @@
   },
   {
     "teal": 153,
-    "source": 66,
+    "source": 74,
     "pc": [
       195
     ]
   },
   {
     "teal": 156,
-    "source": 66,
+    "source": 73,
     "pc": [
       196,
       197,
@@ -655,7 +655,7 @@
   },
   {
     "teal": 157,
-    "source": 66,
+    "source": 73,
     "pc": [
       199,
       200,
@@ -664,7 +664,7 @@
   },
   {
     "teal": 160,
-    "source": 66,
+    "source": 72,
     "pc": [
       202,
       203,
@@ -673,7 +673,7 @@
   },
   {
     "teal": 161,
-    "source": 66,
+    "source": 72,
     "pc": [
       205,
       206,
@@ -682,7 +682,7 @@
   },
   {
     "teal": 164,
-    "source": 66,
+    "source": 71,
     "pc": [
       208,
       209
@@ -690,28 +690,28 @@
   },
   {
     "teal": 165,
-    "source": 66,
+    "source": 71,
     "pc": [
       210
     ]
   },
   {
     "teal": 166,
-    "source": 66,
+    "source": 71,
     "pc": [
       211
     ]
   },
   {
     "teal": 167,
-    "source": 66,
+    "source": 71,
     "pc": [
       212
     ]
   },
   {
     "teal": 168,
-    "source": 66,
+    "source": 71,
     "pc": [
       213,
       214
@@ -719,29 +719,29 @@
   },
   {
     "teal": 169,
-    "source": 66,
+    "source": 71,
     "pc": [
       215
     ]
   },
   {
     "teal": 170,
-    "source": 66,
+    "source": 71,
     "pc": [
       216
     ]
   },
   {
     "teal": 173,
-    "source": 66,
-    "errorMessage": "argument 3 (axfer) for createPoll must be a axfer transaction",
+    "source": 71,
+    "errorMessage": "argument 3 (platformFeeTxn) for createPoll must be a axfer transaction",
     "pc": [
       217
     ]
   },
   {
     "teal": 176,
-    "source": 66,
+    "source": 70,
     "pc": [
       218,
       219
@@ -749,7 +749,7 @@
   },
   {
     "teal": 177,
-    "source": 66,
+    "source": 70,
     "pc": [
       220,
       221
@@ -757,21 +757,21 @@
   },
   {
     "teal": 178,
-    "source": 66,
+    "source": 70,
     "pc": [
       222
     ]
   },
   {
     "teal": 179,
-    "source": 66,
+    "source": 70,
     "pc": [
       223
     ]
   },
   {
     "teal": 180,
-    "source": 66,
+    "source": 70,
     "pc": [
       224,
       225
@@ -779,130 +779,136 @@
   },
   {
     "teal": 181,
-    "source": 66,
+    "source": 70,
     "pc": [
       226
     ]
   },
   {
     "teal": 182,
-    "source": 66,
+    "source": 70,
     "pc": [
       227
     ]
   },
   {
     "teal": 185,
-    "source": 66,
-    "errorMessage": "argument 4 (mbrTxn) for createPoll must be a pay transaction",
+    "source": 70,
+    "errorMessage": "argument 4 (axfer) for createPoll must be a axfer transaction",
     "pc": [
       228
     ]
   },
   {
     "teal": 188,
-    "source": 66,
+    "source": 69,
     "pc": [
       229,
-      230,
-      231
+      230
     ]
   },
   {
     "teal": 189,
-    "source": 66,
+    "source": 69,
     "pc": [
+      231,
       232
     ]
   },
   {
     "teal": 190,
-    "source": 66,
+    "source": 69,
     "pc": [
       233
     ]
   },
   {
-    "teal": 194,
-    "source": 66,
+    "teal": 191,
+    "source": 69,
     "pc": [
-      234,
+      234
+    ]
+  },
+  {
+    "teal": 192,
+    "source": 69,
+    "pc": [
       235,
       236
     ]
   },
   {
-    "teal": 197,
-    "source": 66,
+    "teal": 193,
+    "source": 69,
     "pc": [
       237
     ]
   },
   {
-    "teal": 198,
-    "source": 66,
+    "teal": 194,
+    "source": 69,
     "pc": [
-      238,
+      238
+    ]
+  },
+  {
+    "teal": 197,
+    "source": 69,
+    "errorMessage": "argument 5 (mbrTxn) for createPoll must be a pay transaction",
+    "pc": [
       239
+    ]
+  },
+  {
+    "teal": 200,
+    "source": 68,
+    "pc": [
+      240,
+      241,
+      242
+    ]
+  },
+  {
+    "teal": 201,
+    "source": 68,
+    "pc": [
+      243
     ]
   },
   {
     "teal": 202,
     "source": 68,
     "pc": [
-      240,
-      241
-    ]
-  },
-  {
-    "teal": 203,
-    "source": 68,
-    "pc": [
-      242,
-      243
-    ]
-  },
-  {
-    "teal": 204,
-    "source": 68,
-    "pc": [
-      244,
-      245
-    ]
-  },
-  {
-    "teal": 205,
-    "source": 68,
-    "pc": [
-      246,
-      247
+      244
     ]
   },
   {
     "teal": 206,
     "source": 68,
     "pc": [
-      248
+      245,
+      246,
+      247
     ]
   },
   {
-    "teal": 207,
+    "teal": 209,
     "source": 68,
     "pc": [
-      249
+      248
     ]
   },
   {
     "teal": 210,
     "source": 68,
-    "errorMessage": "Application not opted in to the asset",
     "pc": [
+      249,
       250
     ]
   },
   {
     "teal": 214,
-    "source": 71,
+    "source": 77,
     "pc": [
       251,
       252
@@ -910,7 +916,7 @@
   },
   {
     "teal": 215,
-    "source": 71,
+    "source": 77,
     "pc": [
       253,
       254
@@ -918,7 +924,7 @@
   },
   {
     "teal": 216,
-    "source": 71,
+    "source": 77,
     "pc": [
       255,
       256
@@ -926,925 +932,677 @@
   },
   {
     "teal": 217,
-    "source": 71,
+    "source": 77,
     "pc": [
-      257
-    ]
-  },
-  {
-    "teal": 220,
-    "source": 71,
-    "errorMessage": "Deposit transaction not to the app wallet",
-    "pc": [
+      257,
       258
     ]
   },
   {
-    "teal": 224,
-    "source": 74,
+    "teal": 218,
+    "source": 77,
     "pc": [
-      259,
+      259
+    ]
+  },
+  {
+    "teal": 219,
+    "source": 77,
+    "pc": [
       260
     ]
   },
   {
-    "teal": 225,
-    "source": 74,
+    "teal": 222,
+    "source": 77,
+    "errorMessage": "Application not opted in to the asset",
     "pc": [
-      261,
-      262
+      261
     ]
   },
   {
     "teal": 226,
-    "source": 74,
+    "source": 80,
     "pc": [
-      263,
-      264
+      262,
+      263
     ]
   },
   {
-    "teal": 230,
-    "source": 77,
+    "teal": 227,
+    "source": 80,
     "pc": [
+      264,
       265
     ]
   },
   {
-    "teal": 231,
-    "source": 77,
+    "teal": 228,
+    "source": 80,
     "pc": [
-      266
-    ]
-  },
-  {
-    "teal": 232,
-    "source": 77,
-    "pc": [
+      266,
       267,
-      268
-    ]
-  },
-  {
-    "teal": 236,
-    "source": 80,
-    "pc": [
+      268,
       269,
-      270
-    ]
-  },
-  {
-    "teal": 237,
-    "source": 80,
-    "pc": [
-      271
-    ]
-  },
-  {
-    "teal": 238,
-    "source": 80,
-    "pc": [
-      272
-    ]
-  },
-  {
-    "teal": 239,
-    "source": 80,
-    "pc": [
+      270,
+      271,
+      272,
       273,
-      274
-    ]
-  },
-  {
-    "teal": 243,
-    "source": 83,
-    "pc": [
-      275
-    ]
-  },
-  {
-    "teal": 244,
-    "source": 83,
-    "pc": [
+      274,
+      275,
       276,
-      277
-    ]
-  },
-  {
-    "teal": 245,
-    "source": 83,
-    "pc": [
-      278
-    ]
-  },
-  {
-    "teal": 246,
-    "source": 83,
-    "pc": [
-      279
-    ]
-  },
-  {
-    "teal": 247,
-    "source": 83,
-    "pc": [
-      280
-    ]
-  },
-  {
-    "teal": 248,
-    "source": 83,
-    "pc": [
-      281
-    ]
-  },
-  {
-    "teal": 249,
-    "source": 83,
-    "pc": [
-      282
-    ]
-  },
-  {
-    "teal": 250,
-    "source": 83,
-    "pc": [
-      283
-    ]
-  },
-  {
-    "teal": 253,
-    "source": 83,
-    "errorMessage": "This poll already exists!",
-    "pc": [
-      284
-    ]
-  },
-  {
-    "teal": 258,
-    "source": 86,
-    "pc": [
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
       285,
-      286
-    ]
-  },
-  {
-    "teal": 259,
-    "source": 86,
-    "pc": [
+      286,
       287,
-      288
-    ]
-  },
-  {
-    "teal": 260,
-    "source": 86,
-    "pc": [
+      288,
       289,
       290,
-      291
-    ]
-  },
-  {
-    "teal": 261,
-    "source": 86,
-    "pc": [
-      292
-    ]
-  },
-  {
-    "teal": 264,
-    "source": 86,
-    "errorMessage": "transaction verification failed: {\"txn\":\"mbrTxn\",\"field\":\"amount\",\"expected\":\"pollMbr\"}",
-    "pc": [
-      293
-    ]
-  },
-  {
-    "teal": 268,
-    "source": 89,
-    "pc": [
-      294
-    ]
-  },
-  {
-    "teal": 269,
-    "source": 89,
-    "pc": [
-      295
-    ]
-  },
-  {
-    "teal": 270,
-    "source": 89,
-    "pc": [
-      296
-    ]
-  },
-  {
-    "teal": 271,
-    "source": 89,
-    "pc": [
-      297
-    ]
-  },
-  {
-    "teal": 272,
-    "source": 89,
-    "pc": [
-      298
-    ]
-  },
-  {
-    "teal": 273,
-    "source": 89,
-    "pc": [
-      299
-    ]
-  },
-  {
-    "teal": 274,
-    "source": 89,
-    "pc": [
-      300
-    ]
-  },
-  {
-    "teal": 278,
-    "source": 92,
-    "pc": [
+      291,
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300,
       301,
-      302
-    ]
-  },
-  {
-    "teal": 279,
-    "source": 92,
-    "pc": [
+      302,
       303,
-      304
-    ]
-  },
-  {
-    "teal": 280,
-    "source": 92,
-    "pc": [
+      304,
       305,
-      306
-    ]
-  },
-  {
-    "teal": 284,
-    "source": 93,
-    "pc": [
+      306,
       307,
-      308
-    ]
-  },
-  {
-    "teal": 285,
-    "source": 93,
-    "pc": [
+      308,
       309,
-      310
-    ]
-  },
-  {
-    "teal": 286,
-    "source": 93,
-    "pc": [
+      310,
       311,
-      312
-    ]
-  },
-  {
-    "teal": 290,
-    "source": 96,
-    "pc": [
+      312,
       313,
-      314
-    ]
-  },
-  {
-    "teal": 291,
-    "source": 96,
-    "pc": [
+      314,
       315,
-      316
-    ]
-  },
-  {
-    "teal": 292,
-    "source": 96,
-    "pc": [
-      317
-    ]
-  },
-  {
-    "teal": 293,
-    "source": 96,
-    "pc": [
+      316,
+      317,
       318,
-      319
-    ]
-  },
-  {
-    "teal": 307,
-    "source": 99,
-    "pc": [
-      320
-    ]
-  },
-  {
-    "teal": 308,
-    "source": 99,
-    "pc": [
+      319,
+      320,
       321,
-      322
-    ]
-  },
-  {
-    "teal": 309,
-    "source": 99,
-    "pc": [
-      323
-    ]
-  },
-  {
-    "teal": 310,
-    "source": 99,
-    "pc": [
-      324
-    ]
-  },
-  {
-    "teal": 311,
-    "source": 99,
-    "pc": [
+      322,
+      323,
+      324,
       325
     ]
   },
   {
-    "teal": 312,
-    "source": 99,
+    "teal": 229,
+    "source": 80,
     "pc": [
       326
     ]
   },
   {
-    "teal": 313,
-    "source": 99,
+    "teal": 230,
+    "source": 80,
     "pc": [
       327
     ]
   },
   {
-    "teal": 314,
-    "source": 99,
+    "teal": 233,
+    "source": 80,
+    "errorMessage": "payment receiver is not the platform",
     "pc": [
       328
     ]
   },
   {
-    "teal": 315,
-    "source": 99,
+    "teal": 237,
+    "source": 83,
     "pc": [
-      329
+      329,
+      330
     ]
   },
   {
-    "teal": 316,
-    "source": 99,
+    "teal": 238,
+    "source": 83,
     "pc": [
-      330,
       331,
-      332,
-      333
+      332
     ]
   },
   {
-    "teal": 317,
-    "source": 101,
+    "teal": 239,
+    "source": 83,
     "pc": [
-      334,
+      333,
+      334
+    ]
+  },
+  {
+    "teal": 240,
+    "source": 83,
+    "pc": [
       335
     ]
   },
   {
-    "teal": 318,
-    "source": 101,
+    "teal": 243,
+    "source": 83,
+    "errorMessage": "Deposit transaction not to the app wallet",
     "pc": [
-      336,
+      336
+    ]
+  },
+  {
+    "teal": 247,
+    "source": 86,
+    "pc": [
       337,
       338
     ]
   },
   {
-    "teal": 319,
-    "source": 105,
+    "teal": 248,
+    "source": 86,
     "pc": [
       339,
       340
     ]
   },
   {
-    "teal": 320,
-    "source": 105,
+    "teal": 249,
+    "source": 86,
     "pc": [
-      341
+      341,
+      342
     ]
   },
   {
-    "teal": 321,
-    "source": 105,
+    "teal": 253,
+    "source": 89,
     "pc": [
-      342,
-      343,
+      343
+    ]
+  },
+  {
+    "teal": 254,
+    "source": 89,
+    "pc": [
       344
     ]
   },
   {
-    "teal": 322,
-    "source": 102,
+    "teal": 255,
+    "source": 89,
     "pc": [
       345,
       346
     ]
   },
   {
-    "teal": 323,
-    "source": 102,
+    "teal": 259,
+    "source": 92,
     "pc": [
       347,
-      348,
+      348
+    ]
+  },
+  {
+    "teal": 260,
+    "source": 92,
+    "pc": [
       349
     ]
   },
   {
-    "teal": 324,
-    "source": 103,
+    "teal": 261,
+    "source": 92,
     "pc": [
-      350,
-      351
+      350
     ]
   },
   {
-    "teal": 325,
-    "source": 103,
+    "teal": 262,
+    "source": 92,
     "pc": [
-      352,
-      353,
-      354
+      351,
+      352
     ]
   },
   {
-    "teal": 326,
-    "source": 104,
+    "teal": 266,
+    "source": 95,
     "pc": [
-      355,
+      353
+    ]
+  },
+  {
+    "teal": 267,
+    "source": 95,
+    "pc": [
+      354,
+      355
+    ]
+  },
+  {
+    "teal": 268,
+    "source": 95,
+    "pc": [
       356
     ]
   },
   {
-    "teal": 327,
-    "source": 104,
+    "teal": 269,
+    "source": 95,
     "pc": [
       357
     ]
   },
   {
-    "teal": 328,
-    "source": 104,
+    "teal": 270,
+    "source": 95,
     "pc": [
-      358,
-      359,
+      358
+    ]
+  },
+  {
+    "teal": 271,
+    "source": 95,
+    "pc": [
+      359
+    ]
+  },
+  {
+    "teal": 272,
+    "source": 95,
+    "pc": [
       360
     ]
   },
   {
-    "teal": 329,
-    "source": 106,
+    "teal": 273,
+    "source": 95,
     "pc": [
-      361,
+      361
+    ]
+  },
+  {
+    "teal": 276,
+    "source": 95,
+    "errorMessage": "This poll already exists!",
+    "pc": [
       362
     ]
   },
   {
-    "teal": 330,
-    "source": 106,
+    "teal": 281,
+    "source": 98,
     "pc": [
-      363
+      363,
+      364
     ]
   },
   {
-    "teal": 331,
-    "source": 106,
+    "teal": 282,
+    "source": 98,
     "pc": [
-      364,
       365,
       366
     ]
   },
   {
-    "teal": 332,
-    "source": 108,
+    "teal": 283,
+    "source": 98,
     "pc": [
       367,
-      368
-    ]
-  },
-  {
-    "teal": 333,
-    "source": 108,
-    "pc": [
+      368,
       369
     ]
   },
   {
-    "teal": 334,
-    "source": 108,
+    "teal": 284,
+    "source": 98,
     "pc": [
-      370,
-      371,
+      370
+    ]
+  },
+  {
+    "teal": 287,
+    "source": 98,
+    "errorMessage": "transaction verification failed: {\"txn\":\"mbrTxn\",\"field\":\"amount\",\"expected\":\"pollMbr\"}",
+    "pc": [
+      371
+    ]
+  },
+  {
+    "teal": 291,
+    "source": 101,
+    "pc": [
       372
     ]
   },
   {
-    "teal": 335,
-    "source": 107,
+    "teal": 292,
+    "source": 101,
     "pc": [
-      373,
+      373
+    ]
+  },
+  {
+    "teal": 293,
+    "source": 101,
+    "pc": [
       374
     ]
   },
   {
-    "teal": 336,
-    "source": 107,
+    "teal": 294,
+    "source": 101,
     "pc": [
       375
     ]
   },
   {
-    "teal": 337,
-    "source": 107,
+    "teal": 295,
+    "source": 101,
     "pc": [
       376
     ]
   },
   {
-    "teal": 338,
-    "source": 107,
+    "teal": 296,
+    "source": 101,
     "pc": [
       377
     ]
   },
   {
-    "teal": 339,
-    "source": 107,
+    "teal": 297,
+    "source": 101,
     "pc": [
-      378,
+      378
+    ]
+  },
+  {
+    "teal": 301,
+    "source": 104,
+    "pc": [
       379,
       380
     ]
   },
   {
-    "teal": 340,
-    "source": 107,
+    "teal": 302,
+    "source": 104,
     "pc": [
-      381
-    ]
-  },
-  {
-    "teal": 341,
-    "source": 107,
-    "pc": [
+      381,
       382
     ]
   },
   {
-    "teal": 342,
-    "source": 107,
+    "teal": 303,
+    "source": 104,
     "pc": [
       383,
-      384,
-      385
+      384
     ]
   },
   {
-    "teal": 343,
-    "source": 100,
+    "teal": 307,
+    "source": 105,
     "pc": [
-      386,
-      387
+      385,
+      386
     ]
   },
   {
-    "teal": 344,
-    "source": 100,
+    "teal": 308,
+    "source": 105,
     "pc": [
+      387,
       388
     ]
   },
   {
-    "teal": 345,
-    "source": 100,
+    "teal": 309,
+    "source": 105,
     "pc": [
-      389
-    ]
-  },
-  {
-    "teal": 346,
-    "source": 100,
-    "pc": [
+      389,
       390
     ]
   },
   {
-    "teal": 347,
-    "source": 100,
+    "teal": 313,
+    "source": 108,
     "pc": [
       391,
-      392,
-      393
+      392
     ]
   },
   {
-    "teal": 348,
-    "source": 100,
+    "teal": 314,
+    "source": 108,
     "pc": [
+      393,
       394
     ]
   },
   {
-    "teal": 349,
-    "source": 100,
+    "teal": 315,
+    "source": 108,
     "pc": [
       395
     ]
   },
   {
-    "teal": 350,
-    "source": 100,
+    "teal": 316,
+    "source": 108,
     "pc": [
       396,
-      397,
+      397
+    ]
+  },
+  {
+    "teal": 330,
+    "source": 111,
+    "pc": [
       398
     ]
   },
   {
-    "teal": 351,
-    "source": 99,
+    "teal": 331,
+    "source": 111,
     "pc": [
-      399
-    ]
-  },
-  {
-    "teal": 352,
-    "source": 99,
-    "pc": [
+      399,
       400
     ]
   },
   {
-    "teal": 353,
-    "source": 99,
+    "teal": 332,
+    "source": 111,
     "pc": [
       401
     ]
   },
   {
-    "teal": 354,
-    "source": 66,
+    "teal": 333,
+    "source": 111,
     "pc": [
       402
     ]
   },
   {
-    "teal": 359,
-    "source": 120,
+    "teal": 334,
+    "source": 111,
     "pc": [
-      403,
-      404,
+      403
+    ]
+  },
+  {
+    "teal": 335,
+    "source": 111,
+    "pc": [
+      404
+    ]
+  },
+  {
+    "teal": 336,
+    "source": 111,
+    "pc": [
       405
     ]
   },
   {
-    "teal": 360,
-    "source": 120,
+    "teal": 337,
+    "source": 111,
     "pc": [
       406
     ]
   },
   {
-    "teal": 361,
-    "source": 120,
+    "teal": 338,
+    "source": 111,
     "pc": [
       407
     ]
   },
   {
-    "teal": 362,
-    "source": 120,
+    "teal": 339,
+    "source": 111,
     "pc": [
-      408
-    ]
-  },
-  {
-    "teal": 363,
-    "source": 120,
-    "pc": [
-      409
-    ]
-  },
-  {
-    "teal": 366,
-    "source": 120,
-    "errorMessage": "argument 0 (inFavor) for makeVote must be a bool",
-    "pc": [
-      410
-    ]
-  },
-  {
-    "teal": 367,
-    "source": 120,
-    "pc": [
+      408,
+      409,
+      410,
       411
     ]
   },
   {
-    "teal": 368,
-    "source": 120,
+    "teal": 340,
+    "source": 113,
     "pc": [
-      412
+      412,
+      413
     ]
   },
   {
-    "teal": 371,
-    "source": 120,
+    "teal": 341,
+    "source": 113,
     "pc": [
-      413,
-      414
-    ]
-  },
-  {
-    "teal": 372,
-    "source": 120,
-    "pc": [
-      415
-    ]
-  },
-  {
-    "teal": 373,
-    "source": 120,
-    "pc": [
+      414,
+      415,
       416
     ]
   },
   {
-    "teal": 374,
-    "source": 120,
+    "teal": 342,
+    "source": 117,
     "pc": [
-      417
+      417,
+      418
     ]
   },
   {
-    "teal": 375,
-    "source": 120,
+    "teal": 343,
+    "source": 117,
     "pc": [
-      418,
       419
     ]
   },
   {
-    "teal": 376,
-    "source": 120,
+    "teal": 344,
+    "source": 117,
     "pc": [
-      420
-    ]
-  },
-  {
-    "teal": 377,
-    "source": 120,
-    "pc": [
-      421
-    ]
-  },
-  {
-    "teal": 380,
-    "source": 120,
-    "errorMessage": "argument 1 (mbrTxn) for makeVote must be a pay transaction",
-    "pc": [
+      420,
+      421,
       422
     ]
   },
   {
-    "teal": 383,
-    "source": 120,
+    "teal": 345,
+    "source": 114,
     "pc": [
       423,
       424
     ]
   },
   {
-    "teal": 384,
-    "source": 120,
+    "teal": 346,
+    "source": 114,
     "pc": [
       425,
-      426
-    ]
-  },
-  {
-    "teal": 385,
-    "source": 120,
-    "pc": [
+      426,
       427
     ]
   },
   {
-    "teal": 386,
-    "source": 120,
+    "teal": 347,
+    "source": 115,
     "pc": [
-      428
+      428,
+      429
     ]
   },
   {
-    "teal": 387,
-    "source": 120,
+    "teal": 348,
+    "source": 115,
     "pc": [
-      429,
-      430
-    ]
-  },
-  {
-    "teal": 388,
-    "source": 120,
-    "pc": [
-      431
-    ]
-  },
-  {
-    "teal": 389,
-    "source": 120,
-    "pc": [
+      430,
+      431,
       432
     ]
   },
   {
-    "teal": 392,
-    "source": 120,
-    "errorMessage": "argument 2 (axfer) for makeVote must be a axfer transaction",
+    "teal": 349,
+    "source": 116,
     "pc": [
-      433
+      433,
+      434
     ]
   },
   {
-    "teal": 395,
-    "source": 120,
+    "teal": 350,
+    "source": 116,
     "pc": [
-      434,
-      435,
-      436
+      435
     ]
   },
   {
-    "teal": 396,
-    "source": 120,
+    "teal": 351,
+    "source": 116,
     "pc": [
-      437
-    ]
-  },
-  {
-    "teal": 397,
-    "source": 120,
-    "pc": [
+      436,
+      437,
       438
     ]
   },
   {
-    "teal": 398,
-    "source": 120,
+    "teal": 352,
+    "source": 118,
     "pc": [
-      439
-    ]
-  },
-  {
-    "teal": 399,
-    "source": 120,
-    "pc": [
+      439,
       440
     ]
   },
   {
-    "teal": 402,
-    "source": 120,
-    "errorMessage": "argument 3 (pollId) for makeVote must be a (uint64)",
+    "teal": 353,
+    "source": 118,
     "pc": [
       441
     ]
   },
   {
-    "teal": 405,
-    "source": 120,
+    "teal": 354,
+    "source": 118,
     "pc": [
       442,
       443,
@@ -1852,906 +1610,897 @@
     ]
   },
   {
-    "teal": 406,
+    "teal": 355,
     "source": 120,
     "pc": [
-      445
-    ]
-  },
-  {
-    "teal": 407,
-    "source": 120,
-    "pc": [
+      445,
       446
     ]
   },
   {
-    "teal": 411,
+    "teal": 356,
     "source": 120,
     "pc": [
-      447,
-      448,
-      449
+      447
     ]
   },
   {
-    "teal": 414,
+    "teal": 357,
     "source": 120,
     "pc": [
+      448,
+      449,
       450
     ]
   },
   {
-    "teal": 415,
-    "source": 120,
+    "teal": 358,
+    "source": 119,
     "pc": [
       451,
       452
     ]
   },
   {
-    "teal": 419,
-    "source": 121,
+    "teal": 359,
+    "source": 119,
     "pc": [
       453
     ]
   },
   {
-    "teal": 420,
-    "source": 121,
+    "teal": 360,
+    "source": 119,
     "pc": [
-      454,
+      454
+    ]
+  },
+  {
+    "teal": 361,
+    "source": 119,
+    "pc": [
       455
     ]
   },
   {
-    "teal": 421,
-    "source": 121,
+    "teal": 362,
+    "source": 119,
     "pc": [
-      456
-    ]
-  },
-  {
-    "teal": 422,
-    "source": 121,
-    "pc": [
-      457
-    ]
-  },
-  {
-    "teal": 425,
-    "source": 121,
-    "errorMessage": "box value does not exist: this.poll(pollId).value",
-    "pc": [
+      456,
+      457,
       458
     ]
   },
   {
-    "teal": 426,
-    "source": 121,
+    "teal": 363,
+    "source": 119,
     "pc": [
-      459,
+      459
+    ]
+  },
+  {
+    "teal": 364,
+    "source": 119,
+    "pc": [
       460
     ]
   },
   {
-    "teal": 427,
-    "source": 121,
+    "teal": 365,
+    "source": 119,
     "pc": [
       461,
-      462
+      462,
+      463
     ]
   },
   {
-    "teal": 428,
-    "source": 121,
+    "teal": 366,
+    "source": 112,
     "pc": [
-      463,
       464,
       465
     ]
   },
   {
-    "teal": 429,
-    "source": 121,
+    "teal": 367,
+    "source": 112,
     "pc": [
       466
     ]
   },
   {
-    "teal": 430,
-    "source": 121,
+    "teal": 368,
+    "source": 112,
     "pc": [
-      467,
+      467
+    ]
+  },
+  {
+    "teal": 369,
+    "source": 112,
+    "pc": [
       468
     ]
   },
   {
-    "teal": 434,
-    "source": 123,
+    "teal": 370,
+    "source": 112,
     "pc": [
       469,
-      470
-    ]
-  },
-  {
-    "teal": 435,
-    "source": 123,
-    "pc": [
+      470,
       471
     ]
   },
   {
-    "teal": 436,
-    "source": 123,
+    "teal": 371,
+    "source": 112,
     "pc": [
       472
     ]
   },
   {
-    "teal": 437,
-    "source": 123,
+    "teal": 372,
+    "source": 112,
     "pc": [
-      473,
-      474,
-      475
+      473
     ]
   },
   {
-    "teal": 438,
-    "source": 123,
+    "teal": 373,
+    "source": 112,
     "pc": [
-      476,
+      474,
+      475,
+      476
+    ]
+  },
+  {
+    "teal": 374,
+    "source": 111,
+    "pc": [
       477
     ]
   },
   {
-    "teal": 439,
-    "source": 123,
+    "teal": 375,
+    "source": 111,
     "pc": [
       478
     ]
   },
   {
-    "teal": 440,
-    "source": 123,
+    "teal": 376,
+    "source": 111,
     "pc": [
       479
     ]
   },
   {
-    "teal": 441,
-    "source": 123,
+    "teal": 377,
+    "source": 68,
     "pc": [
-      480,
-      481,
-      482
+      480
     ]
   },
   {
-    "teal": 444,
-    "source": 123,
+    "teal": 382,
+    "source": 132,
     "pc": [
+      481,
+      482,
       483
     ]
   },
   {
-    "teal": 447,
-    "source": 123,
+    "teal": 383,
+    "source": 132,
     "pc": [
-      484,
+      484
+    ]
+  },
+  {
+    "teal": 384,
+    "source": 132,
+    "pc": [
       485
     ]
   },
   {
-    "teal": 451,
-    "source": 125,
+    "teal": 385,
+    "source": 132,
     "pc": [
-      486,
+      486
+    ]
+  },
+  {
+    "teal": 386,
+    "source": 132,
+    "pc": [
       487
     ]
   },
   {
-    "teal": 452,
-    "source": 125,
+    "teal": 389,
+    "source": 132,
+    "errorMessage": "argument 0 (inFavor) for makeVote must be a bool",
     "pc": [
-      488,
+      488
+    ]
+  },
+  {
+    "teal": 390,
+    "source": 132,
+    "pc": [
       489
     ]
   },
   {
-    "teal": 453,
-    "source": 125,
+    "teal": 391,
+    "source": 132,
     "pc": [
-      490,
-      491
+      490
     ]
   },
   {
-    "teal": 457,
-    "source": 127,
+    "teal": 394,
+    "source": 132,
     "pc": [
-      492,
+      491,
+      492
+    ]
+  },
+  {
+    "teal": 395,
+    "source": 132,
+    "pc": [
       493
     ]
   },
   {
-    "teal": 458,
-    "source": 127,
+    "teal": 396,
+    "source": 132,
     "pc": [
-      494,
+      494
+    ]
+  },
+  {
+    "teal": 397,
+    "source": 132,
+    "pc": [
       495
     ]
   },
   {
-    "teal": 459,
-    "source": 127,
+    "teal": 398,
+    "source": 132,
     "pc": [
       496,
       497
     ]
   },
   {
-    "teal": 463,
-    "source": 129,
+    "teal": 399,
+    "source": 132,
     "pc": [
       498
     ]
   },
   {
-    "teal": 464,
-    "source": 129,
+    "teal": 400,
+    "source": 132,
     "pc": [
-      499,
+      499
+    ]
+  },
+  {
+    "teal": 403,
+    "source": 132,
+    "errorMessage": "argument 1 (mbrTxn) for makeVote must be a pay transaction",
+    "pc": [
       500
     ]
   },
   {
-    "teal": 465,
-    "source": 129,
+    "teal": 406,
+    "source": 132,
     "pc": [
-      501
-    ]
-  },
-  {
-    "teal": 466,
-    "source": 129,
-    "pc": [
+      501,
       502
     ]
   },
   {
-    "teal": 469,
-    "source": 129,
-    "errorMessage": "box value does not exist: this.poll(pollId).value",
+    "teal": 407,
+    "source": 132,
     "pc": [
-      503
+      503,
+      504
     ]
   },
   {
-    "teal": 470,
-    "source": 129,
+    "teal": 408,
+    "source": 132,
     "pc": [
-      504,
       505
     ]
   },
   {
-    "teal": 471,
-    "source": 129,
+    "teal": 409,
+    "source": 132,
     "pc": [
-      506,
-      507
+      506
     ]
   },
   {
-    "teal": 472,
-    "source": 129,
+    "teal": 410,
+    "source": 132,
     "pc": [
-      508,
-      509,
+      507,
+      508
+    ]
+  },
+  {
+    "teal": 411,
+    "source": 132,
+    "pc": [
+      509
+    ]
+  },
+  {
+    "teal": 412,
+    "source": 132,
+    "pc": [
       510
     ]
   },
   {
-    "teal": 473,
-    "source": 129,
+    "teal": 415,
+    "source": 132,
+    "errorMessage": "argument 2 (axfer) for makeVote must be a axfer transaction",
     "pc": [
-      511,
-      512
+      511
     ]
   },
   {
-    "teal": 474,
-    "source": 129,
+    "teal": 418,
+    "source": 132,
     "pc": [
-      513
-    ]
-  },
-  {
-    "teal": 477,
-    "source": 129,
-    "errorMessage": "Poll creator cant vote",
-    "pc": [
+      512,
+      513,
       514
     ]
   },
   {
-    "teal": 481,
-    "source": 131,
+    "teal": 419,
+    "source": 132,
     "pc": [
-      515,
+      515
+    ]
+  },
+  {
+    "teal": 420,
+    "source": 132,
+    "pc": [
       516
     ]
   },
   {
-    "teal": 482,
-    "source": 131,
+    "teal": 421,
+    "source": 132,
     "pc": [
-      517,
+      517
+    ]
+  },
+  {
+    "teal": 422,
+    "source": 132,
+    "pc": [
       518
     ]
   },
   {
-    "teal": 483,
-    "source": 131,
+    "teal": 425,
+    "source": 132,
+    "errorMessage": "argument 3 (pollId) for makeVote must be a (uint64)",
     "pc": [
-      519,
-      520
+      519
     ]
   },
   {
-    "teal": 484,
-    "source": 131,
+    "teal": 428,
+    "source": 132,
     "pc": [
+      520,
       521,
       522
     ]
   },
   {
-    "teal": 485,
-    "source": 131,
+    "teal": 429,
+    "source": 132,
     "pc": [
       523
     ]
   },
   {
-    "teal": 486,
-    "source": 131,
+    "teal": 430,
+    "source": 132,
     "pc": [
       524
     ]
   },
   {
-    "teal": 489,
-    "source": 131,
-    "errorMessage": "Application not opted in to the asset",
+    "teal": 434,
+    "source": 132,
     "pc": [
-      525
-    ]
-  },
-  {
-    "teal": 493,
-    "source": 134,
-    "pc": [
+      525,
       526,
       527
     ]
   },
   {
-    "teal": 494,
-    "source": 134,
+    "teal": 437,
+    "source": 132,
     "pc": [
-      528,
-      529
+      528
     ]
   },
   {
-    "teal": 495,
-    "source": 134,
+    "teal": 438,
+    "source": 132,
     "pc": [
-      530,
+      529,
+      530
+    ]
+  },
+  {
+    "teal": 442,
+    "source": 133,
+    "pc": [
       531
     ]
   },
   {
-    "teal": 496,
-    "source": 134,
+    "teal": 443,
+    "source": 133,
     "pc": [
-      532
-    ]
-  },
-  {
-    "teal": 499,
-    "source": 134,
-    "errorMessage": "Deposit transaction not to the app wallet",
-    "pc": [
+      532,
       533
     ]
   },
   {
-    "teal": 503,
-    "source": 137,
+    "teal": 444,
+    "source": 133,
     "pc": [
       534
     ]
   },
   {
-    "teal": 504,
-    "source": 137,
+    "teal": 445,
+    "source": 133,
     "pc": [
-      535,
+      535
+    ]
+  },
+  {
+    "teal": 448,
+    "source": 133,
+    "errorMessage": "box value does not exist: this.poll(pollId).value",
+    "pc": [
       536
     ]
   },
   {
-    "teal": 505,
-    "source": 137,
+    "teal": 449,
+    "source": 133,
     "pc": [
-      537
-    ]
-  },
-  {
-    "teal": 506,
-    "source": 137,
-    "pc": [
+      537,
       538
     ]
   },
   {
-    "teal": 507,
-    "source": 137,
+    "teal": 450,
+    "source": 133,
     "pc": [
-      539
-    ]
-  },
-  {
-    "teal": 508,
-    "source": 137,
-    "pc": [
+      539,
       540
     ]
   },
   {
-    "teal": 511,
-    "source": 137,
-    "errorMessage": "Poll user is trying to vote in does not exist",
+    "teal": 451,
+    "source": 133,
     "pc": [
-      541
-    ]
-  },
-  {
-    "teal": 515,
-    "source": 140,
-    "pc": [
+      541,
       542,
       543
     ]
   },
   {
-    "teal": 516,
-    "source": 140,
+    "teal": 452,
+    "source": 133,
     "pc": [
       544
     ]
   },
   {
-    "teal": 517,
-    "source": 140,
+    "teal": 453,
+    "source": 133,
     "pc": [
       545,
       546
     ]
   },
   {
-    "teal": 518,
-    "source": 140,
+    "teal": 457,
+    "source": 135,
     "pc": [
-      547
-    ]
-  },
-  {
-    "teal": 519,
-    "source": 140,
-    "pc": [
+      547,
       548
     ]
   },
   {
-    "teal": 522,
-    "source": 140,
-    "errorMessage": "box value does not exist: this.poll(pollId).value",
+    "teal": 458,
+    "source": 135,
     "pc": [
       549
     ]
   },
   {
-    "teal": 523,
-    "source": 140,
+    "teal": 459,
+    "source": 135,
     "pc": [
-      550,
-      551
+      550
     ]
   },
   {
-    "teal": 524,
-    "source": 140,
+    "teal": 460,
+    "source": 135,
     "pc": [
+      551,
       552,
       553
     ]
   },
   {
-    "teal": 525,
-    "source": 140,
+    "teal": 461,
+    "source": 135,
     "pc": [
       554,
-      555,
+      555
+    ]
+  },
+  {
+    "teal": 462,
+    "source": 135,
+    "pc": [
       556
     ]
   },
   {
-    "teal": 526,
-    "source": 140,
+    "teal": 463,
+    "source": 135,
     "pc": [
       557
     ]
   },
   {
-    "teal": 527,
-    "source": 140,
+    "teal": 464,
+    "source": 135,
     "pc": [
-      558
-    ]
-  },
-  {
-    "teal": 530,
-    "source": 140,
-    "errorMessage": "using wrong asset to vote into this poll",
-    "pc": [
-      559
-    ]
-  },
-  {
-    "teal": 534,
-    "source": 143,
-    "pc": [
+      558,
+      559,
       560
     ]
   },
   {
-    "teal": 535,
-    "source": 143,
+    "teal": 467,
+    "source": 135,
     "pc": [
-      561,
-      562
+      561
     ]
   },
   {
-    "teal": 536,
-    "source": 143,
+    "teal": 470,
+    "source": 135,
     "pc": [
-      563,
-      564
+      562,
+      563
     ]
   },
   {
-    "teal": 537,
-    "source": 143,
+    "teal": 474,
+    "source": 137,
     "pc": [
+      564,
       565
     ]
   },
   {
-    "teal": 538,
-    "source": 143,
+    "teal": 475,
+    "source": 137,
     "pc": [
-      566
-    ]
-  },
-  {
-    "teal": 539,
-    "source": 143,
-    "pc": [
+      566,
       567
     ]
   },
   {
-    "teal": 540,
-    "source": 143,
+    "teal": 476,
+    "source": 137,
     "pc": [
-      568
-    ]
-  },
-  {
-    "teal": 541,
-    "source": 143,
-    "pc": [
+      568,
       569
     ]
   },
   {
-    "teal": 542,
-    "source": 143,
+    "teal": 480,
+    "source": 139,
     "pc": [
-      570
-    ]
-  },
-  {
-    "teal": 545,
-    "source": 143,
-    "errorMessage": "Vote with new nonce already exists",
-    "pc": [
+      570,
       571
     ]
   },
   {
-    "teal": 549,
-    "source": 146,
+    "teal": 481,
+    "source": 139,
     "pc": [
       572,
       573
     ]
   },
   {
-    "teal": 550,
-    "source": 146,
+    "teal": 482,
+    "source": 139,
     "pc": [
-      574
+      574,
+      575
     ]
   },
   {
-    "teal": 551,
-    "source": 146,
+    "teal": 486,
+    "source": 141,
     "pc": [
-      575,
       576
     ]
   },
   {
-    "teal": 552,
-    "source": 146,
+    "teal": 487,
+    "source": 141,
     "pc": [
-      577
-    ]
-  },
-  {
-    "teal": 553,
-    "source": 146,
-    "pc": [
+      577,
       578
     ]
   },
   {
-    "teal": 556,
-    "source": 146,
-    "errorMessage": "box value does not exist: this.poll(pollId).value",
+    "teal": 488,
+    "source": 141,
     "pc": [
       579
     ]
   },
   {
-    "teal": 557,
-    "source": 146,
+    "teal": 489,
+    "source": 141,
     "pc": [
-      580,
+      580
+    ]
+  },
+  {
+    "teal": 492,
+    "source": 141,
+    "errorMessage": "box value does not exist: this.poll(pollId).value",
+    "pc": [
       581
     ]
   },
   {
-    "teal": 558,
-    "source": 146,
+    "teal": 493,
+    "source": 141,
     "pc": [
       582,
       583
     ]
   },
   {
-    "teal": 559,
-    "source": 146,
+    "teal": 494,
+    "source": 141,
     "pc": [
       584,
-      585,
-      586
+      585
     ]
   },
   {
-    "teal": 560,
-    "source": 146,
+    "teal": 495,
+    "source": 141,
     "pc": [
-      587
-    ]
-  },
-  {
-    "teal": 561,
-    "source": 146,
-    "pc": [
+      586,
+      587,
       588
     ]
   },
   {
-    "teal": 564,
-    "source": 146,
-    "errorMessage": "Voting on an expired poll",
+    "teal": 496,
+    "source": 141,
     "pc": [
-      589
-    ]
-  },
-  {
-    "teal": 568,
-    "source": 149,
-    "pc": [
+      589,
       590
     ]
   },
   {
-    "teal": 569,
-    "source": 149,
+    "teal": 497,
+    "source": 141,
     "pc": [
-      591,
+      591
+    ]
+  },
+  {
+    "teal": 500,
+    "source": 141,
+    "errorMessage": "Poll creator cant vote",
+    "pc": [
       592
     ]
   },
   {
-    "teal": 570,
-    "source": 149,
+    "teal": 504,
+    "source": 143,
     "pc": [
       593,
       594
     ]
   },
   {
-    "teal": 571,
-    "source": 149,
+    "teal": 505,
+    "source": 143,
     "pc": [
-      595
-    ]
-  },
-  {
-    "teal": 572,
-    "source": 149,
-    "pc": [
+      595,
       596
     ]
   },
   {
-    "teal": 573,
-    "source": 149,
+    "teal": 506,
+    "source": 143,
     "pc": [
       597,
       598
     ]
   },
   {
-    "teal": 574,
-    "source": 149,
+    "teal": 507,
+    "source": 143,
     "pc": [
       599,
       600
     ]
   },
   {
-    "teal": 575,
-    "source": 149,
+    "teal": 508,
+    "source": 143,
     "pc": [
       601
     ]
   },
   {
-    "teal": 576,
-    "source": 149,
+    "teal": 509,
+    "source": 143,
     "pc": [
       602
     ]
   },
   {
-    "teal": 580,
-    "source": 152,
+    "teal": 512,
+    "source": 143,
+    "errorMessage": "Application not opted in to the asset",
     "pc": [
       603
     ]
   },
   {
-    "teal": 581,
-    "source": 152,
+    "teal": 516,
+    "source": 146,
     "pc": [
       604,
       605
     ]
   },
   {
-    "teal": 582,
-    "source": 152,
+    "teal": 517,
+    "source": 146,
     "pc": [
-      606
-    ]
-  },
-  {
-    "teal": 583,
-    "source": 152,
-    "pc": [
+      606,
       607
     ]
   },
   {
-    "teal": 586,
-    "source": 152,
-    "errorMessage": "box value does not exist: this.poll(pollId).value",
+    "teal": 518,
+    "source": 146,
     "pc": [
-      608
+      608,
+      609
     ]
   },
   {
-    "teal": 587,
-    "source": 152,
+    "teal": 519,
+    "source": 146,
     "pc": [
-      609,
       610
     ]
   },
   {
-    "teal": 588,
-    "source": 152,
+    "teal": 522,
+    "source": 146,
+    "errorMessage": "Deposit transaction not to the app wallet",
     "pc": [
-      611,
+      611
+    ]
+  },
+  {
+    "teal": 526,
+    "source": 149,
+    "pc": [
       612
     ]
   },
   {
-    "teal": 589,
-    "source": 152,
+    "teal": 527,
+    "source": 149,
     "pc": [
       613,
       614
     ]
   },
   {
-    "teal": 590,
-    "source": 152,
+    "teal": 528,
+    "source": 149,
     "pc": [
       615
     ]
   },
   {
-    "teal": 591,
-    "source": 152,
+    "teal": 529,
+    "source": 149,
     "pc": [
-      616,
+      616
+    ]
+  },
+  {
+    "teal": 530,
+    "source": 149,
+    "pc": [
       617
     ]
   },
   {
-    "teal": 592,
-    "source": 152,
+    "teal": 531,
+    "source": 149,
     "pc": [
       618
     ]
   },
   {
-    "teal": 593,
-    "source": 152,
+    "teal": 534,
+    "source": 149,
+    "errorMessage": "Poll user is trying to vote in does not exist",
     "pc": [
       619
     ]
   },
   {
-    "teal": 596,
+    "teal": 538,
     "source": 152,
-    "errorMessage": "box value does not exist: this.poll(pollId).value",
     "pc": [
-      620
+      620,
+      621
     ]
   },
   {
-    "teal": 597,
+    "teal": 539,
     "source": 152,
     "pc": [
-      621,
       622
     ]
   },
   {
-    "teal": 598,
+    "teal": 540,
     "source": 152,
     "pc": [
       623,
@@ -2759,640 +2508,638 @@
     ]
   },
   {
-    "teal": 599,
+    "teal": 541,
     "source": 152,
     "pc": [
-      625,
-      626,
+      625
+    ]
+  },
+  {
+    "teal": 542,
+    "source": 152,
+    "pc": [
+      626
+    ]
+  },
+  {
+    "teal": 545,
+    "source": 152,
+    "errorMessage": "box value does not exist: this.poll(pollId).value",
+    "pc": [
       627
     ]
   },
   {
-    "teal": 600,
+    "teal": 546,
     "source": 152,
     "pc": [
-      628
-    ]
-  },
-  {
-    "teal": 601,
-    "source": 152,
-    "pc": [
+      628,
       629
     ]
   },
   {
-    "teal": 602,
+    "teal": 547,
     "source": 152,
     "pc": [
-      630
-    ]
-  },
-  {
-    "teal": 603,
-    "source": 152,
-    "pc": [
+      630,
       631
     ]
   },
   {
-    "teal": 604,
+    "teal": 548,
     "source": 152,
     "pc": [
-      632
+      632,
+      633,
+      634
     ]
   },
   {
-    "teal": 605,
+    "teal": 549,
     "source": 152,
     "pc": [
-      633
-    ]
-  },
-  {
-    "teal": 606,
-    "source": 152,
-    "pc": [
-      634,
       635
     ]
   },
   {
-    "teal": 607,
+    "teal": 550,
     "source": 152,
     "pc": [
       636
     ]
   },
   {
-    "teal": 608,
+    "teal": 553,
     "source": 152,
+    "errorMessage": "using wrong asset to vote into this poll",
     "pc": [
       637
     ]
   },
   {
-    "teal": 609,
-    "source": 152,
+    "teal": 557,
+    "source": 155,
     "pc": [
       638
     ]
   },
   {
-    "teal": 610,
-    "source": 152,
+    "teal": 558,
+    "source": 155,
     "pc": [
-      639
-    ]
-  },
-  {
-    "teal": 611,
-    "source": 152,
-    "pc": [
+      639,
       640
     ]
   },
   {
-    "teal": 612,
-    "source": 152,
-    "pc": [
-      641
-    ]
-  },
-  {
-    "teal": 616,
+    "teal": 559,
     "source": 155,
     "pc": [
+      641,
       642
     ]
   },
   {
-    "teal": 617,
+    "teal": 560,
     "source": 155,
     "pc": [
-      643,
+      643
+    ]
+  },
+  {
+    "teal": 561,
+    "source": 155,
+    "pc": [
       644
     ]
   },
   {
-    "teal": 618,
+    "teal": 562,
     "source": 155,
     "pc": [
       645
     ]
   },
   {
-    "teal": 619,
+    "teal": 563,
     "source": 155,
     "pc": [
       646
     ]
   },
   {
-    "teal": 622,
+    "teal": 564,
     "source": 155,
-    "errorMessage": "box value does not exist: this.poll(pollId).value",
     "pc": [
       647
     ]
   },
   {
-    "teal": 623,
+    "teal": 565,
     "source": 155,
     "pc": [
-      648,
+      648
+    ]
+  },
+  {
+    "teal": 568,
+    "source": 155,
+    "errorMessage": "Vote with new nonce already exists",
+    "pc": [
       649
     ]
   },
   {
-    "teal": 624,
-    "source": 155,
+    "teal": 572,
+    "source": 158,
     "pc": [
       650,
       651
     ]
   },
   {
-    "teal": 625,
-    "source": 155,
+    "teal": 573,
+    "source": 158,
     "pc": [
-      652,
-      653
+      652
     ]
   },
   {
-    "teal": 626,
-    "source": 155,
+    "teal": 574,
+    "source": 158,
     "pc": [
+      653,
       654
     ]
   },
   {
-    "teal": 627,
-    "source": 155,
+    "teal": 575,
+    "source": 158,
     "pc": [
-      655,
+      655
+    ]
+  },
+  {
+    "teal": 576,
+    "source": 158,
+    "pc": [
       656
     ]
   },
   {
-    "teal": 628,
-    "source": 155,
+    "teal": 579,
+    "source": 158,
+    "errorMessage": "box value does not exist: this.poll(pollId).value",
     "pc": [
       657
     ]
   },
   {
-    "teal": 629,
-    "source": 155,
+    "teal": 580,
+    "source": 158,
     "pc": [
-      658
-    ]
-  },
-  {
-    "teal": 632,
-    "source": 155,
-    "errorMessage": "box value does not exist: this.poll(pollId).value",
-    "pc": [
+      658,
       659
     ]
   },
   {
-    "teal": 633,
-    "source": 155,
+    "teal": 581,
+    "source": 158,
     "pc": [
       660,
       661
     ]
   },
   {
-    "teal": 634,
-    "source": 155,
+    "teal": 582,
+    "source": 158,
     "pc": [
       662,
-      663
+      663,
+      664
     ]
   },
   {
-    "teal": 635,
-    "source": 155,
+    "teal": 583,
+    "source": 158,
     "pc": [
-      664,
-      665,
+      665
+    ]
+  },
+  {
+    "teal": 584,
+    "source": 158,
+    "pc": [
       666
     ]
   },
   {
-    "teal": 636,
-    "source": 155,
+    "teal": 587,
+    "source": 158,
+    "errorMessage": "Voting on an expired poll",
     "pc": [
       667
     ]
   },
   {
-    "teal": 637,
-    "source": 155,
+    "teal": 591,
+    "source": 161,
     "pc": [
-      668,
-      669
+      668
     ]
   },
   {
-    "teal": 638,
-    "source": 155,
+    "teal": 592,
+    "source": 161,
     "pc": [
-      670,
-      671
+      669,
+      670
     ]
   },
   {
-    "teal": 639,
-    "source": 155,
+    "teal": 593,
+    "source": 161,
     "pc": [
+      671,
       672
     ]
   },
   {
-    "teal": 640,
-    "source": 155,
+    "teal": 594,
+    "source": 161,
     "pc": [
       673
     ]
   },
   {
-    "teal": 641,
-    "source": 155,
+    "teal": 595,
+    "source": 161,
     "pc": [
       674
     ]
   },
   {
-    "teal": 642,
-    "source": 155,
+    "teal": 596,
+    "source": 161,
     "pc": [
-      675
+      675,
+      676
     ]
   },
   {
-    "teal": 643,
-    "source": 155,
+    "teal": 597,
+    "source": 161,
     "pc": [
-      676,
-      677
-    ]
-  },
-  {
-    "teal": 644,
-    "source": 155,
-    "pc": [
+      677,
       678
     ]
   },
   {
-    "teal": 645,
-    "source": 155,
+    "teal": 598,
+    "source": 161,
     "pc": [
       679
     ]
   },
   {
-    "teal": 646,
-    "source": 155,
+    "teal": 599,
+    "source": 161,
     "pc": [
       680
     ]
   },
   {
-    "teal": 647,
-    "source": 155,
+    "teal": 603,
+    "source": 164,
     "pc": [
       681
     ]
   },
   {
-    "teal": 648,
-    "source": 155,
+    "teal": 604,
+    "source": 164,
     "pc": [
-      682
-    ]
-  },
-  {
-    "teal": 649,
-    "source": 155,
-    "pc": [
+      682,
       683
     ]
   },
   {
-    "teal": 654,
-    "source": 157,
+    "teal": 605,
+    "source": 164,
     "pc": [
-      684,
+      684
+    ]
+  },
+  {
+    "teal": 606,
+    "source": 164,
+    "pc": [
       685
     ]
   },
   {
-    "teal": 655,
-    "source": 157,
+    "teal": 609,
+    "source": 164,
+    "errorMessage": "box value does not exist: this.poll(pollId).value",
     "pc": [
-      686,
+      686
+    ]
+  },
+  {
+    "teal": 610,
+    "source": 164,
+    "pc": [
       687,
       688
     ]
   },
   {
-    "teal": 660,
-    "source": 159,
+    "teal": 611,
+    "source": 164,
     "pc": [
-      689
+      689,
+      690
     ]
   },
   {
-    "teal": 661,
-    "source": 159,
+    "teal": 612,
+    "source": 164,
     "pc": [
-      690,
-      691
-    ]
-  },
-  {
-    "teal": 662,
-    "source": 159,
-    "pc": [
+      691,
       692
     ]
   },
   {
-    "teal": 663,
-    "source": 159,
+    "teal": 613,
+    "source": 164,
     "pc": [
       693
     ]
   },
   {
-    "teal": 666,
-    "source": 159,
-    "errorMessage": "box value does not exist: this.poll(pollId).value",
+    "teal": 614,
+    "source": 164,
     "pc": [
-      694
+      694,
+      695
     ]
   },
   {
-    "teal": 667,
-    "source": 159,
+    "teal": 615,
+    "source": 164,
     "pc": [
-      695,
       696
     ]
   },
   {
-    "teal": 668,
-    "source": 159,
+    "teal": 616,
+    "source": 164,
     "pc": [
-      697,
+      697
+    ]
+  },
+  {
+    "teal": 619,
+    "source": 164,
+    "errorMessage": "box value does not exist: this.poll(pollId).value",
+    "pc": [
       698
     ]
   },
   {
-    "teal": 669,
-    "source": 159,
+    "teal": 620,
+    "source": 164,
     "pc": [
       699,
       700
     ]
   },
   {
-    "teal": 670,
-    "source": 159,
+    "teal": 621,
+    "source": 164,
     "pc": [
-      701
+      701,
+      702
     ]
   },
   {
-    "teal": 671,
-    "source": 159,
+    "teal": 622,
+    "source": 164,
     "pc": [
-      702,
-      703
-    ]
-  },
-  {
-    "teal": 672,
-    "source": 159,
-    "pc": [
-      704
-    ]
-  },
-  {
-    "teal": 673,
-    "source": 159,
-    "pc": [
+      703,
+      704,
       705
     ]
   },
   {
-    "teal": 676,
-    "source": 159,
-    "errorMessage": "box value does not exist: this.poll(pollId).value",
+    "teal": 623,
+    "source": 164,
     "pc": [
       706
     ]
   },
   {
-    "teal": 677,
-    "source": 159,
+    "teal": 624,
+    "source": 164,
     "pc": [
-      707,
+      707
+    ]
+  },
+  {
+    "teal": 625,
+    "source": 164,
+    "pc": [
       708
     ]
   },
   {
-    "teal": 678,
-    "source": 159,
+    "teal": 626,
+    "source": 164,
     "pc": [
-      709,
+      709
+    ]
+  },
+  {
+    "teal": 627,
+    "source": 164,
+    "pc": [
       710
     ]
   },
   {
-    "teal": 679,
-    "source": 159,
+    "teal": 628,
+    "source": 164,
     "pc": [
-      711,
+      711
+    ]
+  },
+  {
+    "teal": 629,
+    "source": 164,
+    "pc": [
       712,
       713
     ]
   },
   {
-    "teal": 680,
-    "source": 159,
+    "teal": 630,
+    "source": 164,
     "pc": [
       714
     ]
   },
   {
-    "teal": 681,
-    "source": 159,
+    "teal": 631,
+    "source": 164,
     "pc": [
       715
     ]
   },
   {
-    "teal": 682,
-    "source": 159,
+    "teal": 632,
+    "source": 164,
     "pc": [
       716
     ]
   },
   {
-    "teal": 683,
-    "source": 159,
+    "teal": 633,
+    "source": 164,
     "pc": [
       717
     ]
   },
   {
-    "teal": 684,
-    "source": 159,
+    "teal": 634,
+    "source": 164,
     "pc": [
       718
     ]
   },
   {
-    "teal": 685,
-    "source": 159,
+    "teal": 635,
+    "source": 164,
     "pc": [
       719
     ]
   },
   {
-    "teal": 686,
-    "source": 159,
+    "teal": 639,
+    "source": 167,
     "pc": [
-      720,
-      721
+      720
     ]
   },
   {
-    "teal": 687,
-    "source": 159,
+    "teal": 640,
+    "source": 167,
     "pc": [
+      721,
       722
     ]
   },
   {
-    "teal": 688,
-    "source": 159,
+    "teal": 641,
+    "source": 167,
     "pc": [
       723
     ]
   },
   {
-    "teal": 689,
-    "source": 159,
+    "teal": 642,
+    "source": 167,
     "pc": [
       724
     ]
   },
   {
-    "teal": 690,
-    "source": 159,
+    "teal": 645,
+    "source": 167,
+    "errorMessage": "box value does not exist: this.poll(pollId).value",
     "pc": [
       725
     ]
   },
   {
-    "teal": 691,
-    "source": 159,
+    "teal": 646,
+    "source": 167,
     "pc": [
-      726
-    ]
-  },
-  {
-    "teal": 692,
-    "source": 159,
-    "pc": [
+      726,
       727
     ]
   },
   {
-    "teal": 695,
-    "source": 120,
+    "teal": 647,
+    "source": 167,
     "pc": [
-      728
+      728,
+      729
     ]
   },
   {
-    "teal": 700,
-    "source": 163,
+    "teal": 648,
+    "source": 167,
     "pc": [
-      729,
       730,
       731
     ]
   },
   {
-    "teal": 701,
-    "source": 163,
+    "teal": 649,
+    "source": 167,
     "pc": [
       732
     ]
   },
   {
-    "teal": 702,
-    "source": 163,
+    "teal": 650,
+    "source": 167,
     "pc": [
-      733
-    ]
-  },
-  {
-    "teal": 703,
-    "source": 163,
-    "pc": [
+      733,
       734
     ]
   },
   {
-    "teal": 704,
-    "source": 163,
+    "teal": 651,
+    "source": 167,
     "pc": [
       735
     ]
   },
   {
-    "teal": 707,
-    "source": 163,
-    "errorMessage": "argument 0 (pollId) for withdrawPollShare must be a (uint64)",
+    "teal": 652,
+    "source": 167,
     "pc": [
       736
     ]
   },
   {
-    "teal": 710,
-    "source": 163,
+    "teal": 655,
+    "source": 167,
+    "errorMessage": "box value does not exist: this.poll(pollId).value",
     "pc": [
-      737,
+      737
+    ]
+  },
+  {
+    "teal": 656,
+    "source": 167,
+    "pc": [
       738,
       739
     ]
   },
   {
-    "teal": 711,
-    "source": 163,
+    "teal": 657,
+    "source": 167,
     "pc": [
-      740
-    ]
-  },
-  {
-    "teal": 712,
-    "source": 163,
-    "pc": [
+      740,
       741
     ]
   },
   {
-    "teal": 716,
-    "source": 163,
+    "teal": 658,
+    "source": 167,
     "pc": [
       742,
       743,
@@ -3400,184 +3147,170 @@
     ]
   },
   {
-    "teal": 719,
-    "source": 163,
+    "teal": 659,
+    "source": 167,
     "pc": [
       745
     ]
   },
   {
-    "teal": 720,
-    "source": 163,
+    "teal": 660,
+    "source": 167,
     "pc": [
       746,
       747
     ]
   },
   {
-    "teal": 724,
-    "source": 165,
+    "teal": 661,
+    "source": 167,
     "pc": [
-      748
+      748,
+      749
     ]
   },
   {
-    "teal": 725,
-    "source": 165,
+    "teal": 662,
+    "source": 167,
     "pc": [
-      749,
       750
     ]
   },
   {
-    "teal": 726,
-    "source": 165,
+    "teal": 663,
+    "source": 167,
     "pc": [
       751
     ]
   },
   {
-    "teal": 727,
-    "source": 165,
+    "teal": 664,
+    "source": 167,
     "pc": [
       752
     ]
   },
   {
-    "teal": 728,
-    "source": 165,
+    "teal": 665,
+    "source": 167,
     "pc": [
       753
     ]
   },
   {
-    "teal": 729,
-    "source": 165,
+    "teal": 666,
+    "source": 167,
     "pc": [
-      754
-    ]
-  },
-  {
-    "teal": 732,
-    "source": 165,
-    "errorMessage": "Poll does not exist",
-    "pc": [
+      754,
       755
     ]
   },
   {
-    "teal": 736,
-    "source": 168,
+    "teal": 667,
+    "source": 167,
     "pc": [
       756
     ]
   },
   {
-    "teal": 737,
-    "source": 168,
+    "teal": 668,
+    "source": 167,
     "pc": [
-      757,
+      757
+    ]
+  },
+  {
+    "teal": 669,
+    "source": 167,
+    "pc": [
       758
     ]
   },
   {
-    "teal": 738,
-    "source": 168,
+    "teal": 670,
+    "source": 167,
     "pc": [
-      759,
+      759
+    ]
+  },
+  {
+    "teal": 671,
+    "source": 167,
+    "pc": [
       760
     ]
   },
   {
-    "teal": 739,
-    "source": 168,
+    "teal": 672,
+    "source": 167,
     "pc": [
       761
     ]
   },
   {
-    "teal": 740,
-    "source": 168,
+    "teal": 677,
+    "source": 169,
     "pc": [
-      762
-    ]
-  },
-  {
-    "teal": 741,
-    "source": 168,
-    "pc": [
+      762,
       763
     ]
   },
   {
-    "teal": 742,
-    "source": 168,
+    "teal": 678,
+    "source": 169,
     "pc": [
-      764
-    ]
-  },
-  {
-    "teal": 743,
-    "source": 168,
-    "pc": [
-      765
-    ]
-  },
-  {
-    "teal": 746,
-    "source": 168,
-    "errorMessage": "Vote does not exist",
-    "pc": [
+      764,
+      765,
       766
     ]
   },
   {
-    "teal": 750,
+    "teal": 683,
     "source": 171,
     "pc": [
-      767,
-      768
+      767
     ]
   },
   {
-    "teal": 751,
+    "teal": 684,
     "source": 171,
     "pc": [
+      768,
       769
     ]
   },
   {
-    "teal": 752,
+    "teal": 685,
     "source": 171,
     "pc": [
-      770,
+      770
+    ]
+  },
+  {
+    "teal": 686,
+    "source": 171,
+    "pc": [
       771
     ]
   },
   {
-    "teal": 753,
+    "teal": 689,
     "source": 171,
+    "errorMessage": "box value does not exist: this.poll(pollId).value",
     "pc": [
       772
     ]
   },
   {
-    "teal": 754,
+    "teal": 690,
     "source": 171,
     "pc": [
-      773
-    ]
-  },
-  {
-    "teal": 757,
-    "source": 171,
-    "errorMessage": "box value does not exist: this.poll(pollId).value",
-    "pc": [
+      773,
       774
     ]
   },
   {
-    "teal": 758,
+    "teal": 691,
     "source": 171,
     "pc": [
       775,
@@ -3585,7 +3318,7 @@
     ]
   },
   {
-    "teal": 759,
+    "teal": 692,
     "source": 171,
     "pc": [
       777,
@@ -3593,602 +3326,688 @@
     ]
   },
   {
-    "teal": 760,
+    "teal": 693,
     "source": 171,
     "pc": [
-      779,
+      779
+    ]
+  },
+  {
+    "teal": 694,
+    "source": 171,
+    "pc": [
       780,
       781
     ]
   },
   {
-    "teal": 761,
+    "teal": 695,
     "source": 171,
     "pc": [
       782
     ]
   },
   {
-    "teal": 762,
+    "teal": 696,
     "source": 171,
     "pc": [
       783
     ]
   },
   {
-    "teal": 765,
+    "teal": 699,
     "source": 171,
-    "errorMessage": "Voting on an expired poll",
+    "errorMessage": "box value does not exist: this.poll(pollId).value",
     "pc": [
       784
     ]
   },
   {
-    "teal": 769,
-    "source": 174,
+    "teal": 700,
+    "source": 171,
     "pc": [
-      785
+      785,
+      786
     ]
   },
   {
-    "teal": 770,
-    "source": 174,
+    "teal": 701,
+    "source": 171,
     "pc": [
-      786,
-      787
-    ]
-  },
-  {
-    "teal": 771,
-    "source": 174,
-    "pc": [
+      787,
       788
     ]
   },
   {
-    "teal": 772,
-    "source": 174,
+    "teal": 702,
+    "source": 171,
     "pc": [
       789,
-      790
+      790,
+      791
     ]
   },
   {
-    "teal": 776,
-    "source": 177,
+    "teal": 703,
+    "source": 171,
     "pc": [
-      791,
       792
     ]
   },
   {
-    "teal": 777,
-    "source": 177,
+    "teal": 704,
+    "source": 171,
     "pc": [
-      793,
+      793
+    ]
+  },
+  {
+    "teal": 705,
+    "source": 171,
+    "pc": [
       794
     ]
   },
   {
-    "teal": 781,
-    "source": 180,
+    "teal": 706,
+    "source": 171,
     "pc": [
-      795,
+      795
+    ]
+  },
+  {
+    "teal": 707,
+    "source": 171,
+    "pc": [
       796
     ]
   },
   {
-    "teal": 782,
-    "source": 180,
+    "teal": 708,
+    "source": 171,
     "pc": [
-      797,
-      798
+      797
     ]
   },
   {
-    "teal": 783,
-    "source": 180,
+    "teal": 709,
+    "source": 171,
     "pc": [
+      798,
       799
     ]
   },
   {
-    "teal": 784,
-    "source": 180,
+    "teal": 710,
+    "source": 171,
     "pc": [
-      800,
+      800
+    ]
+  },
+  {
+    "teal": 711,
+    "source": 171,
+    "pc": [
       801
     ]
   },
   {
-    "teal": 788,
-    "source": 181,
+    "teal": 712,
+    "source": 171,
     "pc": [
       802
     ]
   },
   {
-    "teal": 789,
-    "source": 181,
+    "teal": 713,
+    "source": 171,
     "pc": [
-      803,
+      803
+    ]
+  },
+  {
+    "teal": 714,
+    "source": 171,
+    "pc": [
       804
     ]
   },
   {
-    "teal": 790,
-    "source": 181,
+    "teal": 715,
+    "source": 171,
     "pc": [
       805
     ]
   },
   {
-    "teal": 791,
-    "source": 181,
+    "teal": 718,
+    "source": 132,
     "pc": [
-      806,
-      807
+      806
     ]
   },
   {
-    "teal": 795,
-    "source": 187,
+    "teal": 723,
+    "source": 175,
     "pc": [
-      808
-    ]
-  },
-  {
-    "teal": 796,
-    "source": 187,
-    "pc": [
+      807,
+      808,
       809
     ]
   },
   {
-    "teal": 797,
-    "source": 181,
+    "teal": 724,
+    "source": 175,
     "pc": [
       810
     ]
   },
   {
-    "teal": 798,
-    "source": 181,
+    "teal": 725,
+    "source": 175,
     "pc": [
-      811,
+      811
+    ]
+  },
+  {
+    "teal": 726,
+    "source": 175,
+    "pc": [
       812
     ]
   },
   {
-    "teal": 799,
-    "source": 181,
+    "teal": 727,
+    "source": 175,
     "pc": [
       813
     ]
   },
   {
-    "teal": 800,
-    "source": 181,
+    "teal": 730,
+    "source": 175,
+    "errorMessage": "argument 0 (pollId) for withdrawPollShare must be a (uint64)",
     "pc": [
-      814,
-      815
+      814
     ]
   },
   {
-    "teal": 801,
-    "source": 181,
+    "teal": 733,
+    "source": 175,
     "pc": [
-      816
-    ]
-  },
-  {
-    "teal": 802,
-    "source": 187,
-    "pc": [
+      815,
+      816,
       817
     ]
   },
   {
-    "teal": 803,
-    "source": 187,
+    "teal": 734,
+    "source": 175,
     "pc": [
       818
     ]
   },
   {
-    "teal": 806,
-    "source": 187,
-    "errorMessage": "Share already claimed",
+    "teal": 735,
+    "source": 175,
     "pc": [
       819
     ]
   },
   {
-    "teal": 810,
-    "source": 174,
+    "teal": 739,
+    "source": 175,
     "pc": [
       820,
-      821
-    ]
-  },
-  {
-    "teal": 811,
-    "source": 174,
-    "pc": [
+      821,
       822
     ]
   },
   {
-    "teal": 814,
-    "source": 174,
-    "errorMessage": "box value does not exist: this.poll(pollId).value",
+    "teal": 742,
+    "source": 175,
     "pc": [
       823
     ]
   },
   {
-    "teal": 815,
-    "source": 190,
+    "teal": 743,
+    "source": 175,
     "pc": [
       824,
       825
     ]
   },
   {
-    "teal": 816,
-    "source": 190,
+    "teal": 747,
+    "source": 177,
     "pc": [
-      826,
-      827
+      826
     ]
   },
   {
-    "teal": 817,
-    "source": 190,
+    "teal": 748,
+    "source": 177,
     "pc": [
-      828,
-      829,
+      827,
+      828
+    ]
+  },
+  {
+    "teal": 749,
+    "source": 177,
+    "pc": [
+      829
+    ]
+  },
+  {
+    "teal": 750,
+    "source": 177,
+    "pc": [
       830
     ]
   },
   {
-    "teal": 818,
-    "source": 190,
+    "teal": 751,
+    "source": 177,
     "pc": [
       831
     ]
   },
   {
-    "teal": 819,
-    "source": 174,
+    "teal": 752,
+    "source": 177,
     "pc": [
-      832,
+      832
+    ]
+  },
+  {
+    "teal": 755,
+    "source": 177,
+    "errorMessage": "Poll does not exist",
+    "pc": [
       833
     ]
   },
   {
-    "teal": 820,
-    "source": 174,
+    "teal": 759,
+    "source": 180,
     "pc": [
       834
     ]
   },
   {
-    "teal": 823,
-    "source": 174,
-    "errorMessage": "box value does not exist: this.poll(pollId).value",
+    "teal": 760,
+    "source": 180,
     "pc": [
-      835
+      835,
+      836
     ]
   },
   {
-    "teal": 824,
-    "source": 190,
+    "teal": 761,
+    "source": 180,
     "pc": [
-      836,
-      837
+      837,
+      838
     ]
   },
   {
-    "teal": 825,
-    "source": 190,
+    "teal": 762,
+    "source": 180,
     "pc": [
-      838,
       839
     ]
   },
   {
-    "teal": 826,
-    "source": 190,
+    "teal": 763,
+    "source": 180,
     "pc": [
-      840,
-      841,
+      840
+    ]
+  },
+  {
+    "teal": 764,
+    "source": 180,
+    "pc": [
+      841
+    ]
+  },
+  {
+    "teal": 765,
+    "source": 180,
+    "pc": [
       842
     ]
   },
   {
-    "teal": 827,
-    "source": 190,
+    "teal": 766,
+    "source": 180,
     "pc": [
       843
     ]
   },
   {
-    "teal": 828,
-    "source": 190,
+    "teal": 769,
+    "source": 180,
+    "errorMessage": "Vote does not exist",
     "pc": [
       844
     ]
   },
   {
-    "teal": 829,
-    "source": 190,
+    "teal": 776,
+    "source": 184,
     "pc": [
       845,
       846
     ]
   },
   {
-    "teal": 837,
-    "source": 193,
+    "teal": 777,
+    "source": 184,
     "pc": [
       847
     ]
   },
   {
-    "teal": 838,
-    "source": 193,
+    "teal": 778,
+    "source": 184,
     "pc": [
-      848
+      848,
+      849
     ]
   },
   {
-    "teal": 839,
-    "source": 193,
+    "teal": 779,
+    "source": 184,
     "pc": [
-      849,
       850
     ]
   },
   {
-    "teal": 843,
-    "source": 194,
+    "teal": 780,
+    "source": 184,
     "pc": [
-      851,
+      851
+    ]
+  },
+  {
+    "teal": 783,
+    "source": 184,
+    "errorMessage": "box value does not exist: this.poll(pollId).value",
+    "pc": [
       852
     ]
   },
   {
-    "teal": 844,
-    "source": 194,
+    "teal": 784,
+    "source": 184,
     "pc": [
       853,
       854
     ]
   },
   {
-    "teal": 848,
-    "source": 195,
+    "teal": 785,
+    "source": 184,
     "pc": [
       855,
       856
     ]
   },
   {
-    "teal": 849,
-    "source": 195,
+    "teal": 786,
+    "source": 184,
     "pc": [
       857,
-      858
+      858,
+      859
     ]
   },
   {
-    "teal": 853,
-    "source": 174,
+    "teal": 787,
+    "source": 184,
     "pc": [
-      859,
       860
     ]
   },
   {
-    "teal": 854,
-    "source": 174,
+    "teal": 788,
+    "source": 184,
     "pc": [
       861
     ]
   },
   {
-    "teal": 857,
-    "source": 174,
-    "errorMessage": "box value does not exist: this.poll(pollId).value",
+    "teal": 791,
+    "source": 183,
+    "errorMessage": "withdrawing from a poll that is still running",
     "pc": [
       862
     ]
   },
   {
-    "teal": 858,
-    "source": 196,
+    "teal": 795,
+    "source": 189,
     "pc": [
-      863,
-      864
+      863
     ]
   },
   {
-    "teal": 859,
-    "source": 196,
+    "teal": 796,
+    "source": 189,
     "pc": [
-      865,
+      864,
+      865
+    ]
+  },
+  {
+    "teal": 797,
+    "source": 189,
+    "pc": [
       866
     ]
   },
   {
-    "teal": 860,
-    "source": 196,
+    "teal": 798,
+    "source": 189,
     "pc": [
       867,
-      868,
-      869
+      868
     ]
   },
   {
-    "teal": 861,
-    "source": 196,
+    "teal": 802,
+    "source": 192,
     "pc": [
+      869,
       870
     ]
   },
   {
-    "teal": 862,
-    "source": 196,
+    "teal": 803,
+    "source": 192,
     "pc": [
       871,
       872
     ]
   },
   {
-    "teal": 865,
-    "source": 193,
+    "teal": 807,
+    "source": 195,
     "pc": [
-      873
+      873,
+      874
     ]
   },
   {
-    "teal": 866,
-    "source": 193,
+    "teal": 808,
+    "source": 195,
     "pc": [
-      874,
-      875
-    ]
-  },
-  {
-    "teal": 869,
-    "source": 193,
-    "pc": [
+      875,
       876
     ]
   },
   {
-    "teal": 873,
-    "source": 200,
+    "teal": 809,
+    "source": 195,
     "pc": [
       877
     ]
   },
   {
-    "teal": 874,
-    "source": 200,
+    "teal": 810,
+    "source": 195,
     "pc": [
       878,
       879
     ]
   },
   {
-    "teal": 875,
-    "source": 200,
+    "teal": 814,
+    "source": 196,
     "pc": [
       880
     ]
   },
   {
-    "teal": 876,
-    "source": 200,
+    "teal": 815,
+    "source": 196,
     "pc": [
       881,
-      882,
-      883,
+      882
+    ]
+  },
+  {
+    "teal": 816,
+    "source": 196,
+    "pc": [
+      883
+    ]
+  },
+  {
+    "teal": 817,
+    "source": 196,
+    "pc": [
       884,
-      885,
-      886,
-      887,
-      888,
+      885
+    ]
+  },
+  {
+    "teal": 821,
+    "source": 202,
+    "pc": [
+      886
+    ]
+  },
+  {
+    "teal": 822,
+    "source": 202,
+    "pc": [
+      887
+    ]
+  },
+  {
+    "teal": 823,
+    "source": 196,
+    "pc": [
+      888
+    ]
+  },
+  {
+    "teal": 824,
+    "source": 196,
+    "pc": [
       889,
       890
     ]
   },
   {
-    "teal": 877,
-    "source": 200,
+    "teal": 825,
+    "source": 196,
     "pc": [
-      891,
-      892
+      891
     ]
   },
   {
-    "teal": 878,
-    "source": 200,
+    "teal": 826,
+    "source": 196,
     "pc": [
+      892,
       893
     ]
   },
   {
-    "teal": 879,
-    "source": 200,
+    "teal": 827,
+    "source": 196,
     "pc": [
       894
     ]
   },
   {
-    "teal": 880,
-    "source": 163,
+    "teal": 828,
+    "source": 202,
     "pc": [
       895
     ]
   },
   {
-    "teal": 885,
-    "source": 205,
+    "teal": 829,
+    "source": 202,
     "pc": [
-      896,
+      896
+    ]
+  },
+  {
+    "teal": 832,
+    "source": 202,
+    "errorMessage": "Share already claimed",
+    "pc": [
       897
     ]
   },
   {
-    "teal": 888,
-    "source": 205,
+    "teal": 836,
+    "source": 189,
     "pc": [
       898,
-      899,
+      899
+    ]
+  },
+  {
+    "teal": 837,
+    "source": 189,
+    "pc": [
       900
     ]
   },
   {
-    "teal": 889,
-    "source": 205,
+    "teal": 840,
+    "source": 189,
+    "errorMessage": "box value does not exist: this.poll(pollId).value",
     "pc": [
       901
     ]
   },
   {
-    "teal": 890,
+    "teal": 841,
     "source": 205,
     "pc": [
-      902
-    ]
-  },
-  {
-    "teal": 891,
-    "source": 205,
-    "pc": [
+      902,
       903
     ]
   },
   {
-    "teal": 892,
+    "teal": 842,
     "source": 205,
     "pc": [
-      904
-    ]
-  },
-  {
-    "teal": 895,
-    "source": 205,
-    "errorMessage": "argument 0 (pollId) for getPollByPollId must be a (uint64)",
-    "pc": [
+      904,
       905
     ]
   },
   {
-    "teal": 898,
+    "teal": 843,
     "source": 205,
     "pc": [
       906,
@@ -4197,702 +4016,1047 @@
     ]
   },
   {
-    "teal": 899,
+    "teal": 844,
     "source": 205,
     "pc": [
       909
     ]
   },
   {
-    "teal": 900,
-    "source": 205,
+    "teal": 845,
+    "source": 189,
     "pc": [
-      910
-    ]
-  },
-  {
-    "teal": 901,
-    "source": 205,
-    "pc": [
+      910,
       911
     ]
   },
   {
-    "teal": 902,
-    "source": 205,
+    "teal": 846,
+    "source": 189,
     "pc": [
       912
     ]
   },
   {
-    "teal": 906,
+    "teal": 849,
+    "source": 189,
+    "errorMessage": "box value does not exist: this.poll(pollId).value",
+    "pc": [
+      913
+    ]
+  },
+  {
+    "teal": 850,
     "source": 205,
     "pc": [
-      913,
       914,
       915
     ]
   },
   {
-    "teal": 910,
-    "source": 206,
+    "teal": 851,
+    "source": 205,
     "pc": [
-      916
+      916,
+      917
     ]
   },
   {
-    "teal": 911,
-    "source": 206,
+    "teal": 852,
+    "source": 205,
     "pc": [
-      917,
-      918
-    ]
-  },
-  {
-    "teal": 912,
-    "source": 206,
-    "pc": [
-      919
-    ]
-  },
-  {
-    "teal": 913,
-    "source": 206,
-    "pc": [
+      918,
+      919,
       920
     ]
   },
   {
-    "teal": 914,
-    "source": 206,
+    "teal": 853,
+    "source": 205,
     "pc": [
       921
     ]
   },
   {
-    "teal": 915,
-    "source": 206,
+    "teal": 854,
+    "source": 205,
     "pc": [
       922
     ]
   },
   {
-    "teal": 918,
-    "source": 206,
-    "errorMessage": "Searched poll does not exist",
+    "teal": 855,
+    "source": 205,
     "pc": [
-      923
-    ]
-  },
-  {
-    "teal": 922,
-    "source": 207,
-    "pc": [
+      923,
       924
     ]
   },
   {
-    "teal": 923,
-    "source": 207,
+    "teal": 863,
+    "source": 208,
     "pc": [
-      925,
+      925
+    ]
+  },
+  {
+    "teal": 864,
+    "source": 208,
+    "pc": [
       926
     ]
   },
   {
-    "teal": 924,
-    "source": 207,
+    "teal": 865,
+    "source": 208,
     "pc": [
-      927
-    ]
-  },
-  {
-    "teal": 925,
-    "source": 207,
-    "pc": [
+      927,
       928
     ]
   },
   {
-    "teal": 928,
-    "source": 207,
-    "errorMessage": "box value does not exist: this.poll(pollId).value",
+    "teal": 869,
+    "source": 209,
     "pc": [
-      929
-    ]
-  },
-  {
-    "teal": 929,
-    "source": 205,
-    "pc": [
+      929,
       930
     ]
   },
   {
-    "teal": 934,
-    "source": 210,
+    "teal": 870,
+    "source": 209,
     "pc": [
       931,
       932
     ]
   },
   {
-    "teal": 937,
+    "teal": 874,
     "source": 210,
     "pc": [
       933,
-      934,
-      935
+      934
     ]
   },
   {
-    "teal": 938,
+    "teal": 875,
     "source": 210,
     "pc": [
+      935,
       936
     ]
   },
   {
-    "teal": 939,
-    "source": 210,
+    "teal": 879,
+    "source": 189,
     "pc": [
-      937
+      937,
+      938
     ]
   },
   {
-    "teal": 940,
-    "source": 210,
+    "teal": 880,
+    "source": 189,
     "pc": [
-      938,
       939
     ]
   },
   {
-    "teal": 941,
-    "source": 210,
+    "teal": 883,
+    "source": 189,
+    "errorMessage": "box value does not exist: this.poll(pollId).value",
     "pc": [
       940
     ]
   },
   {
-    "teal": 944,
-    "source": 210,
-    "errorMessage": "argument 0 (voteId) for getVoteByVoteId must be a ((uint64),address)",
+    "teal": 884,
+    "source": 211,
     "pc": [
-      941
+      941,
+      942
     ]
   },
   {
-    "teal": 947,
-    "source": 210,
+    "teal": 885,
+    "source": 211,
     "pc": [
-      942,
       943,
       944
     ]
   },
   {
-    "teal": 948,
-    "source": 210,
+    "teal": 886,
+    "source": 211,
     "pc": [
-      945
-    ]
-  },
-  {
-    "teal": 949,
-    "source": 210,
-    "pc": [
-      946
-    ]
-  },
-  {
-    "teal": 950,
-    "source": 210,
-    "pc": [
+      945,
+      946,
       947
     ]
   },
   {
-    "teal": 951,
-    "source": 210,
+    "teal": 887,
+    "source": 211,
     "pc": [
       948
     ]
   },
   {
-    "teal": 955,
-    "source": 210,
+    "teal": 888,
+    "source": 211,
     "pc": [
       949,
-      950,
+      950
+    ]
+  },
+  {
+    "teal": 891,
+    "source": 208,
+    "pc": [
       951
     ]
   },
   {
-    "teal": 959,
-    "source": 211,
+    "teal": 892,
+    "source": 208,
     "pc": [
-      952
+      952,
+      953
     ]
   },
   {
-    "teal": 960,
-    "source": 211,
+    "teal": 895,
+    "source": 208,
     "pc": [
-      953,
       954
     ]
   },
   {
-    "teal": 961,
-    "source": 211,
+    "teal": 899,
+    "source": 215,
     "pc": [
       955
     ]
   },
   {
-    "teal": 962,
-    "source": 211,
+    "teal": 900,
+    "source": 215,
     "pc": [
-      956
-    ]
-  },
-  {
-    "teal": 963,
-    "source": 211,
-    "pc": [
+      956,
       957
     ]
   },
   {
-    "teal": 964,
-    "source": 211,
+    "teal": 901,
+    "source": 215,
     "pc": [
       958
     ]
   },
   {
-    "teal": 967,
-    "source": 211,
-    "errorMessage": "searched vote does not exist",
+    "teal": 902,
+    "source": 215,
     "pc": [
-      959
-    ]
-  },
-  {
-    "teal": 971,
-    "source": 212,
-    "pc": [
-      960
-    ]
-  },
-  {
-    "teal": 972,
-    "source": 212,
-    "pc": [
+      959,
+      960,
       961,
-      962
-    ]
-  },
-  {
-    "teal": 973,
-    "source": 212,
-    "pc": [
-      963
-    ]
-  },
-  {
-    "teal": 974,
-    "source": 212,
-    "pc": [
-      964
-    ]
-  },
-  {
-    "teal": 977,
-    "source": 212,
-    "errorMessage": "box value does not exist: this.vote(voteId).value",
-    "pc": [
-      965
-    ]
-  },
-  {
-    "teal": 978,
-    "source": 210,
-    "pc": [
-      966
-    ]
-  },
-  {
-    "teal": 981,
-    "source": 33,
-    "pc": [
+      962,
+      963,
+      964,
+      965,
+      966,
       967,
-      968,
+      968
+    ]
+  },
+  {
+    "teal": 903,
+    "source": 215,
+    "pc": [
       969,
-      970,
-      971,
+      970
+    ]
+  },
+  {
+    "teal": 904,
+    "source": 215,
+    "pc": [
+      971
+    ]
+  },
+  {
+    "teal": 905,
+    "source": 215,
+    "pc": [
       972
     ]
   },
   {
-    "teal": 982,
-    "source": 33,
+    "teal": 906,
+    "source": 175,
     "pc": [
-      973,
+      973
+    ]
+  },
+  {
+    "teal": 911,
+    "source": 220,
+    "pc": [
       974,
       975
     ]
   },
   {
-    "teal": 983,
-    "source": 33,
+    "teal": 914,
+    "source": 220,
     "pc": [
       976,
       977,
-      978,
+      978
+    ]
+  },
+  {
+    "teal": 915,
+    "source": 220,
+    "pc": [
       979
     ]
   },
   {
-    "teal": 986,
-    "source": 33,
-    "errorMessage": "this contract does not implement the given ABI method for create NoOp",
+    "teal": 916,
+    "source": 220,
     "pc": [
       980
     ]
   },
   {
-    "teal": 989,
-    "source": 33,
+    "teal": 917,
+    "source": 220,
     "pc": [
-      981,
-      982,
-      983,
+      981
+    ]
+  },
+  {
+    "teal": 918,
+    "source": 220,
+    "pc": [
+      982
+    ]
+  },
+  {
+    "teal": 921,
+    "source": 220,
+    "errorMessage": "argument 0 (pollId) for getPollByPollId must be a (uint64)",
+    "pc": [
+      983
+    ]
+  },
+  {
+    "teal": 924,
+    "source": 220,
+    "pc": [
       984,
       985,
       986
     ]
   },
   {
-    "teal": 990,
-    "source": 33,
+    "teal": 925,
+    "source": 220,
     "pc": [
-      987,
-      988,
-      989,
-      990,
-      991,
-      992
+      987
     ]
   },
   {
-    "teal": 991,
-    "source": 33,
+    "teal": 926,
+    "source": 220,
     "pc": [
-      993,
-      994,
+      988
+    ]
+  },
+  {
+    "teal": 927,
+    "source": 220,
+    "pc": [
+      989
+    ]
+  },
+  {
+    "teal": 928,
+    "source": 220,
+    "pc": [
+      990
+    ]
+  },
+  {
+    "teal": 932,
+    "source": 220,
+    "pc": [
+      991,
+      992,
+      993
+    ]
+  },
+  {
+    "teal": 936,
+    "source": 221,
+    "pc": [
+      994
+    ]
+  },
+  {
+    "teal": 937,
+    "source": 221,
+    "pc": [
       995,
-      996,
-      997,
+      996
+    ]
+  },
+  {
+    "teal": 938,
+    "source": 221,
+    "pc": [
+      997
+    ]
+  },
+  {
+    "teal": 939,
+    "source": 221,
+    "pc": [
       998
     ]
   },
   {
-    "teal": 992,
-    "source": 33,
+    "teal": 940,
+    "source": 221,
     "pc": [
-      999,
-      1000,
-      1001,
-      1002,
+      999
+    ]
+  },
+  {
+    "teal": 941,
+    "source": 221,
+    "pc": [
+      1000
+    ]
+  },
+  {
+    "teal": 944,
+    "source": 221,
+    "errorMessage": "Searched poll does not exist",
+    "pc": [
+      1001
+    ]
+  },
+  {
+    "teal": 948,
+    "source": 222,
+    "pc": [
+      1002
+    ]
+  },
+  {
+    "teal": 949,
+    "source": 222,
+    "pc": [
       1003,
       1004
     ]
   },
   {
-    "teal": 993,
-    "source": 33,
+    "teal": 950,
+    "source": 222,
     "pc": [
-      1005,
-      1006,
-      1007,
-      1008,
+      1005
+    ]
+  },
+  {
+    "teal": 951,
+    "source": 222,
+    "pc": [
+      1006
+    ]
+  },
+  {
+    "teal": 954,
+    "source": 222,
+    "errorMessage": "box value does not exist: this.poll(pollId).value",
+    "pc": [
+      1007
+    ]
+  },
+  {
+    "teal": 955,
+    "source": 220,
+    "pc": [
+      1008
+    ]
+  },
+  {
+    "teal": 960,
+    "source": 225,
+    "pc": [
       1009,
       1010
     ]
   },
   {
-    "teal": 994,
-    "source": 33,
+    "teal": 963,
+    "source": 225,
     "pc": [
       1011,
       1012,
-      1013,
-      1014,
-      1015,
-      1016
+      1013
     ]
   },
   {
-    "teal": 995,
-    "source": 33,
+    "teal": 964,
+    "source": 225,
     "pc": [
-      1017,
-      1018,
+      1014
+    ]
+  },
+  {
+    "teal": 965,
+    "source": 225,
+    "pc": [
+      1015
+    ]
+  },
+  {
+    "teal": 966,
+    "source": 225,
+    "pc": [
+      1016,
+      1017
+    ]
+  },
+  {
+    "teal": 967,
+    "source": 225,
+    "pc": [
+      1018
+    ]
+  },
+  {
+    "teal": 970,
+    "source": 225,
+    "errorMessage": "argument 0 (voteId) for getVoteByVoteId must be a ((uint64),address)",
+    "pc": [
       1019
     ]
   },
   {
-    "teal": 996,
-    "source": 33,
+    "teal": 973,
+    "source": 225,
     "pc": [
       1020,
       1021,
-      1022,
-      1023,
-      1024,
-      1025,
-      1026,
+      1022
+    ]
+  },
+  {
+    "teal": 974,
+    "source": 225,
+    "pc": [
+      1023
+    ]
+  },
+  {
+    "teal": 975,
+    "source": 225,
+    "pc": [
+      1024
+    ]
+  },
+  {
+    "teal": 976,
+    "source": 225,
+    "pc": [
+      1025
+    ]
+  },
+  {
+    "teal": 977,
+    "source": 225,
+    "pc": [
+      1026
+    ]
+  },
+  {
+    "teal": 981,
+    "source": 225,
+    "pc": [
       1027,
       1028,
-      1029,
-      1030,
+      1029
+    ]
+  },
+  {
+    "teal": 985,
+    "source": 226,
+    "pc": [
+      1030
+    ]
+  },
+  {
+    "teal": 986,
+    "source": 226,
+    "pc": [
       1031,
-      1032,
+      1032
+    ]
+  },
+  {
+    "teal": 987,
+    "source": 226,
+    "pc": [
       1033
     ]
   },
   {
-    "teal": 999,
-    "source": 33,
-    "errorMessage": "this contract does not implement the given ABI method for call NoOp",
+    "teal": 988,
+    "source": 226,
     "pc": [
       1034
     ]
   },
   {
-    "teal": 1002,
-    "source": 33,
+    "teal": 989,
+    "source": 226,
     "pc": [
-      1035,
-      1036,
+      1035
+    ]
+  },
+  {
+    "teal": 990,
+    "source": 226,
+    "pc": [
+      1036
+    ]
+  },
+  {
+    "teal": 993,
+    "source": 226,
+    "errorMessage": "searched vote does not exist",
+    "pc": [
       1037
     ]
   },
   {
-    "teal": 1003,
-    "source": 33,
+    "teal": 997,
+    "source": 227,
     "pc": [
-      1038,
-      1039
+      1038
     ]
   },
   {
-    "teal": 1004,
-    "source": 33,
+    "teal": 998,
+    "source": 227,
     "pc": [
-      1040,
+      1039,
+      1040
+    ]
+  },
+  {
+    "teal": 999,
+    "source": 227,
+    "pc": [
       1041
     ]
   },
   {
-    "teal": 1005,
-    "source": 33,
+    "teal": 1000,
+    "source": 227,
     "pc": [
       1042
     ]
   },
   {
-    "teal": 1006,
-    "source": 33,
+    "teal": 1003,
+    "source": 227,
+    "errorMessage": "box value does not exist: this.vote(voteId).value",
     "pc": [
-      1043,
+      1043
+    ]
+  },
+  {
+    "teal": 1004,
+    "source": 225,
+    "pc": [
       1044
     ]
   },
   {
     "teal": 1007,
-    "source": 33,
+    "source": 34,
     "pc": [
       1045,
-      1046
-    ]
-  },
-  {
-    "teal": 1008,
-    "source": 33,
-    "pc": [
-      1047
-    ]
-  },
-  {
-    "teal": 1011,
-    "source": 33,
-    "pc": [
+      1046,
+      1047,
       1048,
       1049,
       1050
     ]
   },
   {
-    "teal": 1012,
-    "source": 33,
+    "teal": 1008,
+    "source": 34,
     "pc": [
       1051,
-      1052
+      1052,
+      1053
     ]
   },
   {
-    "teal": 1013,
-    "source": 33,
+    "teal": 1009,
+    "source": 34,
     "pc": [
-      1053,
-      1054
-    ]
-  },
-  {
-    "teal": 1014,
-    "source": 33,
-    "pc": [
-      1055
-    ]
-  },
-  {
-    "teal": 1015,
-    "source": 33,
-    "pc": [
+      1054,
+      1055,
       1056,
       1057
     ]
   },
   {
-    "teal": 1016,
-    "source": 33,
+    "teal": 1012,
+    "source": 34,
+    "errorMessage": "this contract does not implement the given ABI method for create NoOp",
     "pc": [
-      1058,
-      1059
+      1058
     ]
   },
   {
-    "teal": 1017,
-    "source": 33,
+    "teal": 1015,
+    "source": 34,
     "pc": [
-      1060
-    ]
-  },
-  {
-    "teal": 1018,
-    "source": 33,
-    "pc": [
-      1061
-    ]
-  },
-  {
-    "teal": 1019,
-    "source": 33,
-    "pc": [
+      1059,
+      1060,
+      1061,
       1062,
-      1063
-    ]
-  },
-  {
-    "teal": 1020,
-    "source": 33,
-    "pc": [
+      1063,
       1064
     ]
   },
   {
-    "teal": 1021,
-    "source": 33,
+    "teal": 1016,
+    "source": 34,
     "pc": [
-      1065
+      1065,
+      1066,
+      1067,
+      1068,
+      1069,
+      1070
+    ]
+  },
+  {
+    "teal": 1017,
+    "source": 34,
+    "pc": [
+      1071,
+      1072,
+      1073,
+      1074,
+      1075,
+      1076
+    ]
+  },
+  {
+    "teal": 1018,
+    "source": 34,
+    "pc": [
+      1077,
+      1078,
+      1079,
+      1080,
+      1081,
+      1082
+    ]
+  },
+  {
+    "teal": 1019,
+    "source": 34,
+    "pc": [
+      1083,
+      1084,
+      1085,
+      1086,
+      1087,
+      1088
+    ]
+  },
+  {
+    "teal": 1020,
+    "source": 34,
+    "pc": [
+      1089,
+      1090,
+      1091,
+      1092,
+      1093,
+      1094
+    ]
+  },
+  {
+    "teal": 1021,
+    "source": 34,
+    "pc": [
+      1095,
+      1096,
+      1097
     ]
   },
   {
     "teal": 1022,
-    "source": 33,
+    "source": 34,
     "pc": [
-      1066
-    ]
-  },
-  {
-    "teal": 1023,
-    "source": 33,
-    "pc": [
-      1067,
-      1068,
-      1069
-    ]
-  },
-  {
-    "teal": 1024,
-    "source": 33,
-    "pc": [
-      1070,
-      1071
+      1098,
+      1099,
+      1100,
+      1101,
+      1102,
+      1103,
+      1104,
+      1105,
+      1106,
+      1107,
+      1108,
+      1109,
+      1110,
+      1111
     ]
   },
   {
     "teal": 1025,
-    "source": 33,
+    "source": 34,
+    "errorMessage": "this contract does not implement the given ABI method for call NoOp",
     "pc": [
-      1072,
-      1073
-    ]
-  },
-  {
-    "teal": 1026,
-    "source": 33,
-    "pc": [
-      1074
-    ]
-  },
-  {
-    "teal": 1027,
-    "source": 33,
-    "pc": [
-      1075
+      1112
     ]
   },
   {
     "teal": 1028,
-    "source": 33,
+    "source": 34,
     "pc": [
-      1076,
-      1077
+      1113,
+      1114,
+      1115
     ]
   },
   {
     "teal": 1029,
-    "source": 33,
+    "source": 34,
     "pc": [
-      1078,
-      1079
+      1116,
+      1117
     ]
   },
   {
     "teal": 1030,
-    "source": 33,
+    "source": 34,
     "pc": [
-      1080,
-      1081
+      1118,
+      1119
     ]
   },
   {
     "teal": 1031,
-    "source": 33,
+    "source": 34,
     "pc": [
-      1082,
-      1083
+      1120
     ]
   },
   {
     "teal": 1032,
-    "source": 33,
+    "source": 34,
     "pc": [
-      1084
+      1121,
+      1122
+    ]
+  },
+  {
+    "teal": 1033,
+    "source": 34,
+    "pc": [
+      1123,
+      1124
+    ]
+  },
+  {
+    "teal": 1034,
+    "source": 34,
+    "pc": [
+      1125
+    ]
+  },
+  {
+    "teal": 1037,
+    "source": 34,
+    "pc": [
+      1126,
+      1127,
+      1128
+    ]
+  },
+  {
+    "teal": 1038,
+    "source": 34,
+    "pc": [
+      1129,
+      1130
+    ]
+  },
+  {
+    "teal": 1039,
+    "source": 34,
+    "pc": [
+      1131,
+      1132
+    ]
+  },
+  {
+    "teal": 1040,
+    "source": 34,
+    "pc": [
+      1133
+    ]
+  },
+  {
+    "teal": 1041,
+    "source": 34,
+    "pc": [
+      1134,
+      1135
+    ]
+  },
+  {
+    "teal": 1042,
+    "source": 34,
+    "pc": [
+      1136,
+      1137
+    ]
+  },
+  {
+    "teal": 1043,
+    "source": 34,
+    "pc": [
+      1138
+    ]
+  },
+  {
+    "teal": 1044,
+    "source": 34,
+    "pc": [
+      1139
+    ]
+  },
+  {
+    "teal": 1045,
+    "source": 34,
+    "pc": [
+      1140,
+      1141
+    ]
+  },
+  {
+    "teal": 1046,
+    "source": 34,
+    "pc": [
+      1142
+    ]
+  },
+  {
+    "teal": 1047,
+    "source": 34,
+    "pc": [
+      1143
+    ]
+  },
+  {
+    "teal": 1048,
+    "source": 34,
+    "pc": [
+      1144
+    ]
+  },
+  {
+    "teal": 1049,
+    "source": 34,
+    "pc": [
+      1145,
+      1146,
+      1147
+    ]
+  },
+  {
+    "teal": 1050,
+    "source": 34,
+    "pc": [
+      1148,
+      1149
+    ]
+  },
+  {
+    "teal": 1051,
+    "source": 34,
+    "pc": [
+      1150,
+      1151
+    ]
+  },
+  {
+    "teal": 1052,
+    "source": 34,
+    "pc": [
+      1152
+    ]
+  },
+  {
+    "teal": 1053,
+    "source": 34,
+    "pc": [
+      1153
+    ]
+  },
+  {
+    "teal": 1054,
+    "source": 34,
+    "pc": [
+      1154,
+      1155
+    ]
+  },
+  {
+    "teal": 1055,
+    "source": 34,
+    "pc": [
+      1156,
+      1157
+    ]
+  },
+  {
+    "teal": 1056,
+    "source": 34,
+    "pc": [
+      1158,
+      1159
+    ]
+  },
+  {
+    "teal": 1057,
+    "source": 34,
+    "pc": [
+      1160,
+      1161
+    ]
+  },
+  {
+    "teal": 1058,
+    "source": 34,
+    "pc": [
+      1162
     ]
   }
 ]

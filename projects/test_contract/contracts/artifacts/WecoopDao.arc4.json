@@ -37,6 +37,10 @@
           "type": "axfer"
         },
         {
+          "name": "platformFeeTxn",
+          "type": "axfer"
+        },
+        {
           "name": "question",
           "type": "string"
         },

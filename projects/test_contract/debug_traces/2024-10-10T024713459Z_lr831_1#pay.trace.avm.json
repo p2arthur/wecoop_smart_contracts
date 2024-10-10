@@ -1,0 +1,110 @@
+{
+  "last-round": 831,
+  "txn-groups": [
+    {
+      "txn-results": [
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "amt": 3450,
+                "fee": 1000,
+                "fv": 830,
+                "gen": "dockernet-v1",
+                "gh": "oTBcv2xpn/VjAmthbTSa/7DPKb36BlYtvjjX9eDUx/E=",
+                "grp": "tsg5ipUTuG4yLQiJLMMH/XtgFOPFLZ1SlBHH5Cq30Dg=",
+                "lv": 1830,
+                "rcv": "shbywhFRZpZQOi8Kfhijfb4NCULq8VOFAATPR452p+M=",
+                "snd": "zBBzFZQXKllf291/mxr8SYTsYgEltxvT54c9fEA234s=",
+                "type": "pay"
+              }
+            }
+          }
+        },
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "aamt": 2,
+                "arcv": "shbywhFRZpZQOi8Kfhijfb4NCULq8VOFAATPR452p+M=",
+                "fee": 1000,
+                "fv": 830,
+                "gen": "dockernet-v1",
+                "gh": "oTBcv2xpn/VjAmthbTSa/7DPKb36BlYtvjjX9eDUx/E=",
+                "grp": "tsg5ipUTuG4yLQiJLMMH/XtgFOPFLZ1SlBHH5Cq30Dg=",
+                "lv": 1830,
+                "snd": "zBBzFZQXKllf291/mxr8SYTsYgEltxvT54c9fEA234s=",
+                "type": "axfer",
+                "xaid": 2085
+              }
+            }
+          }
+        },
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "aamt": 2,
+                "arcv": "shbywhFRZpZQOi8Kfhijfb4NCULq8VOFAATPR452p+M=",
+                "fee": 1000,
+                "fv": 830,
+                "gen": "dockernet-v1",
+                "gh": "oTBcv2xpn/VjAmthbTSa/7DPKb36BlYtvjjX9eDUx/E=",
+                "grp": "tsg5ipUTuG4yLQiJLMMH/XtgFOPFLZ1SlBHH5Cq30Dg=",
+                "lv": 1830,
+                "snd": "zBBzFZQXKllf291/mxr8SYTsYgEltxvT54c9fEA234s=",
+                "type": "axfer",
+                "xaid": 2085
+              }
+            }
+          }
+        },
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "apaa": [
+                  "6AqlJA==",
+                  "ADRJcyB0aGlzIHRoZSBmaXJzdCBldmVyIHF1ZXN0aW9uIG9uIHdlY29vcC54eXogcG9sbHM/",
+                  "AAJCUg==",
+                  "AAAAAAAAASw="
+                ],
+                "apid": 2087,
+                "fee": 3000,
+                "fv": 831,
+                "gen": "dockernet-v1",
+                "gh": "oTBcv2xpn/VjAmthbTSa/7DPKb36BlYtvjjX9eDUx/E=",
+                "grp": "tsg5ipUTuG4yLQiJLMMH/XtgFOPFLZ1SlBHH5Cq30Dg=",
+                "lv": 1831,
+                "snd": "zBBzFZQXKllf291/mxr8SYTsYgEltxvT54c9fEA234s=",
+                "type": "appl"
+              }
+            }
+          }
+        }
+      ],
+      "app-budget-added": 700,
+      "failed-at": [
+        2
+      ],
+      "failure-message": "transaction already in ledger: 7QFZMOIOVS7YAI6SEQVUEW2MKRL2TJQLREA2K43ELD2JVR2VAZBQ"
+    }
+  ],
+  "version": 2,
+  "eval-overrides": {
+    "allow-empty-signatures": true,
+    "max-log-calls": 2048,
+    "max-log-size": 65536
+  },
+  "exec-trace-config": {
+    "enable": true,
+    "scratch-change": true,
+    "stack-change": true,
+    "state-change": true
+  },
+  "initial-states": {}
+}
