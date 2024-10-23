@@ -6,6 +6,9 @@
     },
     {
       "path": "projects/test_contract"
+    },
+    {
+      "path": "projects/wecoop_rewards"
     }
   ],
   "settings": {

@@ -75,6 +75,14 @@
         {
           "name": "inFavor",
           "type": "bool"
+        },
+        {
+          "name": "platrformFeeTxn",
+          "type": "axfer"
+        },
+        {
+          "name": "creatorFeeTxn",
+          "type": "axfer"
         }
       ],
       "returns": {

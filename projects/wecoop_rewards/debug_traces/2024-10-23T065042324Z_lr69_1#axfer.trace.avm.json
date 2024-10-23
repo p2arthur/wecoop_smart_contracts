@@ -1,0 +1,68 @@
+{
+  "last-round": 69,
+  "txn-groups": [
+    {
+      "txn-results": [
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "aamt": 10000,
+                "arcv": "D1fTY5ERIEgflc5vZynI95YSMYI9JK72t7gpzyME9TI=",
+                "fee": 1000,
+                "fv": 69,
+                "gen": "dockernet-v1",
+                "gh": "dOe0eBEmZEcUxpl2UZYkgBs1SJ9xWuBzIRR6wxo6PvY=",
+                "grp": "B86tcD8O8PcD27CJ0EsEyiflFAda22VdKtz0IlLFRBA=",
+                "lv": 1069,
+                "snd": "WPdVkFsLH8RuyaAGlReNdmRjVcDH4gloDHOw0mMJ75U=",
+                "type": "axfer",
+                "xaid": 1086
+              }
+            }
+          }
+        },
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "apaa": [
+                  "0gtBUA=="
+                ],
+                "apid": 1087,
+                "fee": 1000,
+                "fv": 69,
+                "gen": "dockernet-v1",
+                "gh": "dOe0eBEmZEcUxpl2UZYkgBs1SJ9xWuBzIRR6wxo6PvY=",
+                "grp": "B86tcD8O8PcD27CJ0EsEyiflFAda22VdKtz0IlLFRBA=",
+                "lv": 1069,
+                "snd": "WPdVkFsLH8RuyaAGlReNdmRjVcDH4gloDHOw0mMJ75U=",
+                "type": "appl"
+              }
+            }
+          }
+        }
+      ],
+      "app-budget-added": 700,
+      "failed-at": [
+        0
+      ],
+      "failure-message": "transaction CSWQDEU7WO7B3EMDTOIS62CKTMQMVGTPLNOG2LJVY6HL4KMHC2AA: receiver error: must optin, asset 1086 missing from B5L5GY4RCEQEQH4VZZXWOKOI66LBEMMCHUSK55VXXAU46IYE6UZNXXM2YA"
+    }
+  ],
+  "version": 2,
+  "eval-overrides": {
+    "allow-empty-signatures": true,
+    "max-log-calls": 2048,
+    "max-log-size": 65536
+  },
+  "exec-trace-config": {
+    "enable": true,
+    "scratch-change": true,
+    "stack-change": true,
+    "state-change": true
+  },
+  "initial-states": {}
+}

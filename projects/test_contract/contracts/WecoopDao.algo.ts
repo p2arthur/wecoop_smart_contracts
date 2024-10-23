@@ -76,8 +76,8 @@ export class WecoopDao extends Contract {
     // Check if the contract account is opted in to the deposited assetnumber
     assert(this.app.address.isOptedInToAsset(axfer.xferAsset), 'Application not opted in to the asset');
 
-    //Check if platform payment transaction is being made to the Wecoop main wallet
-    assert(platformFeeTxn.assetReceiver === this.wecoop_main_address.value, 'payment receiver is not the platform');
+    // //Check if platform payment transaction is being made to the Wecoop main wallet
+    // assert(platformFeeTxn.assetReceiver === this.wecoop_main_address.value, 'payment receiver is not the platform');
 
     // Check if the receiver of the deposit is the app address
     assert(axfer.assetReceiver === this.app.address, 'Deposit transaction not to the app wallet');
@@ -129,7 +129,14 @@ export class WecoopDao extends Contract {
   - Vote with nonce does not already exist
   - If user haven't already voted
   */
-  makeVote(pollId: PollId, axfer: AssetTransferTxn, mbrTxn: PayTxn, inFavor: boolean) {
+  makeVote(
+    pollId: PollId,
+    axfer: AssetTransferTxn,
+    mbrTxn: PayTxn,
+    inFavor: boolean,
+    platrformFeeTxn: AssetTransferTxn,
+    creatorFeeTxn: AssetTransferTxn
+  ) {
     const currentNonce: uint64 = this.poll(pollId).value.totalVotes;
 
     const newNonce: uint64 = currentNonce === 0 ? currentNonce + 1 : 0;
@@ -141,6 +148,12 @@ export class WecoopDao extends Contract {
     assert(this.poll(pollId).value.creator !== this.txn.sender, 'Poll creator cant vote');
     //Check if the contract account is opted in to the deposited asset
     assert(this.app.address.isOptedInToAsset(axfer.xferAsset), 'Application not opted in to the asset');
+
+    //Check if the user is making a non 0 transaction as platform fee
+    assert(platrformFeeTxn.assetAmount > 0, 'Invalid platform fee on vote');
+
+    const pollCreator: Address = this.poll(pollId).value.creator;
+    assert(creatorFeeTxn.assetReceiver == pollCreator, 'Payment gotta be made to the poll creator on vote');
 
     //Check if the the receiver of the deposit is the app address
     assert(axfer.assetReceiver === this.app.address, 'Deposit transaction not to the app wallet');
