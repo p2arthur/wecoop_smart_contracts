@@ -65,74 +65,74 @@
       47,
       48,
       49,
-      50
-    ]
-  },
-  {
-    "teal": 15,
-    "source": "contracts/WecoopRewards.algo.ts:5",
-    "pc": [
+      50,
       51,
-      52
-    ]
-  },
-  {
-    "teal": 16,
-    "source": "contracts/WecoopRewards.algo.ts:5",
-    "pc": [
-      53
-    ]
-  },
-  {
-    "teal": 17,
-    "source": "contracts/WecoopRewards.algo.ts:5",
-    "pc": [
+      52,
+      53,
       54,
-      55
-    ]
-  },
-  {
-    "teal": 18,
-    "source": "contracts/WecoopRewards.algo.ts:5",
-    "pc": [
-      56
-    ]
-  },
-  {
-    "teal": 19,
-    "source": "contracts/WecoopRewards.algo.ts:5",
-    "pc": [
+      55,
+      56,
       57,
-      58
-    ]
-  },
-  {
-    "teal": 20,
-    "source": "contracts/WecoopRewards.algo.ts:5",
-    "pc": [
-      59
-    ]
-  },
-  {
-    "teal": 21,
-    "source": "contracts/WecoopRewards.algo.ts:5",
-    "pc": [
+      58,
+      59,
       60,
       61,
       62,
       63,
       64,
       65,
-      66,
+      66
+    ]
+  },
+  {
+    "teal": 15,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
       67,
-      68,
-      69,
+      68
+    ]
+  },
+  {
+    "teal": 16,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
+      69
+    ]
+  },
+  {
+    "teal": 17,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
       70,
-      71,
-      72,
+      71
+    ]
+  },
+  {
+    "teal": 18,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
+      72
+    ]
+  },
+  {
+    "teal": 19,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
       73,
-      74,
-      75,
+      74
+    ]
+  },
+  {
+    "teal": 20,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
+      75
+    ]
+  },
+  {
+    "teal": 21,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
       76,
       77,
       78,
@@ -142,7 +142,23 @@
       82,
       83,
       84,
-      85
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101
     ]
   },
   {
@@ -150,89 +166,12 @@
     "source": "contracts/WecoopRewards.algo.ts:5",
     "errorMessage": "The requested action is not implemented in this contract. Are you using the correct OnComplete? Did you set your app ID?",
     "pc": [
-      86
-    ]
-  },
-  {
-    "teal": 30,
-    "source": "contracts/WecoopRewards.algo.ts:22",
-    "pc": [
-      87,
-      88,
-      89
-    ]
-  },
-  {
-    "teal": 31,
-    "source": "contracts/WecoopRewards.algo.ts:22",
-    "pc": [
-      90
-    ]
-  },
-  {
-    "teal": 34,
-    "source": "contracts/WecoopRewards.algo.ts:22",
-    "pc": [
-      91,
-      92
-    ]
-  },
-  {
-    "teal": 35,
-    "source": "contracts/WecoopRewards.algo.ts:22",
-    "pc": [
-      93,
-      94
-    ]
-  },
-  {
-    "teal": 36,
-    "source": "contracts/WecoopRewards.algo.ts:22",
-    "pc": [
-      95
-    ]
-  },
-  {
-    "teal": 37,
-    "source": "contracts/WecoopRewards.algo.ts:22",
-    "pc": [
-      96
-    ]
-  },
-  {
-    "teal": 38,
-    "source": "contracts/WecoopRewards.algo.ts:22",
-    "pc": [
-      97,
-      98
-    ]
-  },
-  {
-    "teal": 39,
-    "source": "contracts/WecoopRewards.algo.ts:22",
-    "pc": [
-      99,
-      100
-    ]
-  },
-  {
-    "teal": 40,
-    "source": "contracts/WecoopRewards.algo.ts:22",
-    "pc": [
-      101
-    ]
-  },
-  {
-    "teal": 43,
-    "source": "contracts/WecoopRewards.algo.ts:22",
-    "errorMessage": "argument 1 (mbrTxn) for bootstrap must be a pay transaction",
-    "pc": [
       102
     ]
   },
   {
-    "teal": 46,
-    "source": "contracts/WecoopRewards.algo.ts:22",
+    "teal": 30,
+    "source": "contracts/WecoopRewards.algo.ts:15",
     "pc": [
       103,
       104,
@@ -240,23 +179,23 @@
     ]
   },
   {
-    "teal": 47,
-    "source": "contracts/WecoopRewards.algo.ts:22",
+    "teal": 31,
+    "source": "contracts/WecoopRewards.algo.ts:15",
     "pc": [
       106,
       107
     ]
   },
   {
-    "teal": 48,
-    "source": "contracts/WecoopRewards.algo.ts:22",
+    "teal": 32,
+    "source": "contracts/WecoopRewards.algo.ts:15",
     "pc": [
       108
     ]
   },
   {
-    "teal": 52,
-    "source": "contracts/WecoopRewards.algo.ts:22",
+    "teal": 36,
+    "source": "contracts/WecoopRewards.algo.ts:15",
     "pc": [
       109,
       110,
@@ -264,603 +203,658 @@
     ]
   },
   {
-    "teal": 56,
-    "source": "contracts/WecoopRewards.algo.ts:24",
+    "teal": 40,
+    "source": "contracts/WecoopRewards.algo.ts:16",
     "pc": [
       112,
       113
     ]
   },
   {
-    "teal": 57,
-    "source": "contracts/WecoopRewards.algo.ts:24",
+    "teal": 41,
+    "source": "contracts/WecoopRewards.algo.ts:16",
     "pc": [
       114,
       115,
-      116
-    ]
-  },
-  {
-    "teal": 58,
-    "source": "contracts/WecoopRewards.algo.ts:24",
-    "pc": [
+      116,
       117,
-      118
-    ]
-  },
-  {
-    "teal": 59,
-    "source": "contracts/WecoopRewards.algo.ts:24",
-    "pc": [
-      119
-    ]
-  },
-  {
-    "teal": 60,
-    "source": "contracts/WecoopRewards.algo.ts:24",
-    "pc": [
-      120
-    ]
-  },
-  {
-    "teal": 63,
-    "source": "contracts/WecoopRewards.algo.ts:24",
-    "errorMessage": "Error: Not the creator trying to optin to an asset",
-    "pc": [
-      121
-    ]
-  },
-  {
-    "teal": 67,
-    "source": "contracts/WecoopRewards.algo.ts:27",
-    "pc": [
+      118,
+      119,
+      120,
+      121,
       122,
-      123
-    ]
-  },
-  {
-    "teal": 68,
-    "source": "contracts/WecoopRewards.algo.ts:27",
-    "pc": [
+      123,
       124,
-      125
-    ]
-  },
-  {
-    "teal": 69,
-    "source": "contracts/WecoopRewards.algo.ts:27",
-    "pc": [
+      125,
       126,
-      127
-    ]
-  },
-  {
-    "teal": 70,
-    "source": "contracts/WecoopRewards.algo.ts:27",
-    "pc": [
-      128
-    ]
-  },
-  {
-    "teal": 73,
-    "source": "contracts/WecoopRewards.algo.ts:27",
-    "errorMessage": "Receiver is not the app address",
-    "pc": [
+      127,
+      128,
       129
     ]
   },
   {
-    "teal": 77,
-    "source": "contracts/WecoopRewards.algo.ts:30",
+    "teal": 42,
+    "source": "contracts/WecoopRewards.algo.ts:16",
     "pc": [
       130,
       131
     ]
   },
   {
-    "teal": 78,
-    "source": "contracts/WecoopRewards.algo.ts:30",
+    "teal": 43,
+    "source": "contracts/WecoopRewards.algo.ts:16",
     "pc": [
-      132,
+      132
+    ]
+  },
+  {
+    "teal": 44,
+    "source": "contracts/WecoopRewards.algo.ts:15",
+    "pc": [
       133
     ]
   },
   {
-    "teal": 79,
-    "source": "contracts/WecoopRewards.algo.ts:30",
+    "teal": 49,
+    "source": "contracts/WecoopRewards.algo.ts:20",
     "pc": [
       134,
-      135
-    ]
-  },
-  {
-    "teal": 80,
-    "source": "contracts/WecoopRewards.algo.ts:30",
-    "pc": [
+      135,
       136
     ]
   },
   {
-    "teal": 81,
-    "source": "contracts/WecoopRewards.algo.ts:30",
+    "teal": 50,
+    "source": "contracts/WecoopRewards.algo.ts:20",
     "pc": [
       137
     ]
   },
   {
-    "teal": 82,
-    "source": "contracts/WecoopRewards.algo.ts:30",
+    "teal": 53,
+    "source": "contracts/WecoopRewards.algo.ts:20",
     "pc": [
-      138
-    ]
-  },
-  {
-    "teal": 83,
-    "source": "contracts/WecoopRewards.algo.ts:30",
-    "pc": [
+      138,
       139
     ]
   },
   {
-    "teal": 88,
-    "source": "contracts/WecoopRewards.algo.ts:33",
+    "teal": 54,
+    "source": "contracts/WecoopRewards.algo.ts:20",
     "pc": [
       140,
       141
     ]
   },
   {
-    "teal": 89,
-    "source": "contracts/WecoopRewards.algo.ts:33",
+    "teal": 55,
+    "source": "contracts/WecoopRewards.algo.ts:20",
     "pc": [
-      142,
+      142
+    ]
+  },
+  {
+    "teal": 56,
+    "source": "contracts/WecoopRewards.algo.ts:20",
+    "pc": [
       143
     ]
   },
   {
-    "teal": 90,
-    "source": "contracts/WecoopRewards.algo.ts:33",
+    "teal": 57,
+    "source": "contracts/WecoopRewards.algo.ts:20",
     "pc": [
       144,
       145
     ]
   },
   {
-    "teal": 91,
-    "source": "contracts/WecoopRewards.algo.ts:33",
+    "teal": 58,
+    "source": "contracts/WecoopRewards.algo.ts:20",
     "pc": [
       146,
       147
     ]
   },
   {
-    "teal": 92,
-    "source": "contracts/WecoopRewards.algo.ts:33",
+    "teal": 59,
+    "source": "contracts/WecoopRewards.algo.ts:20",
     "pc": [
       148
     ]
   },
   {
-    "teal": 93,
-    "source": "contracts/WecoopRewards.algo.ts:33",
+    "teal": 62,
+    "source": "contracts/WecoopRewards.algo.ts:20",
+    "errorMessage": "argument 1 (mbrTxn) for bootstrap must be a pay transaction",
     "pc": [
       149
     ]
   },
   {
-    "teal": 96,
-    "source": "contracts/WecoopRewards.algo.ts:33",
-    "errorMessage": "transaction verification failed: {\"txn\":\"mbrTxn\",\"field\":\"amount\",\"condition\":\"greaterThanEqualTo\",\"expected\":\">=globals.minBalance + globals.assetOptInMinBalance\"}",
+    "teal": 65,
+    "source": "contracts/WecoopRewards.algo.ts:20",
     "pc": [
-      150
+      150,
+      151,
+      152
     ]
   },
   {
-    "teal": 100,
-    "source": "contracts/WecoopRewards.algo.ts:35",
+    "teal": 66,
+    "source": "contracts/WecoopRewards.algo.ts:20",
     "pc": [
-      151,
-      152,
       153,
-      154,
-      155,
+      154
+    ]
+  },
+  {
+    "teal": 67,
+    "source": "contracts/WecoopRewards.algo.ts:20",
+    "pc": [
+      155
+    ]
+  },
+  {
+    "teal": 71,
+    "source": "contracts/WecoopRewards.algo.ts:20",
+    "pc": [
       156,
       157,
-      158,
-      159,
-      160,
-      161,
-      162,
-      163,
-      164
+      158
     ]
   },
   {
-    "teal": 101,
-    "source": "contracts/WecoopRewards.algo.ts:35",
+    "teal": 75,
+    "source": "contracts/WecoopRewards.algo.ts:22",
     "pc": [
-      165,
+      159,
+      160
+    ]
+  },
+  {
+    "teal": 76,
+    "source": "contracts/WecoopRewards.algo.ts:22",
+    "pc": [
+      161,
+      162,
+      163
+    ]
+  },
+  {
+    "teal": 77,
+    "source": "contracts/WecoopRewards.algo.ts:22",
+    "pc": [
+      164,
+      165
+    ]
+  },
+  {
+    "teal": 78,
+    "source": "contracts/WecoopRewards.algo.ts:22",
+    "pc": [
       166
     ]
   },
   {
-    "teal": 102,
-    "source": "contracts/WecoopRewards.algo.ts:35",
+    "teal": 79,
+    "source": "contracts/WecoopRewards.algo.ts:22",
     "pc": [
       167
     ]
   },
   {
-    "teal": 106,
-    "source": "contracts/WecoopRewards.algo.ts:38",
+    "teal": 82,
+    "source": "contracts/WecoopRewards.algo.ts:22",
+    "errorMessage": "Error: Not the creator trying to optin to an asset",
     "pc": [
       168
     ]
   },
   {
-    "teal": 107,
-    "source": "contracts/WecoopRewards.algo.ts:38",
+    "teal": 86,
+    "source": "contracts/WecoopRewards.algo.ts:25",
     "pc": [
       169,
       170
     ]
   },
   {
-    "teal": 108,
-    "source": "contracts/WecoopRewards.algo.ts:38",
+    "teal": 87,
+    "source": "contracts/WecoopRewards.algo.ts:25",
     "pc": [
       171,
       172
     ]
   },
   {
-    "teal": 112,
-    "source": "contracts/WecoopRewards.algo.ts:38",
+    "teal": 88,
+    "source": "contracts/WecoopRewards.algo.ts:25",
     "pc": [
       173,
       174
     ]
   },
   {
-    "teal": 113,
-    "source": "contracts/WecoopRewards.algo.ts:38",
+    "teal": 89,
+    "source": "contracts/WecoopRewards.algo.ts:25",
     "pc": [
-      175,
+      175
+    ]
+  },
+  {
+    "teal": 92,
+    "source": "contracts/WecoopRewards.algo.ts:25",
+    "errorMessage": "Receiver is not the app address",
+    "pc": [
       176
     ]
   },
   {
-    "teal": 117,
-    "source": "contracts/WecoopRewards.algo.ts:38",
+    "teal": 96,
+    "source": "contracts/WecoopRewards.algo.ts:28",
     "pc": [
       177,
       178
     ]
   },
   {
-    "teal": 118,
-    "source": "contracts/WecoopRewards.algo.ts:38",
+    "teal": 97,
+    "source": "contracts/WecoopRewards.algo.ts:28",
     "pc": [
       179,
       180
     ]
   },
   {
-    "teal": 122,
-    "source": "contracts/WecoopRewards.algo.ts:38",
+    "teal": 98,
+    "source": "contracts/WecoopRewards.algo.ts:28",
     "pc": [
       181,
       182
     ]
   },
   {
-    "teal": 123,
-    "source": "contracts/WecoopRewards.algo.ts:38",
+    "teal": 99,
+    "source": "contracts/WecoopRewards.algo.ts:28",
     "pc": [
-      183,
+      183
+    ]
+  },
+  {
+    "teal": 100,
+    "source": "contracts/WecoopRewards.algo.ts:28",
+    "pc": [
       184
     ]
   },
   {
-    "teal": 126,
-    "source": "contracts/WecoopRewards.algo.ts:38",
+    "teal": 101,
+    "source": "contracts/WecoopRewards.algo.ts:28",
     "pc": [
-      185,
+      185
+    ]
+  },
+  {
+    "teal": 102,
+    "source": "contracts/WecoopRewards.algo.ts:28",
+    "pc": [
       186
     ]
   },
   {
-    "teal": 127,
-    "source": "contracts/WecoopRewards.algo.ts:38",
+    "teal": 107,
+    "source": "contracts/WecoopRewards.algo.ts:31",
     "pc": [
       187,
       188
     ]
   },
   {
-    "teal": 130,
-    "source": "contracts/WecoopRewards.algo.ts:38",
+    "teal": 108,
+    "source": "contracts/WecoopRewards.algo.ts:31",
     "pc": [
-      189
-    ]
-  },
-  {
-    "teal": 131,
-    "source": "contracts/WecoopRewards.algo.ts:22",
-    "pc": [
+      189,
       190
     ]
   },
   {
-    "teal": 136,
-    "source": "contracts/WecoopRewards.algo.ts:41",
+    "teal": 109,
+    "source": "contracts/WecoopRewards.algo.ts:31",
     "pc": [
       191,
       192
     ]
   },
   {
-    "teal": 137,
-    "source": "contracts/WecoopRewards.algo.ts:41",
+    "teal": 110,
+    "source": "contracts/WecoopRewards.algo.ts:31",
     "pc": [
       193,
       194
     ]
   },
   {
-    "teal": 138,
-    "source": "contracts/WecoopRewards.algo.ts:41",
+    "teal": 111,
+    "source": "contracts/WecoopRewards.algo.ts:31",
     "pc": [
       195
     ]
   },
   {
-    "teal": 139,
-    "source": "contracts/WecoopRewards.algo.ts:41",
+    "teal": 112,
+    "source": "contracts/WecoopRewards.algo.ts:31",
     "pc": [
       196
     ]
   },
   {
-    "teal": 140,
-    "source": "contracts/WecoopRewards.algo.ts:41",
+    "teal": 115,
+    "source": "contracts/WecoopRewards.algo.ts:31",
+    "errorMessage": "transaction verification failed: {\"txn\":\"mbrTxn\",\"field\":\"amount\",\"condition\":\"greaterThanEqualTo\",\"expected\":\">=globals.minBalance + globals.assetOptInMinBalance\"}",
     "pc": [
-      197,
-      198
+      197
     ]
   },
   {
-    "teal": 141,
-    "source": "contracts/WecoopRewards.algo.ts:41",
+    "teal": 119,
+    "source": "contracts/WecoopRewards.algo.ts:33",
     "pc": [
+      198,
       199,
-      200
-    ]
-  },
-  {
-    "teal": 142,
-    "source": "contracts/WecoopRewards.algo.ts:41",
-    "pc": [
-      201
-    ]
-  },
-  {
-    "teal": 145,
-    "source": "contracts/WecoopRewards.algo.ts:41",
-    "errorMessage": "argument 0 (axfer) for initiateRewardCycle must be a axfer transaction",
-    "pc": [
-      202
-    ]
-  },
-  {
-    "teal": 148,
-    "source": "contracts/WecoopRewards.algo.ts:41",
-    "pc": [
+      200,
+      201,
+      202,
       203,
       204,
-      205
-    ]
-  },
-  {
-    "teal": 149,
-    "source": "contracts/WecoopRewards.algo.ts:41",
-    "pc": [
+      205,
       206,
-      207
-    ]
-  },
-  {
-    "teal": 150,
-    "source": "contracts/WecoopRewards.algo.ts:41",
-    "pc": [
-      208
-    ]
-  },
-  {
-    "teal": 154,
-    "source": "contracts/WecoopRewards.algo.ts:41",
-    "pc": [
+      207,
+      208,
       209,
       210,
       211
     ]
   },
   {
-    "teal": 157,
-    "source": "contracts/WecoopRewards.algo.ts:41",
+    "teal": 120,
+    "source": "contracts/WecoopRewards.algo.ts:33",
     "pc": [
       212,
       213
     ]
   },
   {
-    "teal": 161,
-    "source": "contracts/WecoopRewards.algo.ts:49",
+    "teal": 121,
+    "source": "contracts/WecoopRewards.algo.ts:33",
     "pc": [
-      214,
+      214
+    ]
+  },
+  {
+    "teal": 125,
+    "source": "contracts/WecoopRewards.algo.ts:36",
+    "pc": [
       215
     ]
   },
   {
-    "teal": 162,
-    "source": "contracts/WecoopRewards.algo.ts:49",
+    "teal": 126,
+    "source": "contracts/WecoopRewards.algo.ts:36",
     "pc": [
       216,
       217
     ]
   },
   {
-    "teal": 163,
-    "source": "contracts/WecoopRewards.algo.ts:49",
+    "teal": 127,
+    "source": "contracts/WecoopRewards.algo.ts:36",
     "pc": [
       218,
-      219,
+      219
+    ]
+  },
+  {
+    "teal": 131,
+    "source": "contracts/WecoopRewards.algo.ts:36",
+    "pc": [
       220,
-      221,
+      221
+    ]
+  },
+  {
+    "teal": 132,
+    "source": "contracts/WecoopRewards.algo.ts:36",
+    "pc": [
       222,
-      223,
+      223
+    ]
+  },
+  {
+    "teal": 136,
+    "source": "contracts/WecoopRewards.algo.ts:36",
+    "pc": [
       224,
-      225,
+      225
+    ]
+  },
+  {
+    "teal": 137,
+    "source": "contracts/WecoopRewards.algo.ts:36",
+    "pc": [
       226,
-      227,
+      227
+    ]
+  },
+  {
+    "teal": 141,
+    "source": "contracts/WecoopRewards.algo.ts:36",
+    "pc": [
       228,
-      229,
+      229
+    ]
+  },
+  {
+    "teal": 142,
+    "source": "contracts/WecoopRewards.algo.ts:36",
+    "pc": [
       230,
       231
     ]
   },
   {
-    "teal": 164,
-    "source": "contracts/WecoopRewards.algo.ts:49",
+    "teal": 145,
+    "source": "contracts/WecoopRewards.algo.ts:36",
     "pc": [
-      232
-    ]
-  },
-  {
-    "teal": 165,
-    "source": "contracts/WecoopRewards.algo.ts:49",
-    "pc": [
+      232,
       233
     ]
   },
   {
-    "teal": 166,
-    "source": "contracts/WecoopRewards.algo.ts:49",
+    "teal": 146,
+    "source": "contracts/WecoopRewards.algo.ts:36",
     "pc": [
-      234
+      234,
+      235
     ]
   },
   {
-    "teal": 170,
-    "source": "contracts/WecoopRewards.algo.ts:52",
+    "teal": 149,
+    "source": "contracts/WecoopRewards.algo.ts:36",
     "pc": [
-      235,
-      236,
-      237,
+      236
+    ]
+  },
+  {
+    "teal": 150,
+    "source": "contracts/WecoopRewards.algo.ts:20",
+    "pc": [
+      237
+    ]
+  },
+  {
+    "teal": 155,
+    "source": "contracts/WecoopRewards.algo.ts:39",
+    "pc": [
       238,
-      239,
+      239
+    ]
+  },
+  {
+    "teal": 156,
+    "source": "contracts/WecoopRewards.algo.ts:39",
+    "pc": [
       240,
-      241,
-      242,
-      243,
+      241
+    ]
+  },
+  {
+    "teal": 157,
+    "source": "contracts/WecoopRewards.algo.ts:39",
+    "pc": [
+      242
+    ]
+  },
+  {
+    "teal": 158,
+    "source": "contracts/WecoopRewards.algo.ts:39",
+    "pc": [
+      243
+    ]
+  },
+  {
+    "teal": 159,
+    "source": "contracts/WecoopRewards.algo.ts:39",
+    "pc": [
       244,
-      245,
+      245
+    ]
+  },
+  {
+    "teal": 160,
+    "source": "contracts/WecoopRewards.algo.ts:39",
+    "pc": [
       246,
-      247,
+      247
+    ]
+  },
+  {
+    "teal": 161,
+    "source": "contracts/WecoopRewards.algo.ts:39",
+    "pc": [
       248
     ]
   },
   {
-    "teal": 171,
-    "source": "contracts/WecoopRewards.algo.ts:52",
+    "teal": 164,
+    "source": "contracts/WecoopRewards.algo.ts:39",
+    "errorMessage": "argument 0 (axfer) for initiateRewardCycle must be a axfer transaction",
     "pc": [
       249
     ]
   },
   {
-    "teal": 172,
-    "source": "contracts/WecoopRewards.algo.ts:52",
+    "teal": 167,
+    "source": "contracts/WecoopRewards.algo.ts:39",
     "pc": [
       250,
-      251
-    ]
-  },
-  {
-    "teal": 173,
-    "source": "contracts/WecoopRewards.algo.ts:52",
-    "pc": [
+      251,
       252
     ]
   },
   {
-    "teal": 174,
-    "source": "contracts/WecoopRewards.algo.ts:52",
+    "teal": 168,
+    "source": "contracts/WecoopRewards.algo.ts:39",
     "pc": [
       253,
-      254,
-      255,
-      256,
-      257,
-      258,
-      259,
-      260,
-      261,
-      262,
-      263,
-      264,
-      265,
-      266
+      254
     ]
   },
   {
-    "teal": 175,
-    "source": "contracts/WecoopRewards.algo.ts:52",
+    "teal": 169,
+    "source": "contracts/WecoopRewards.algo.ts:39",
     "pc": [
-      267
+      255
+    ]
+  },
+  {
+    "teal": 173,
+    "source": "contracts/WecoopRewards.algo.ts:39",
+    "pc": [
+      256,
+      257,
+      258
     ]
   },
   {
     "teal": 176,
-    "source": "contracts/WecoopRewards.algo.ts:52",
+    "source": "contracts/WecoopRewards.algo.ts:39",
     "pc": [
-      268
+      259,
+      260
     ]
   },
   {
     "teal": 180,
-    "source": "contracts/WecoopRewards.algo.ts:55",
+    "source": "contracts/WecoopRewards.algo.ts:47",
     "pc": [
-      269,
-      270
+      261,
+      262
     ]
   },
   {
     "teal": 181,
-    "source": "contracts/WecoopRewards.algo.ts:55",
+    "source": "contracts/WecoopRewards.algo.ts:47",
     "pc": [
-      271,
-      272
+      263,
+      264
     ]
   },
   {
     "teal": 182,
-    "source": "contracts/WecoopRewards.algo.ts:55",
+    "source": "contracts/WecoopRewards.algo.ts:47",
     "pc": [
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
       273,
-      274
-    ]
-  },
-  {
-    "teal": 186,
-    "source": "contracts/WecoopRewards.algo.ts:57",
-    "pc": [
+      274,
       275,
       276,
       277,
-      278,
-      279,
-      280,
-      281,
+      278
+    ]
+  },
+  {
+    "teal": 183,
+    "source": "contracts/WecoopRewards.algo.ts:47",
+    "pc": [
+      279
+    ]
+  },
+  {
+    "teal": 184,
+    "source": "contracts/WecoopRewards.algo.ts:47",
+    "pc": [
+      280
+    ]
+  },
+  {
+    "teal": 185,
+    "source": "contracts/WecoopRewards.algo.ts:47",
+    "pc": [
+      281
+    ]
+  },
+  {
+    "teal": 189,
+    "source": "contracts/WecoopRewards.algo.ts:50",
+    "pc": [
       282,
       283,
       284,
@@ -868,41 +862,41 @@
       286,
       287,
       288,
-      289
-    ]
-  },
-  {
-    "teal": 187,
-    "source": "contracts/WecoopRewards.algo.ts:57",
-    "pc": [
-      290
-    ]
-  },
-  {
-    "teal": 188,
-    "source": "contracts/WecoopRewards.algo.ts:57",
-    "pc": [
+      289,
+      290,
       291,
-      292
-    ]
-  },
-  {
-    "teal": 189,
-    "source": "contracts/WecoopRewards.algo.ts:57",
-    "pc": [
-      293
+      292,
+      293,
+      294,
+      295
     ]
   },
   {
     "teal": 190,
-    "source": "contracts/WecoopRewards.algo.ts:57",
+    "source": "contracts/WecoopRewards.algo.ts:50",
     "pc": [
-      294,
-      295,
-      296,
+      296
+    ]
+  },
+  {
+    "teal": 191,
+    "source": "contracts/WecoopRewards.algo.ts:50",
+    "pc": [
       297,
-      298,
-      299,
+      298
+    ]
+  },
+  {
+    "teal": 192,
+    "source": "contracts/WecoopRewards.algo.ts:50",
+    "pc": [
+      299
+    ]
+  },
+  {
+    "teal": 193,
+    "source": "contracts/WecoopRewards.algo.ts:50",
+    "pc": [
       300,
       301,
       302,
@@ -911,148 +905,99 @@
       305,
       306,
       307,
-      308
-    ]
-  },
-  {
-    "teal": 191,
-    "source": "contracts/WecoopRewards.algo.ts:57",
-    "pc": [
-      309
-    ]
-  },
-  {
-    "teal": 192,
-    "source": "contracts/WecoopRewards.algo.ts:57",
-    "pc": [
-      310
-    ]
-  },
-  {
-    "teal": 193,
-    "source": "contracts/WecoopRewards.algo.ts:41",
-    "pc": [
-      311
-    ]
-  },
-  {
-    "teal": 198,
-    "source": "contracts/WecoopRewards.algo.ts:63",
-    "pc": [
+      308,
+      309,
+      310,
+      311,
       312,
       313
     ]
   },
   {
-    "teal": 199,
-    "source": "contracts/WecoopRewards.algo.ts:63",
+    "teal": 194,
+    "source": "contracts/WecoopRewards.algo.ts:50",
     "pc": [
-      314,
+      314
+    ]
+  },
+  {
+    "teal": 195,
+    "source": "contracts/WecoopRewards.algo.ts:50",
+    "pc": [
       315
     ]
   },
   {
-    "teal": 200,
-    "source": "contracts/WecoopRewards.algo.ts:63",
+    "teal": 199,
+    "source": "contracts/WecoopRewards.algo.ts:53",
     "pc": [
-      316
-    ]
-  },
-  {
-    "teal": 201,
-    "source": "contracts/WecoopRewards.algo.ts:63",
-    "pc": [
+      316,
       317
     ]
   },
   {
-    "teal": 202,
-    "source": "contracts/WecoopRewards.algo.ts:63",
+    "teal": 200,
+    "source": "contracts/WecoopRewards.algo.ts:53",
     "pc": [
       318,
       319
     ]
   },
   {
-    "teal": 203,
-    "source": "contracts/WecoopRewards.algo.ts:63",
+    "teal": 201,
+    "source": "contracts/WecoopRewards.algo.ts:53",
     "pc": [
       320,
       321
     ]
   },
   {
-    "teal": 204,
-    "source": "contracts/WecoopRewards.algo.ts:63",
+    "teal": 205,
+    "source": "contracts/WecoopRewards.algo.ts:55",
     "pc": [
-      322
-    ]
-  },
-  {
-    "teal": 207,
-    "source": "contracts/WecoopRewards.algo.ts:63",
-    "errorMessage": "argument 0 (axfer) for createPost must be a axfer transaction",
-    "pc": [
-      323
-    ]
-  },
-  {
-    "teal": 210,
-    "source": "contracts/WecoopRewards.algo.ts:63",
-    "pc": [
+      322,
+      323,
       324,
       325,
-      326
-    ]
-  },
-  {
-    "teal": 211,
-    "source": "contracts/WecoopRewards.algo.ts:63",
-    "pc": [
+      326,
       327,
-      328
-    ]
-  },
-  {
-    "teal": 212,
-    "source": "contracts/WecoopRewards.algo.ts:63",
-    "pc": [
-      329
-    ]
-  },
-  {
-    "teal": 216,
-    "source": "contracts/WecoopRewards.algo.ts:63",
-    "pc": [
+      328,
+      329,
       330,
       331,
-      332
-    ]
-  },
-  {
-    "teal": 220,
-    "source": "contracts/WecoopRewards.algo.ts:65",
-    "pc": [
+      332,
       333,
-      334
-    ]
-  },
-  {
-    "teal": 221,
-    "source": "contracts/WecoopRewards.algo.ts:65",
-    "pc": [
+      334,
       335,
       336
     ]
   },
   {
-    "teal": 222,
-    "source": "contracts/WecoopRewards.algo.ts:65",
+    "teal": 206,
+    "source": "contracts/WecoopRewards.algo.ts:55",
     "pc": [
-      337,
+      337
+    ]
+  },
+  {
+    "teal": 207,
+    "source": "contracts/WecoopRewards.algo.ts:55",
+    "pc": [
       338,
-      339,
-      340,
+      339
+    ]
+  },
+  {
+    "teal": 208,
+    "source": "contracts/WecoopRewards.algo.ts:55",
+    "pc": [
+      340
+    ]
+  },
+  {
+    "teal": 209,
+    "source": "contracts/WecoopRewards.algo.ts:55",
+    "pc": [
       341,
       342,
       343,
@@ -1067,309 +1012,847 @@
       352,
       353,
       354,
-      355,
-      356,
-      357,
-      358,
+      355
+    ]
+  },
+  {
+    "teal": 210,
+    "source": "contracts/WecoopRewards.algo.ts:55",
+    "pc": [
+      356
+    ]
+  },
+  {
+    "teal": 211,
+    "source": "contracts/WecoopRewards.algo.ts:55",
+    "pc": [
+      357
+    ]
+  },
+  {
+    "teal": 212,
+    "source": "contracts/WecoopRewards.algo.ts:39",
+    "pc": [
+      358
+    ]
+  },
+  {
+    "teal": 217,
+    "source": "contracts/WecoopRewards.algo.ts:61",
+    "pc": [
       359,
-      360,
+      360
+    ]
+  },
+  {
+    "teal": 218,
+    "source": "contracts/WecoopRewards.algo.ts:61",
+    "pc": [
       361,
-      362,
-      363,
-      364,
+      362
+    ]
+  },
+  {
+    "teal": 219,
+    "source": "contracts/WecoopRewards.algo.ts:61",
+    "pc": [
+      363
+    ]
+  },
+  {
+    "teal": 220,
+    "source": "contracts/WecoopRewards.algo.ts:61",
+    "pc": [
+      364
+    ]
+  },
+  {
+    "teal": 221,
+    "source": "contracts/WecoopRewards.algo.ts:61",
+    "pc": [
       365,
-      366,
+      366
+    ]
+  },
+  {
+    "teal": 222,
+    "source": "contracts/WecoopRewards.algo.ts:61",
+    "pc": [
       367,
-      368,
-      369,
-      370,
+      368
+    ]
+  },
+  {
+    "teal": 223,
+    "source": "contracts/WecoopRewards.algo.ts:61",
+    "pc": [
+      369
+    ]
+  },
+  {
+    "teal": 226,
+    "source": "contracts/WecoopRewards.algo.ts:61",
+    "errorMessage": "argument 0 (axfer) for createPost must be a axfer transaction",
+    "pc": [
+      370
+    ]
+  },
+  {
+    "teal": 229,
+    "source": "contracts/WecoopRewards.algo.ts:61",
+    "pc": [
       371,
       372,
-      373,
+      373
+    ]
+  },
+  {
+    "teal": 230,
+    "source": "contracts/WecoopRewards.algo.ts:61",
+    "pc": [
       374,
-      375,
-      376,
+      375
+    ]
+  },
+  {
+    "teal": 231,
+    "source": "contracts/WecoopRewards.algo.ts:61",
+    "pc": [
+      376
+    ]
+  },
+  {
+    "teal": 235,
+    "source": "contracts/WecoopRewards.algo.ts:61",
+    "pc": [
       377,
       378,
-      379,
+      379
+    ]
+  },
+  {
+    "teal": 238,
+    "source": "contracts/WecoopRewards.algo.ts:61",
+    "pc": [
       380,
-      381,
+      381
+    ]
+  },
+  {
+    "teal": 242,
+    "source": "contracts/WecoopRewards.algo.ts:67",
+    "pc": [
       382,
       383,
       384,
       385,
       386,
-      387,
+      387
+    ]
+  },
+  {
+    "teal": 243,
+    "source": "contracts/WecoopRewards.algo.ts:67",
+    "pc": [
       388,
       389,
-      390,
+      390
+    ]
+  },
+  {
+    "teal": 244,
+    "source": "contracts/WecoopRewards.algo.ts:67",
+    "pc": [
       391,
-      392,
+      392
+    ]
+  },
+  {
+    "teal": 248,
+    "source": "contracts/WecoopRewards.algo.ts:69",
+    "pc": [
       393,
       394,
       395,
-      396
-    ]
-  },
-  {
-    "teal": 223,
-    "source": "contracts/WecoopRewards.algo.ts:65",
-    "pc": [
-      397
-    ]
-  },
-  {
-    "teal": 224,
-    "source": "contracts/WecoopRewards.algo.ts:65",
-    "pc": [
-      398
-    ]
-  },
-  {
-    "teal": 225,
-    "source": "contracts/WecoopRewards.algo.ts:65",
-    "pc": [
-      399
-    ]
-  },
-  {
-    "teal": 229,
-    "source": "contracts/WecoopRewards.algo.ts:67",
-    "pc": [
+      396,
+      397,
+      398,
+      399,
       400,
       401,
       402,
       403,
       404,
-      405
+      405,
+      406,
+      407
     ]
   },
   {
-    "teal": 230,
-    "source": "contracts/WecoopRewards.algo.ts:67",
+    "teal": 249,
+    "source": "contracts/WecoopRewards.algo.ts:69",
     "pc": [
-      406,
-      407,
       408
     ]
   },
   {
-    "teal": 231,
-    "source": "contracts/WecoopRewards.algo.ts:63",
+    "teal": 250,
+    "source": "contracts/WecoopRewards.algo.ts:69",
     "pc": [
-      409
+      409,
+      410
     ]
   },
   {
-    "teal": 235,
-    "source": "contracts/WecoopRewards.algo.ts:72",
+    "teal": 251,
+    "source": "contracts/WecoopRewards.algo.ts:69",
     "pc": [
-      410,
-      411,
-      412
+      411
     ]
   },
   {
-    "teal": 240,
-    "source": "contracts/WecoopRewards.algo.ts:73",
+    "teal": 252,
+    "source": "contracts/WecoopRewards.algo.ts:69",
     "pc": [
+      412,
       413,
-      414
-    ]
-  },
-  {
-    "teal": 241,
-    "source": "contracts/WecoopRewards.algo.ts:73",
-    "pc": [
+      414,
       415,
       416,
       417,
       418,
       419,
-      420
-    ]
-  },
-  {
-    "teal": 242,
-    "source": "contracts/WecoopRewards.algo.ts:73",
-    "pc": [
-      421
-    ]
-  },
-  {
-    "teal": 243,
-    "source": "contracts/WecoopRewards.algo.ts:73",
-    "pc": [
+      420,
+      421,
       422,
       423,
-      424
-    ]
-  },
-  {
-    "teal": 248,
-    "source": "contracts/WecoopRewards.algo.ts:74",
-    "pc": [
+      424,
       425,
       426
     ]
   },
   {
-    "teal": 249,
-    "source": "contracts/WecoopRewards.algo.ts:74",
+    "teal": 253,
+    "source": "contracts/WecoopRewards.algo.ts:69",
     "pc": [
       427
     ]
   },
   {
-    "teal": 250,
-    "source": "contracts/WecoopRewards.algo.ts:73",
+    "teal": 254,
+    "source": "contracts/WecoopRewards.algo.ts:69",
     "pc": [
-      428,
+      428
+    ]
+  },
+  {
+    "teal": 258,
+    "source": "contracts/WecoopRewards.algo.ts:70",
+    "pc": [
       429,
       430
     ]
   },
   {
-    "teal": 255,
-    "source": "contracts/WecoopRewards.algo.ts:75",
+    "teal": 259,
+    "source": "contracts/WecoopRewards.algo.ts:70",
     "pc": [
       431,
-      432
-    ]
-  },
-  {
-    "teal": 256,
-    "source": "contracts/WecoopRewards.algo.ts:75",
-    "pc": [
-      433
-    ]
-  },
-  {
-    "teal": 259,
-    "source": "contracts/WecoopRewards.algo.ts:72",
-    "pc": [
-      434
-    ]
-  },
-  {
-    "teal": 262,
-    "source": "contracts/WecoopRewards.algo.ts:5",
-    "pc": [
+      432,
+      433,
+      434,
       435,
-      436
-    ]
-  },
-  {
-    "teal": 263,
-    "source": "contracts/WecoopRewards.algo.ts:5",
-    "pc": [
-      437
-    ]
-  },
-  {
-    "teal": 266,
-    "source": "contracts/WecoopRewards.algo.ts:5",
-    "pc": [
+      436,
+      437,
       438,
       439,
       440,
       441,
       442,
-      443
-    ]
-  },
-  {
-    "teal": 267,
-    "source": "contracts/WecoopRewards.algo.ts:5",
-    "pc": [
+      443,
       444,
       445,
       446
     ]
   },
   {
-    "teal": 268,
-    "source": "contracts/WecoopRewards.algo.ts:5",
+    "teal": 260,
+    "source": "contracts/WecoopRewards.algo.ts:70",
     "pc": [
-      447,
+      447
+    ]
+  },
+  {
+    "teal": 261,
+    "source": "contracts/WecoopRewards.algo.ts:70",
+    "pc": [
       448,
-      449,
+      449
+    ]
+  },
+  {
+    "teal": 262,
+    "source": "contracts/WecoopRewards.algo.ts:70",
+    "pc": [
       450
     ]
   },
   {
-    "teal": 271,
-    "source": "contracts/WecoopRewards.algo.ts:5",
-    "errorMessage": "this contract does not implement the given ABI method for create NoOp",
+    "teal": 263,
+    "source": "contracts/WecoopRewards.algo.ts:70",
     "pc": [
-      451
+      451,
+      452
     ]
   },
   {
-    "teal": 274,
-    "source": "contracts/WecoopRewards.algo.ts:5",
+    "teal": 264,
+    "source": "contracts/WecoopRewards.algo.ts:70",
     "pc": [
-      452,
       453,
       454,
       455,
       456,
-      457
-    ]
-  },
-  {
-    "teal": 275,
-    "source": "contracts/WecoopRewards.algo.ts:5",
-    "pc": [
+      457,
       458,
       459,
       460,
       461,
       462,
-      463
-    ]
-  },
-  {
-    "teal": 276,
-    "source": "contracts/WecoopRewards.algo.ts:5",
-    "pc": [
+      463,
       464,
       465,
       466,
       467,
-      468,
-      469
+      468
     ]
   },
   {
-    "teal": 277,
-    "source": "contracts/WecoopRewards.algo.ts:5",
+    "teal": 265,
+    "source": "contracts/WecoopRewards.algo.ts:70",
     "pc": [
-      470,
-      471,
+      469,
+      470
+    ]
+  },
+  {
+    "teal": 266,
+    "source": "contracts/WecoopRewards.algo.ts:70",
+    "pc": [
+      471
+    ]
+  },
+  {
+    "teal": 270,
+    "source": "contracts/WecoopRewards.algo.ts:71",
+    "pc": [
       472
     ]
   },
   {
-    "teal": 278,
-    "source": "contracts/WecoopRewards.algo.ts:5",
+    "teal": 271,
+    "source": "contracts/WecoopRewards.algo.ts:71",
     "pc": [
       473,
-      474,
+      474
+    ]
+  },
+  {
+    "teal": 272,
+    "source": "contracts/WecoopRewards.algo.ts:71",
+    "pc": [
       475,
-      476,
+      476
+    ]
+  },
+  {
+    "teal": 276,
+    "source": "contracts/WecoopRewards.algo.ts:71",
+    "pc": [
       477,
-      478,
+      478
+    ]
+  },
+  {
+    "teal": 277,
+    "source": "contracts/WecoopRewards.algo.ts:71",
+    "pc": [
       479,
       480
     ]
   },
   {
     "teal": 281,
+    "source": "contracts/WecoopRewards.algo.ts:71",
+    "pc": [
+      481,
+      482
+    ]
+  },
+  {
+    "teal": 282,
+    "source": "contracts/WecoopRewards.algo.ts:71",
+    "pc": [
+      483,
+      484
+    ]
+  },
+  {
+    "teal": 286,
+    "source": "contracts/WecoopRewards.algo.ts:71",
+    "pc": [
+      485,
+      486,
+      487,
+      488,
+      489,
+      490,
+      491,
+      492,
+      493,
+      494,
+      495,
+      496,
+      497,
+      498
+    ]
+  },
+  {
+    "teal": 287,
+    "source": "contracts/WecoopRewards.algo.ts:71",
+    "pc": [
+      499
+    ]
+  },
+  {
+    "teal": 288,
+    "source": "contracts/WecoopRewards.algo.ts:71",
+    "pc": [
+      500,
+      501
+    ]
+  },
+  {
+    "teal": 291,
+    "source": "contracts/WecoopRewards.algo.ts:71",
+    "pc": [
+      502,
+      503
+    ]
+  },
+  {
+    "teal": 292,
+    "source": "contracts/WecoopRewards.algo.ts:71",
+    "pc": [
+      504,
+      505
+    ]
+  },
+  {
+    "teal": 295,
+    "source": "contracts/WecoopRewards.algo.ts:71",
+    "pc": [
+      506
+    ]
+  },
+  {
+    "teal": 296,
+    "source": "contracts/WecoopRewards.algo.ts:61",
+    "pc": [
+      507
+    ]
+  },
+  {
+    "teal": 300,
+    "source": "contracts/WecoopRewards.algo.ts:76",
+    "pc": [
+      508,
+      509,
+      510
+    ]
+  },
+  {
+    "teal": 303,
+    "source": "contracts/WecoopRewards.algo.ts:76",
+    "pc": [
+      511,
+      512
+    ]
+  },
+  {
+    "teal": 307,
+    "source": "contracts/WecoopRewards.algo.ts:77",
+    "pc": [
+      513,
+      514
+    ]
+  },
+  {
+    "teal": 308,
+    "source": "contracts/WecoopRewards.algo.ts:77",
+    "pc": [
+      515,
+      516
+    ]
+  },
+  {
+    "teal": 313,
+    "source": "contracts/WecoopRewards.algo.ts:79",
+    "pc": [
+      517,
+      518
+    ]
+  },
+  {
+    "teal": 314,
+    "source": "contracts/WecoopRewards.algo.ts:79",
+    "pc": [
+      519,
+      520,
+      521,
+      522,
+      523,
+      524,
+      525,
+      526
+    ]
+  },
+  {
+    "teal": 315,
+    "source": "contracts/WecoopRewards.algo.ts:79",
+    "pc": [
+      527
+    ]
+  },
+  {
+    "teal": 316,
+    "source": "contracts/WecoopRewards.algo.ts:79",
+    "pc": [
+      528,
+      529,
+      530
+    ]
+  },
+  {
+    "teal": 321,
+    "source": "contracts/WecoopRewards.algo.ts:80",
+    "pc": [
+      531,
+      532
+    ]
+  },
+  {
+    "teal": 322,
+    "source": "contracts/WecoopRewards.algo.ts:80",
+    "pc": [
+      533,
+      534
+    ]
+  },
+  {
+    "teal": 323,
+    "source": "contracts/WecoopRewards.algo.ts:79",
+    "pc": [
+      535,
+      536,
+      537
+    ]
+  },
+  {
+    "teal": 328,
+    "source": "contracts/WecoopRewards.algo.ts:81",
+    "pc": [
+      538,
+      539
+    ]
+  },
+  {
+    "teal": 329,
+    "source": "contracts/WecoopRewards.algo.ts:81",
+    "pc": [
+      540,
+      541,
+      542,
+      543,
+      544,
+      545,
+      546
+    ]
+  },
+  {
+    "teal": 330,
+    "source": "contracts/WecoopRewards.algo.ts:81",
+    "pc": [
+      547
+    ]
+  },
+  {
+    "teal": 331,
+    "source": "contracts/WecoopRewards.algo.ts:81",
+    "pc": [
+      548,
+      549,
+      550
+    ]
+  },
+  {
+    "teal": 336,
+    "source": "contracts/WecoopRewards.algo.ts:82",
+    "pc": [
+      551,
+      552
+    ]
+  },
+  {
+    "teal": 337,
+    "source": "contracts/WecoopRewards.algo.ts:82",
+    "pc": [
+      553,
+      554
+    ]
+  },
+  {
+    "teal": 338,
+    "source": "contracts/WecoopRewards.algo.ts:81",
+    "pc": [
+      555,
+      556,
+      557
+    ]
+  },
+  {
+    "teal": 343,
+    "source": "contracts/WecoopRewards.algo.ts:83",
+    "pc": [
+      558,
+      559
+    ]
+  },
+  {
+    "teal": 344,
+    "source": "contracts/WecoopRewards.algo.ts:83",
+    "pc": [
+      560,
+      561,
+      562,
+      563,
+      564,
+      565
+    ]
+  },
+  {
+    "teal": 345,
+    "source": "contracts/WecoopRewards.algo.ts:83",
+    "pc": [
+      566
+    ]
+  },
+  {
+    "teal": 346,
+    "source": "contracts/WecoopRewards.algo.ts:83",
+    "pc": [
+      567,
+      568,
+      569
+    ]
+  },
+  {
+    "teal": 351,
+    "source": "contracts/WecoopRewards.algo.ts:84",
+    "pc": [
+      570,
+      571
+    ]
+  },
+  {
+    "teal": 352,
+    "source": "contracts/WecoopRewards.algo.ts:84",
+    "pc": [
+      572,
+      573
+    ]
+  },
+  {
+    "teal": 357,
+    "source": "contracts/WecoopRewards.algo.ts:87",
+    "pc": [
+      574,
+      575
+    ]
+  },
+  {
+    "teal": 360,
+    "source": "contracts/WecoopRewards.algo.ts:76",
+    "pc": [
+      576,
+      577
+    ]
+  },
+  {
+    "teal": 361,
+    "source": "contracts/WecoopRewards.algo.ts:76",
+    "pc": [
+      578
+    ]
+  },
+  {
+    "teal": 364,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
+      579,
+      580
+    ]
+  },
+  {
+    "teal": 365,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
+      581
+    ]
+  },
+  {
+    "teal": 368,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
+      582,
+      583,
+      584,
+      585,
+      586,
+      587
+    ]
+  },
+  {
+    "teal": 369,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
+      588,
+      589,
+      590
+    ]
+  },
+  {
+    "teal": 370,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
+      591,
+      592,
+      593,
+      594
+    ]
+  },
+  {
+    "teal": 373,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "errorMessage": "this contract does not implement the given ABI method for create NoOp",
+    "pc": [
+      595
+    ]
+  },
+  {
+    "teal": 376,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
+      596,
+      597,
+      598,
+      599,
+      600,
+      601
+    ]
+  },
+  {
+    "teal": 377,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
+      602,
+      603,
+      604,
+      605,
+      606,
+      607
+    ]
+  },
+  {
+    "teal": 378,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
+      608,
+      609,
+      610,
+      611,
+      612,
+      613
+    ]
+  },
+  {
+    "teal": 379,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
+      614,
+      615,
+      616
+    ]
+  },
+  {
+    "teal": 380,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
+      617,
+      618,
+      619,
+      620,
+      621,
+      622,
+      623,
+      624
+    ]
+  },
+  {
+    "teal": 383,
     "source": "contracts/WecoopRewards.algo.ts:5",
     "errorMessage": "this contract does not implement the given ABI method for call NoOp",
     "pc": [
-      481
+      625
+    ]
+  },
+  {
+    "teal": 386,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
+      626,
+      627,
+      628,
+      629,
+      630,
+      631
+    ]
+  },
+  {
+    "teal": 387,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
+      632,
+      633,
+      634
+    ]
+  },
+  {
+    "teal": 388,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "pc": [
+      635,
+      636,
+      637,
+      638
+    ]
+  },
+  {
+    "teal": 391,
+    "source": "contracts/WecoopRewards.algo.ts:5",
+    "errorMessage": "this contract does not implement the given ABI method for call OptIn",
+    "pc": [
+      639
     ]
   }
 ]

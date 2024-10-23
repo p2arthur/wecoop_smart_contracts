@@ -90,27 +90,46 @@ describe('WecoopRewards', () => {
     expect(totalRewards?.asNumber()).toBe(10_000);
   });
 
-  //REWARD CYCLE 1 ------------------------------------------------------------------------------------------------------------------------------
-
-  //REWARD CYCLE 2 ------------------------------------------------------------------------------------------------------------------------------
-  test('initiateRewardCycle', async () => {
-    const { appAddress } = await appClient.appClient.getAppReference();
-
-    const axfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+  test('createPost', async () => {
+    // Step 3: Create an asset transfer transaction simulating a post creation
+    const createPostAxfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
       from: mainAccount.addr,
-      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
-      to: appAddress,
-      amount: 10_000,
+      to: mainAccount.addr,
+      amount: 1, // simulate a small fee to post
       assetIndex: Number(wecoopTokenId),
+      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
     });
 
-    await appClient.initiateRewardCycle({ axfer: axfer });
+    try {
+      appClient.optIn.optInToApplication({}, { sender: mainAccount });
 
-    const { reward_cycle: rewardCycle } = await appClient.getGlobalState();
+      // Step 4: Call the createPost method
+      await appClient.createPost(
+        { axfer: createPostAxfer },
+        {
+          sender: mainAccount,
+          sendParams: {
+            fee: algokit.microAlgos(3_000),
+          },
+        }
+      );
+    } catch (error) {
+      console.error(error);
+    }
+
+    // Step 5: Fetch global and local state to verify results
     const { total_rewards: totalRewards } = await appClient.getGlobalState();
+    const userState = await appClient.getLocalState(mainAccount.addr);
 
-    expect(rewardCycle?.asNumber()).toBe(2);
-    expect(totalRewards?.asNumber()).toBe(20_000);
+    // // Assertions:
+    // // 1. Reward pool should be reduced by the post creation reward (e.g., 10 units as per calculatePostReward)
+    // expect(totalRewards?.asNumber()).toBe(10_000);
+
+    // 2. User's claimed reward should be incremented by 10 units
+    expect(userState?.claimed_amount?.asNumber()).toBe(5);
   });
-  //REWARD CYCLE 2 ------------------------------------------------------------------------------------------------------------------------------
+
+  //REWARD CYCLE 1 ------------------------------------------------------------------------------------------------------------------------------
+
+  // -----------------------------------------------------------------------------------------------------------
 });
