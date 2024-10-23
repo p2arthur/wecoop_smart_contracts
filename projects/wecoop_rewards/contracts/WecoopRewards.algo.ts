@@ -18,6 +18,7 @@ export class WecoopRewards extends Contract {
     votesCast: uint64;
   }>();
 
+  //ADMIN METHODS ------------------------------------------------------------------------------------------------------------------------------
   bootstrap(mbrTxn: PayTxn, asset: AssetID) {
     // Verify if the one calling this function is the app creator
     assert(this.txn.sender === this.app.creator, 'Error: Not the creator trying to optin to an asset');
@@ -55,4 +56,42 @@ export class WecoopRewards extends Contract {
 
     this.total_rewards.value += depositedAmount;
   }
+
+  //ADMIN METHODS ------------------------------------------------------------------------------------------------------------------------------
+
+  //POST METHODS ------------------------------------------------------------------------------------------------------------------------------
+  createPost(axfer: AssetTransferTxn) {
+    //Assert that the user is sending a payment transaction to the wecoop main address in order to get rewarded
+    assert(
+      axfer.assetReceiver === this.wecoop_main_address.value,
+      'Send a post transaction to wecoop in order to be rewarded'
+    );
+
+    const reward = this.calculatePostReward('create');
+
+    assert(this.app.address.assetBalance(this.wecoop_token) > reward, 'No more rewards to be distributed');
+
+    this.total_rewards.value -= reward;
+
+    sendAssetTransfer({ assetReceiver: this.txn.sender, assetAmount: reward, xferAsset: this.wecoop_token.value });
+  }
+  //POST METHODS ------------------------------------------------------------------------------------------------------------------------------
+
+  //UTIL METHODS ------------------------------------------------------------------------------------------------------------------------------
+  private calculatePostReward(type: string): uint64 {
+    let amount: uint64 = 0;
+
+    if (type === 'create') {
+      amount = 10;
+    }
+    if (type === 'reply') {
+      amount = 5;
+    }
+    if (type === 'like') {
+      amount = 2;
+    }
+
+    return amount;
+  }
+  //UTIL METHODS ------------------------------------------------------------------------------------------------------------------------------
 }
