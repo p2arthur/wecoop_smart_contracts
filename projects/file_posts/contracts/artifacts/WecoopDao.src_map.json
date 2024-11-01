@@ -1,0 +1,1830 @@
+[
+  {
+    "teal": 1,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      0
+    ]
+  },
+  {
+    "teal": 2,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "teal": 3,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ]
+  },
+  {
+    "teal": 15,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      42,
+      43
+    ]
+  },
+  {
+    "teal": 16,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      44
+    ]
+  },
+  {
+    "teal": 17,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      45,
+      46
+    ]
+  },
+  {
+    "teal": 18,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      47
+    ]
+  },
+  {
+    "teal": 19,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      48,
+      49
+    ]
+  },
+  {
+    "teal": 20,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      50
+    ]
+  },
+  {
+    "teal": 21,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76
+    ]
+  },
+  {
+    "teal": 25,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "errorMessage": "The requested action is not implemented in this contract. Are you using the correct OnComplete? Did you set your app ID?",
+    "pc": [
+      77
+    ]
+  },
+  {
+    "teal": 30,
+    "source": "contracts/WecoopFilePost.algo.ts:43",
+    "pc": [
+      78,
+      79,
+      80
+    ]
+  },
+  {
+    "teal": 31,
+    "source": "contracts/WecoopFilePost.algo.ts:43",
+    "pc": [
+      81
+    ]
+  },
+  {
+    "teal": 32,
+    "source": "contracts/WecoopFilePost.algo.ts:43",
+    "pc": [
+      82
+    ]
+  },
+  {
+    "teal": 36,
+    "source": "contracts/WecoopFilePost.algo.ts:43",
+    "pc": [
+      83,
+      84,
+      85
+    ]
+  },
+  {
+    "teal": 40,
+    "source": "contracts/WecoopFilePost.algo.ts:44",
+    "pc": [
+      86
+    ]
+  },
+  {
+    "teal": 41,
+    "source": "contracts/WecoopFilePost.algo.ts:44",
+    "pc": [
+      87
+    ]
+  },
+  {
+    "teal": 42,
+    "source": "contracts/WecoopFilePost.algo.ts:44",
+    "pc": [
+      88
+    ]
+  },
+  {
+    "teal": 46,
+    "source": "contracts/WecoopFilePost.algo.ts:45",
+    "pc": [
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100
+    ]
+  },
+  {
+    "teal": 47,
+    "source": "contracts/WecoopFilePost.algo.ts:45",
+    "pc": [
+      101
+    ]
+  },
+  {
+    "teal": 48,
+    "source": "contracts/WecoopFilePost.algo.ts:45",
+    "pc": [
+      102
+    ]
+  },
+  {
+    "teal": 49,
+    "source": "contracts/WecoopFilePost.algo.ts:43",
+    "pc": [
+      103
+    ]
+  },
+  {
+    "teal": 54,
+    "source": "contracts/WecoopFilePost.algo.ts:56",
+    "pc": [
+      104,
+      105,
+      106
+    ]
+  },
+  {
+    "teal": 55,
+    "source": "contracts/WecoopFilePost.algo.ts:56",
+    "pc": [
+      107,
+      108,
+      109
+    ]
+  },
+  {
+    "teal": 58,
+    "source": "contracts/WecoopFilePost.algo.ts:55",
+    "pc": [
+      110,
+      111,
+      112
+    ]
+  },
+  {
+    "teal": 59,
+    "source": "contracts/WecoopFilePost.algo.ts:55",
+    "pc": [
+      113,
+      114,
+      115
+    ]
+  },
+  {
+    "teal": 62,
+    "source": "contracts/WecoopFilePost.algo.ts:54",
+    "pc": [
+      116,
+      117,
+      118
+    ]
+  },
+  {
+    "teal": 63,
+    "source": "contracts/WecoopFilePost.algo.ts:54",
+    "pc": [
+      119
+    ]
+  },
+  {
+    "teal": 66,
+    "source": "contracts/WecoopFilePost.algo.ts:53",
+    "pc": [
+      120,
+      121,
+      122
+    ]
+  },
+  {
+    "teal": 67,
+    "source": "contracts/WecoopFilePost.algo.ts:53",
+    "pc": [
+      123,
+      124,
+      125
+    ]
+  },
+  {
+    "teal": 70,
+    "source": "contracts/WecoopFilePost.algo.ts:52",
+    "pc": [
+      126,
+      127,
+      128
+    ]
+  },
+  {
+    "teal": 71,
+    "source": "contracts/WecoopFilePost.algo.ts:52",
+    "pc": [
+      129,
+      130,
+      131
+    ]
+  },
+  {
+    "teal": 74,
+    "source": "contracts/WecoopFilePost.algo.ts:51",
+    "pc": [
+      132,
+      133
+    ]
+  },
+  {
+    "teal": 75,
+    "source": "contracts/WecoopFilePost.algo.ts:51",
+    "pc": [
+      134
+    ]
+  },
+  {
+    "teal": 76,
+    "source": "contracts/WecoopFilePost.algo.ts:51",
+    "pc": [
+      135
+    ]
+  },
+  {
+    "teal": 77,
+    "source": "contracts/WecoopFilePost.algo.ts:51",
+    "pc": [
+      136
+    ]
+  },
+  {
+    "teal": 78,
+    "source": "contracts/WecoopFilePost.algo.ts:51",
+    "pc": [
+      137,
+      138
+    ]
+  },
+  {
+    "teal": 79,
+    "source": "contracts/WecoopFilePost.algo.ts:51",
+    "pc": [
+      139,
+      140
+    ]
+  },
+  {
+    "teal": 80,
+    "source": "contracts/WecoopFilePost.algo.ts:51",
+    "pc": [
+      141
+    ]
+  },
+  {
+    "teal": 83,
+    "source": "contracts/WecoopFilePost.algo.ts:51",
+    "errorMessage": "argument 5 (axfer) for createFilePost must be a axfer transaction",
+    "pc": [
+      142
+    ]
+  },
+  {
+    "teal": 86,
+    "source": "contracts/WecoopFilePost.algo.ts:50",
+    "pc": [
+      143,
+      144
+    ]
+  },
+  {
+    "teal": 87,
+    "source": "contracts/WecoopFilePost.algo.ts:50",
+    "pc": [
+      145,
+      146
+    ]
+  },
+  {
+    "teal": 88,
+    "source": "contracts/WecoopFilePost.algo.ts:50",
+    "pc": [
+      147
+    ]
+  },
+  {
+    "teal": 89,
+    "source": "contracts/WecoopFilePost.algo.ts:50",
+    "pc": [
+      148
+    ]
+  },
+  {
+    "teal": 90,
+    "source": "contracts/WecoopFilePost.algo.ts:50",
+    "pc": [
+      149,
+      150
+    ]
+  },
+  {
+    "teal": 91,
+    "source": "contracts/WecoopFilePost.algo.ts:50",
+    "pc": [
+      151
+    ]
+  },
+  {
+    "teal": 92,
+    "source": "contracts/WecoopFilePost.algo.ts:50",
+    "pc": [
+      152
+    ]
+  },
+  {
+    "teal": 95,
+    "source": "contracts/WecoopFilePost.algo.ts:50",
+    "errorMessage": "argument 6 (mbrTxn) for createFilePost must be a pay transaction",
+    "pc": [
+      153
+    ]
+  },
+  {
+    "teal": 98,
+    "source": "contracts/WecoopFilePost.algo.ts:49",
+    "pc": [
+      154,
+      155,
+      156
+    ]
+  },
+  {
+    "teal": 99,
+    "source": "contracts/WecoopFilePost.algo.ts:49",
+    "pc": [
+      157
+    ]
+  },
+  {
+    "teal": 100,
+    "source": "contracts/WecoopFilePost.algo.ts:49",
+    "pc": [
+      158
+    ]
+  },
+  {
+    "teal": 104,
+    "source": "contracts/WecoopFilePost.algo.ts:49",
+    "pc": [
+      159,
+      160,
+      161
+    ]
+  },
+  {
+    "teal": 107,
+    "source": "contracts/WecoopFilePost.algo.ts:49",
+    "pc": [
+      162
+    ]
+  },
+  {
+    "teal": 108,
+    "source": "contracts/WecoopFilePost.algo.ts:49",
+    "pc": [
+      163,
+      164
+    ]
+  },
+  {
+    "teal": 112,
+    "source": "contracts/WecoopFilePost.algo.ts:59",
+    "pc": [
+      165,
+      166
+    ]
+  },
+  {
+    "teal": 113,
+    "source": "contracts/WecoopFilePost.algo.ts:59",
+    "pc": [
+      167,
+      168
+    ]
+  },
+  {
+    "teal": 114,
+    "source": "contracts/WecoopFilePost.algo.ts:59",
+    "pc": [
+      169,
+      170
+    ]
+  },
+  {
+    "teal": 115,
+    "source": "contracts/WecoopFilePost.algo.ts:59",
+    "pc": [
+      171,
+      172
+    ]
+  },
+  {
+    "teal": 116,
+    "source": "contracts/WecoopFilePost.algo.ts:59",
+    "pc": [
+      173
+    ]
+  },
+  {
+    "teal": 117,
+    "source": "contracts/WecoopFilePost.algo.ts:59",
+    "pc": [
+      174
+    ]
+  },
+  {
+    "teal": 120,
+    "source": "contracts/WecoopFilePost.algo.ts:59",
+    "errorMessage": "Application not opted in to the asset",
+    "pc": [
+      175
+    ]
+  },
+  {
+    "teal": 124,
+    "source": "contracts/WecoopFilePost.algo.ts:62",
+    "pc": [
+      176,
+      177
+    ]
+  },
+  {
+    "teal": 125,
+    "source": "contracts/WecoopFilePost.algo.ts:62",
+    "pc": [
+      178,
+      179
+    ]
+  },
+  {
+    "teal": 126,
+    "source": "contracts/WecoopFilePost.algo.ts:62",
+    "pc": [
+      180,
+      181
+    ]
+  },
+  {
+    "teal": 127,
+    "source": "contracts/WecoopFilePost.algo.ts:62",
+    "pc": [
+      182
+    ]
+  },
+  {
+    "teal": 130,
+    "source": "contracts/WecoopFilePost.algo.ts:62",
+    "errorMessage": "Deposit transaction not to the app wallet",
+    "pc": [
+      183
+    ]
+  },
+  {
+    "teal": 134,
+    "source": "contracts/WecoopFilePost.algo.ts:65",
+    "pc": [
+      184,
+      185
+    ]
+  },
+  {
+    "teal": 135,
+    "source": "contracts/WecoopFilePost.algo.ts:65",
+    "pc": [
+      186,
+      187
+    ]
+  },
+  {
+    "teal": 136,
+    "source": "contracts/WecoopFilePost.algo.ts:65",
+    "pc": [
+      188,
+      189
+    ]
+  },
+  {
+    "teal": 140,
+    "source": "contracts/WecoopFilePost.algo.ts:66",
+    "pc": [
+      190
+    ]
+  },
+  {
+    "teal": 141,
+    "source": "contracts/WecoopFilePost.algo.ts:66",
+    "pc": [
+      191
+    ]
+  },
+  {
+    "teal": 142,
+    "source": "contracts/WecoopFilePost.algo.ts:66",
+    "pc": [
+      192,
+      193
+    ]
+  },
+  {
+    "teal": 146,
+    "source": "contracts/WecoopFilePost.algo.ts:67",
+    "pc": [
+      194,
+      195
+    ]
+  },
+  {
+    "teal": 147,
+    "source": "contracts/WecoopFilePost.algo.ts:67",
+    "pc": [
+      196
+    ]
+  },
+  {
+    "teal": 148,
+    "source": "contracts/WecoopFilePost.algo.ts:67",
+    "pc": [
+      197
+    ]
+  },
+  {
+    "teal": 149,
+    "source": "contracts/WecoopFilePost.algo.ts:67",
+    "pc": [
+      198,
+      199
+    ]
+  },
+  {
+    "teal": 153,
+    "source": "contracts/WecoopFilePost.algo.ts:70",
+    "pc": [
+      200
+    ]
+  },
+  {
+    "teal": 154,
+    "source": "contracts/WecoopFilePost.algo.ts:70",
+    "pc": [
+      201,
+      202
+    ]
+  },
+  {
+    "teal": 155,
+    "source": "contracts/WecoopFilePost.algo.ts:70",
+    "pc": [
+      203
+    ]
+  },
+  {
+    "teal": 156,
+    "source": "contracts/WecoopFilePost.algo.ts:70",
+    "pc": [
+      204
+    ]
+  },
+  {
+    "teal": 157,
+    "source": "contracts/WecoopFilePost.algo.ts:70",
+    "pc": [
+      205
+    ]
+  },
+  {
+    "teal": 158,
+    "source": "contracts/WecoopFilePost.algo.ts:70",
+    "pc": [
+      206
+    ]
+  },
+  {
+    "teal": 159,
+    "source": "contracts/WecoopFilePost.algo.ts:70",
+    "pc": [
+      207
+    ]
+  },
+  {
+    "teal": 160,
+    "source": "contracts/WecoopFilePost.algo.ts:70",
+    "pc": [
+      208
+    ]
+  },
+  {
+    "teal": 163,
+    "source": "contracts/WecoopFilePost.algo.ts:70",
+    "errorMessage": "This file post already exists!",
+    "pc": [
+      209
+    ]
+  },
+  {
+    "teal": 168,
+    "source": "contracts/WecoopFilePost.algo.ts:73",
+    "pc": [
+      210,
+      211
+    ]
+  },
+  {
+    "teal": 169,
+    "source": "contracts/WecoopFilePost.algo.ts:73",
+    "pc": [
+      212,
+      213
+    ]
+  },
+  {
+    "teal": 170,
+    "source": "contracts/WecoopFilePost.algo.ts:73",
+    "pc": [
+      214,
+      215,
+      216
+    ]
+  },
+  {
+    "teal": 171,
+    "source": "contracts/WecoopFilePost.algo.ts:73",
+    "pc": [
+      217
+    ]
+  },
+  {
+    "teal": 174,
+    "source": "contracts/WecoopFilePost.algo.ts:73",
+    "errorMessage": "transaction verification failed: {\"txn\":\"mbrTxn\",\"field\":\"amount\",\"expected\":\"filePostMbr\"}",
+    "pc": [
+      218
+    ]
+  },
+  {
+    "teal": 178,
+    "source": "contracts/WecoopFilePost.algo.ts:76",
+    "pc": [
+      219
+    ]
+  },
+  {
+    "teal": 179,
+    "source": "contracts/WecoopFilePost.algo.ts:76",
+    "pc": [
+      220
+    ]
+  },
+  {
+    "teal": 180,
+    "source": "contracts/WecoopFilePost.algo.ts:76",
+    "pc": [
+      221
+    ]
+  },
+  {
+    "teal": 181,
+    "source": "contracts/WecoopFilePost.algo.ts:76",
+    "pc": [
+      222
+    ]
+  },
+  {
+    "teal": 182,
+    "source": "contracts/WecoopFilePost.algo.ts:76",
+    "pc": [
+      223
+    ]
+  },
+  {
+    "teal": 183,
+    "source": "contracts/WecoopFilePost.algo.ts:76",
+    "pc": [
+      224
+    ]
+  },
+  {
+    "teal": 184,
+    "source": "contracts/WecoopFilePost.algo.ts:76",
+    "pc": [
+      225
+    ]
+  },
+  {
+    "teal": 188,
+    "source": "contracts/WecoopFilePost.algo.ts:79",
+    "pc": [
+      226,
+      227
+    ]
+  },
+  {
+    "teal": 189,
+    "source": "contracts/WecoopFilePost.algo.ts:79",
+    "pc": [
+      228,
+      229
+    ]
+  },
+  {
+    "teal": 190,
+    "source": "contracts/WecoopFilePost.algo.ts:79",
+    "pc": [
+      230
+    ]
+  },
+  {
+    "teal": 191,
+    "source": "contracts/WecoopFilePost.algo.ts:79",
+    "pc": [
+      231,
+      232
+    ]
+  },
+  {
+    "teal": 206,
+    "source": "contracts/WecoopFilePost.algo.ts:82",
+    "pc": [
+      233
+    ]
+  },
+  {
+    "teal": 207,
+    "source": "contracts/WecoopFilePost.algo.ts:82",
+    "pc": [
+      234,
+      235
+    ]
+  },
+  {
+    "teal": 208,
+    "source": "contracts/WecoopFilePost.algo.ts:82",
+    "pc": [
+      236
+    ]
+  },
+  {
+    "teal": 209,
+    "source": "contracts/WecoopFilePost.algo.ts:82",
+    "pc": [
+      237
+    ]
+  },
+  {
+    "teal": 210,
+    "source": "contracts/WecoopFilePost.algo.ts:82",
+    "pc": [
+      238
+    ]
+  },
+  {
+    "teal": 211,
+    "source": "contracts/WecoopFilePost.algo.ts:82",
+    "pc": [
+      239
+    ]
+  },
+  {
+    "teal": 212,
+    "source": "contracts/WecoopFilePost.algo.ts:82",
+    "pc": [
+      240
+    ]
+  },
+  {
+    "teal": 213,
+    "source": "contracts/WecoopFilePost.algo.ts:82",
+    "pc": [
+      241
+    ]
+  },
+  {
+    "teal": 214,
+    "source": "contracts/WecoopFilePost.algo.ts:82",
+    "pc": [
+      242
+    ]
+  },
+  {
+    "teal": 215,
+    "source": "contracts/WecoopFilePost.algo.ts:82",
+    "pc": [
+      243,
+      244,
+      245,
+      246
+    ]
+  },
+  {
+    "teal": 216,
+    "source": "contracts/WecoopFilePost.algo.ts:84",
+    "pc": [
+      247,
+      248
+    ]
+  },
+  {
+    "teal": 217,
+    "source": "contracts/WecoopFilePost.algo.ts:84",
+    "pc": [
+      249,
+      250,
+      251
+    ]
+  },
+  {
+    "teal": 218,
+    "source": "contracts/WecoopFilePost.algo.ts:89",
+    "pc": [
+      252,
+      253
+    ]
+  },
+  {
+    "teal": 219,
+    "source": "contracts/WecoopFilePost.algo.ts:89",
+    "pc": [
+      254
+    ]
+  },
+  {
+    "teal": 220,
+    "source": "contracts/WecoopFilePost.algo.ts:89",
+    "pc": [
+      255,
+      256,
+      257
+    ]
+  },
+  {
+    "teal": 221,
+    "source": "contracts/WecoopFilePost.algo.ts:85",
+    "pc": [
+      258
+    ]
+  },
+  {
+    "teal": 222,
+    "source": "contracts/WecoopFilePost.algo.ts:85",
+    "pc": [
+      259,
+      260,
+      261
+    ]
+  },
+  {
+    "teal": 223,
+    "source": "contracts/WecoopFilePost.algo.ts:86",
+    "pc": [
+      262
+    ]
+  },
+  {
+    "teal": 224,
+    "source": "contracts/WecoopFilePost.algo.ts:86",
+    "pc": [
+      263,
+      264,
+      265
+    ]
+  },
+  {
+    "teal": 225,
+    "source": "contracts/WecoopFilePost.algo.ts:87",
+    "pc": [
+      266
+    ]
+  },
+  {
+    "teal": 226,
+    "source": "contracts/WecoopFilePost.algo.ts:87",
+    "pc": [
+      267,
+      268,
+      269
+    ]
+  },
+  {
+    "teal": 227,
+    "source": "contracts/WecoopFilePost.algo.ts:88",
+    "pc": [
+      270,
+      271
+    ]
+  },
+  {
+    "teal": 228,
+    "source": "contracts/WecoopFilePost.algo.ts:88",
+    "pc": [
+      272,
+      273
+    ]
+  },
+  {
+    "teal": 229,
+    "source": "contracts/WecoopFilePost.algo.ts:88",
+    "pc": [
+      274
+    ]
+  },
+  {
+    "teal": 230,
+    "source": "contracts/WecoopFilePost.algo.ts:88",
+    "pc": [
+      275,
+      276,
+      277
+    ]
+  },
+  {
+    "teal": 231,
+    "source": "contracts/WecoopFilePost.algo.ts:90",
+    "pc": [
+      278,
+      279
+    ]
+  },
+  {
+    "teal": 232,
+    "source": "contracts/WecoopFilePost.algo.ts:90",
+    "pc": [
+      280
+    ]
+  },
+  {
+    "teal": 233,
+    "source": "contracts/WecoopFilePost.algo.ts:90",
+    "pc": [
+      281
+    ]
+  },
+  {
+    "teal": 234,
+    "source": "contracts/WecoopFilePost.algo.ts:90",
+    "pc": [
+      282
+    ]
+  },
+  {
+    "teal": 235,
+    "source": "contracts/WecoopFilePost.algo.ts:90",
+    "pc": [
+      283,
+      284,
+      285
+    ]
+  },
+  {
+    "teal": 236,
+    "source": "contracts/WecoopFilePost.algo.ts:90",
+    "pc": [
+      286
+    ]
+  },
+  {
+    "teal": 237,
+    "source": "contracts/WecoopFilePost.algo.ts:90",
+    "pc": [
+      287
+    ]
+  },
+  {
+    "teal": 238,
+    "source": "contracts/WecoopFilePost.algo.ts:90",
+    "pc": [
+      288,
+      289,
+      290
+    ]
+  },
+  {
+    "teal": 239,
+    "source": "contracts/WecoopFilePost.algo.ts:91",
+    "pc": [
+      291,
+      292
+    ]
+  },
+  {
+    "teal": 240,
+    "source": "contracts/WecoopFilePost.algo.ts:91",
+    "pc": [
+      293
+    ]
+  },
+  {
+    "teal": 241,
+    "source": "contracts/WecoopFilePost.algo.ts:91",
+    "pc": [
+      294
+    ]
+  },
+  {
+    "teal": 242,
+    "source": "contracts/WecoopFilePost.algo.ts:91",
+    "pc": [
+      295
+    ]
+  },
+  {
+    "teal": 243,
+    "source": "contracts/WecoopFilePost.algo.ts:91",
+    "pc": [
+      296,
+      297,
+      298
+    ]
+  },
+  {
+    "teal": 244,
+    "source": "contracts/WecoopFilePost.algo.ts:91",
+    "pc": [
+      299
+    ]
+  },
+  {
+    "teal": 245,
+    "source": "contracts/WecoopFilePost.algo.ts:91",
+    "pc": [
+      300
+    ]
+  },
+  {
+    "teal": 246,
+    "source": "contracts/WecoopFilePost.algo.ts:91",
+    "pc": [
+      301,
+      302,
+      303
+    ]
+  },
+  {
+    "teal": 247,
+    "source": "contracts/WecoopFilePost.algo.ts:92",
+    "pc": [
+      304,
+      305
+    ]
+  },
+  {
+    "teal": 248,
+    "source": "contracts/WecoopFilePost.algo.ts:92",
+    "pc": [
+      306
+    ]
+  },
+  {
+    "teal": 249,
+    "source": "contracts/WecoopFilePost.algo.ts:92",
+    "pc": [
+      307
+    ]
+  },
+  {
+    "teal": 250,
+    "source": "contracts/WecoopFilePost.algo.ts:92",
+    "pc": [
+      308
+    ]
+  },
+  {
+    "teal": 251,
+    "source": "contracts/WecoopFilePost.algo.ts:92",
+    "pc": [
+      309,
+      310,
+      311
+    ]
+  },
+  {
+    "teal": 252,
+    "source": "contracts/WecoopFilePost.algo.ts:92",
+    "pc": [
+      312
+    ]
+  },
+  {
+    "teal": 253,
+    "source": "contracts/WecoopFilePost.algo.ts:92",
+    "pc": [
+      313
+    ]
+  },
+  {
+    "teal": 254,
+    "source": "contracts/WecoopFilePost.algo.ts:92",
+    "pc": [
+      314,
+      315,
+      316
+    ]
+  },
+  {
+    "teal": 255,
+    "source": "contracts/WecoopFilePost.algo.ts:83",
+    "pc": [
+      317,
+      318
+    ]
+  },
+  {
+    "teal": 256,
+    "source": "contracts/WecoopFilePost.algo.ts:83",
+    "pc": [
+      319
+    ]
+  },
+  {
+    "teal": 257,
+    "source": "contracts/WecoopFilePost.algo.ts:83",
+    "pc": [
+      320
+    ]
+  },
+  {
+    "teal": 258,
+    "source": "contracts/WecoopFilePost.algo.ts:83",
+    "pc": [
+      321
+    ]
+  },
+  {
+    "teal": 259,
+    "source": "contracts/WecoopFilePost.algo.ts:83",
+    "pc": [
+      322,
+      323,
+      324
+    ]
+  },
+  {
+    "teal": 260,
+    "source": "contracts/WecoopFilePost.algo.ts:83",
+    "pc": [
+      325
+    ]
+  },
+  {
+    "teal": 261,
+    "source": "contracts/WecoopFilePost.algo.ts:83",
+    "pc": [
+      326
+    ]
+  },
+  {
+    "teal": 262,
+    "source": "contracts/WecoopFilePost.algo.ts:83",
+    "pc": [
+      327,
+      328,
+      329
+    ]
+  },
+  {
+    "teal": 263,
+    "source": "contracts/WecoopFilePost.algo.ts:82",
+    "pc": [
+      330
+    ]
+  },
+  {
+    "teal": 264,
+    "source": "contracts/WecoopFilePost.algo.ts:82",
+    "pc": [
+      331
+    ]
+  },
+  {
+    "teal": 265,
+    "source": "contracts/WecoopFilePost.algo.ts:82",
+    "pc": [
+      332
+    ]
+  },
+  {
+    "teal": 266,
+    "source": "contracts/WecoopFilePost.algo.ts:49",
+    "pc": [
+      333
+    ]
+  },
+  {
+    "teal": 271,
+    "source": "contracts/WecoopFilePost.algo.ts:97",
+    "pc": [
+      334,
+      335,
+      336,
+      337,
+      338,
+      339
+    ]
+  },
+  {
+    "teal": 274,
+    "source": "contracts/WecoopFilePost.algo.ts:97",
+    "pc": [
+      340,
+      341,
+      342
+    ]
+  },
+  {
+    "teal": 275,
+    "source": "contracts/WecoopFilePost.algo.ts:97",
+    "pc": [
+      343
+    ]
+  },
+  {
+    "teal": 276,
+    "source": "contracts/WecoopFilePost.algo.ts:97",
+    "pc": [
+      344
+    ]
+  },
+  {
+    "teal": 277,
+    "source": "contracts/WecoopFilePost.algo.ts:97",
+    "pc": [
+      345,
+      346
+    ]
+  },
+  {
+    "teal": 278,
+    "source": "contracts/WecoopFilePost.algo.ts:97",
+    "pc": [
+      347
+    ]
+  },
+  {
+    "teal": 281,
+    "source": "contracts/WecoopFilePost.algo.ts:97",
+    "errorMessage": "argument 0 (postId) for getFilePostByPostId must be a (uint64)",
+    "pc": [
+      348
+    ]
+  },
+  {
+    "teal": 284,
+    "source": "contracts/WecoopFilePost.algo.ts:97",
+    "pc": [
+      349,
+      350,
+      351
+    ]
+  },
+  {
+    "teal": 285,
+    "source": "contracts/WecoopFilePost.algo.ts:97",
+    "pc": [
+      352
+    ]
+  },
+  {
+    "teal": 286,
+    "source": "contracts/WecoopFilePost.algo.ts:97",
+    "pc": [
+      353
+    ]
+  },
+  {
+    "teal": 287,
+    "source": "contracts/WecoopFilePost.algo.ts:97",
+    "pc": [
+      354
+    ]
+  },
+  {
+    "teal": 288,
+    "source": "contracts/WecoopFilePost.algo.ts:97",
+    "pc": [
+      355
+    ]
+  },
+  {
+    "teal": 292,
+    "source": "contracts/WecoopFilePost.algo.ts:97",
+    "pc": [
+      356,
+      357,
+      358
+    ]
+  },
+  {
+    "teal": 296,
+    "source": "contracts/WecoopFilePost.algo.ts:98",
+    "pc": [
+      359
+    ]
+  },
+  {
+    "teal": 297,
+    "source": "contracts/WecoopFilePost.algo.ts:98",
+    "pc": [
+      360,
+      361
+    ]
+  },
+  {
+    "teal": 298,
+    "source": "contracts/WecoopFilePost.algo.ts:98",
+    "pc": [
+      362
+    ]
+  },
+  {
+    "teal": 299,
+    "source": "contracts/WecoopFilePost.algo.ts:98",
+    "pc": [
+      363
+    ]
+  },
+  {
+    "teal": 300,
+    "source": "contracts/WecoopFilePost.algo.ts:98",
+    "pc": [
+      364
+    ]
+  },
+  {
+    "teal": 301,
+    "source": "contracts/WecoopFilePost.algo.ts:98",
+    "pc": [
+      365
+    ]
+  },
+  {
+    "teal": 304,
+    "source": "contracts/WecoopFilePost.algo.ts:98",
+    "errorMessage": "File post does not exist",
+    "pc": [
+      366
+    ]
+  },
+  {
+    "teal": 308,
+    "source": "contracts/WecoopFilePost.algo.ts:99",
+    "pc": [
+      367
+    ]
+  },
+  {
+    "teal": 309,
+    "source": "contracts/WecoopFilePost.algo.ts:99",
+    "pc": [
+      368,
+      369
+    ]
+  },
+  {
+    "teal": 310,
+    "source": "contracts/WecoopFilePost.algo.ts:99",
+    "pc": [
+      370
+    ]
+  },
+  {
+    "teal": 311,
+    "source": "contracts/WecoopFilePost.algo.ts:99",
+    "pc": [
+      371
+    ]
+  },
+  {
+    "teal": 314,
+    "source": "contracts/WecoopFilePost.algo.ts:99",
+    "errorMessage": "box value does not exist: this.filePosts(postId).value",
+    "pc": [
+      372
+    ]
+  },
+  {
+    "teal": 315,
+    "source": "contracts/WecoopFilePost.algo.ts:97",
+    "pc": [
+      373
+    ]
+  },
+  {
+    "teal": 318,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      374,
+      375,
+      376,
+      377,
+      378,
+      379
+    ]
+  },
+  {
+    "teal": 319,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      380,
+      381,
+      382
+    ]
+  },
+  {
+    "teal": 320,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      383,
+      384,
+      385,
+      386
+    ]
+  },
+  {
+    "teal": 323,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "errorMessage": "this contract does not implement the given ABI method for create NoOp",
+    "pc": [
+      387
+    ]
+  },
+  {
+    "teal": 326,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      388,
+      389,
+      390,
+      391,
+      392,
+      393
+    ]
+  },
+  {
+    "teal": 327,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      394,
+      395,
+      396,
+      397,
+      398,
+      399
+    ]
+  },
+  {
+    "teal": 328,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      400,
+      401,
+      402
+    ]
+  },
+  {
+    "teal": 329,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      403,
+      404,
+      405,
+      406,
+      407,
+      408
+    ]
+  },
+  {
+    "teal": 332,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "errorMessage": "this contract does not implement the given ABI method for call NoOp",
+    "pc": [
+      409
+    ]
+  },
+  {
+    "teal": 335,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      410,
+      411,
+      412
+    ]
+  },
+  {
+    "teal": 336,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      413,
+      414
+    ]
+  },
+  {
+    "teal": 337,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      415,
+      416
+    ]
+  },
+  {
+    "teal": 338,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      417
+    ]
+  },
+  {
+    "teal": 339,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      418,
+      419
+    ]
+  },
+  {
+    "teal": 340,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      420,
+      421
+    ]
+  },
+  {
+    "teal": 341,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      422
+    ]
+  },
+  {
+    "teal": 344,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      423,
+      424,
+      425
+    ]
+  },
+  {
+    "teal": 345,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      426,
+      427
+    ]
+  },
+  {
+    "teal": 346,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      428,
+      429
+    ]
+  },
+  {
+    "teal": 347,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      430
+    ]
+  },
+  {
+    "teal": 348,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      431,
+      432
+    ]
+  },
+  {
+    "teal": 349,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      433,
+      434
+    ]
+  },
+  {
+    "teal": 350,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      435
+    ]
+  },
+  {
+    "teal": 351,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      436
+    ]
+  },
+  {
+    "teal": 352,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      437,
+      438
+    ]
+  },
+  {
+    "teal": 353,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      439
+    ]
+  },
+  {
+    "teal": 354,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      440
+    ]
+  },
+  {
+    "teal": 355,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      441
+    ]
+  },
+  {
+    "teal": 356,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      442,
+      443,
+      444
+    ]
+  },
+  {
+    "teal": 357,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      445,
+      446
+    ]
+  },
+  {
+    "teal": 358,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      447,
+      448
+    ]
+  },
+  {
+    "teal": 359,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      449
+    ]
+  },
+  {
+    "teal": 360,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      450
+    ]
+  },
+  {
+    "teal": 361,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      451,
+      452
+    ]
+  },
+  {
+    "teal": 362,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      453,
+      454
+    ]
+  },
+  {
+    "teal": 363,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      455,
+      456
+    ]
+  },
+  {
+    "teal": 364,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      457,
+      458
+    ]
+  },
+  {
+    "teal": 365,
+    "source": "contracts/WecoopFilePost.algo.ts:36",
+    "pc": [
+      459
+    ]
+  }
+]

@@ -9,6 +9,12 @@
     },
     {
       "path": "projects/wecoop_rewards"
+    },
+    {
+      "path": "projects/verbo_token_v0.1"
+    },
+    {
+      "path": "projects/file_posts"
     }
   ],
   "settings": {

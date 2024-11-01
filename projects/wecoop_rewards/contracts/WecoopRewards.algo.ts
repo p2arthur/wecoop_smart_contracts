@@ -5,6 +5,7 @@ import PaymentTransaction from 'algosdk/dist/types/types/transactions/payment';
 export class WecoopRewards extends Contract {
   // Global State Keys
   wecoop_token = GlobalStateKey<AssetID>(); // Storing asset information
+  total_supply = 1_000_000_000;
   wecoop_main_address = GlobalStateKey<Address>({ key: 'DZ6ZKA6STPVTPCTGN2DO5J5NUYEETWOIB7XVPSJ4F3N2QZQTNS3Q7VIXCM' });
   reward_cycle = GlobalStateKey<uint64>();
   total_rewards = GlobalStateKey<uint64>();
@@ -64,10 +65,13 @@ export class WecoopRewards extends Contract {
     //   axfer.assetReceiver === this.wecoop_main_address.value,
     //   'Send a post transaction to wecoop in order to be rewarded'
     // );
+
+    assert(this.total_rewards.value <= this.total_supply);
     const reward: uint64 = this.calculatePostReward('like');
     // // assert(this.app.address.assetBalance(this.wecoop_token) === reward, 'No more rewards to be distributed');
     this.total_rewards.value -= reward;
     this.claimed_amount(this.txn.sender).value += reward;
+
     sendAssetTransfer({ assetReceiver: this.txn.sender, assetAmount: reward, xferAsset: this.wecoop_token.value });
   }
   //POST METHODS ------------------------------------------------------------------------------------------------------------------------------
