@@ -240,4 +240,111 @@ describe('WecoopFilePost', () => {
 
     return allFilePosts;
   }
+
+  test('User is supposed to be able to like a file post', async () => {
+    const { appAddress } = await appClient.appClient.getAppReference();
+
+    const mbrTxn = algorandClient.send.payment({
+      sender: wecoop_manager_account.addr,
+      amount: algokit.algos(0.02),
+      receiver: appAddress,
+      extraFee: algokit.algos(0.001),
+    });
+
+    const platformAlgoFeeTxn = algorandClient.send.payment({
+      sender: wecoop_manager_account.addr,
+      amount: algokit.algos(0.1),
+      receiver: wecoop_manager_account.addr,
+      extraFee: algokit.algos(0.001),
+    });
+
+    const creatorPayTxn = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+      from: wecoop_manager_account.addr,
+      to: wecoop_manager_account.addr,
+      assetIndex: Number(communityCoin!),
+      amount: 1,
+      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
+    });
+
+    const platformCommunityFeeTxn = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+      from: wecoop_manager_account.addr,
+      to: wecoop_manager_account.addr,
+      assetIndex: Number(communityCoin!),
+      amount: 2,
+      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
+    });
+
+    const result = await appClient.likeFilePost({
+      mbrTxn: mbrTxn,
+      filePostId: [1],
+      platformAlgoFeeTxn,
+      platformCommunityFeeTxn,
+      creatorPayTxn,
+    });
+
+    console.log('result', result);
+  });
+
+  test('User is supposed to be able to reply a file post', async () => {
+    const { appAddress } = await appClient.appClient.getAppReference();
+
+    const mbrTxn = algorandClient.send.payment({
+      sender: wecoop_manager_account.addr,
+      amount: algokit.algos(0.02),
+      receiver: appAddress,
+      extraFee: algokit.algos(0.001),
+    });
+
+    const platformAlgoFeeTxn = algorandClient.send.payment({
+      sender: wecoop_manager_account.addr,
+      amount: algokit.algos(0.1),
+      receiver: wecoop_manager_account.addr,
+      extraFee: algokit.algos(0.001),
+    });
+
+    const creatorPayTxn = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+      from: wecoop_manager_account.addr,
+      to: wecoop_manager_account.addr,
+      assetIndex: Number(communityCoin!),
+      amount: 1,
+      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
+    });
+
+    const platformCommunityFeeTxn = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+      from: wecoop_manager_account.addr,
+      to: wecoop_manager_account.addr,
+      assetIndex: Number(communityCoin!),
+      amount: 2,
+      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
+    });
+
+    const result = await appClient.replyFilePost({
+      mbrTxn: mbrTxn,
+      filePostId: [1],
+      platformAlgoFeeTxn,
+      platformCommunityFeeTxn,
+      creatorPayTxn,
+      text: 'This post realy good',
+      assetId: Number(communityCoin),
+      country: 'CA',
+    });
+
+    console.log('result', result);
+  });
+
+  test('get all filepost likes and comments', async () => {
+    const { appId } = await appClient.appClient.getAppReference();
+
+    const allBoxeNames = await appClient.appClient.getBoxNames();
+
+    const likeBoxes = allBoxeNames.filter((boxName) => boxName.name.split('_')[0] === 'filePostLike');
+
+    console.log('like boxes', likeBoxes);
+
+    const boxValues = await Promise.all(
+      allBoxeNames.map(async (box) => await algodClient.getApplicationBoxByName(Number(appId), box.nameRaw).do())
+    );
+
+    const decoder = new TextDecoder('utf-8');
+  });
 });

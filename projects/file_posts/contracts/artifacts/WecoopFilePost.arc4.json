@@ -58,6 +58,74 @@
       }
     },
     {
+      "name": "likeFilePost",
+      "args": [
+        {
+          "name": "filePostId",
+          "type": "(uint64)"
+        },
+        {
+          "name": "mbrTxn",
+          "type": "pay"
+        },
+        {
+          "name": "platformAlgoFeeTxn",
+          "type": "pay"
+        },
+        {
+          "name": "creatorPayTxn",
+          "type": "axfer"
+        },
+        {
+          "name": "platformCommunityFeeTxn",
+          "type": "axfer"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "replyFilePost",
+      "args": [
+        {
+          "name": "filePostId",
+          "type": "(uint64)"
+        },
+        {
+          "name": "country",
+          "type": "string"
+        },
+        {
+          "name": "assetId",
+          "type": "uint64"
+        },
+        {
+          "name": "text",
+          "type": "string"
+        },
+        {
+          "name": "mbrTxn",
+          "type": "pay"
+        },
+        {
+          "name": "platformAlgoFeeTxn",
+          "type": "pay"
+        },
+        {
+          "name": "creatorPayTxn",
+          "type": "axfer"
+        },
+        {
+          "name": "platformCommunityFeeTxn",
+          "type": "axfer"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
       "name": "getFilePostByPostId",
       "args": [
         {
