@@ -193,6 +193,8 @@ export class WecoopFilePost extends Contract {
     };
   }
 
+  flagFilePost() {}
+
   // Method to retrieve a file post by PostId
   getFilePostByPostId(postId: FilePostId): FilePostData {
     assert(this.filePosts(postId).exists, 'File post does not exist');

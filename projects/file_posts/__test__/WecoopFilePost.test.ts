@@ -1,9 +1,10 @@
-import { describe, test, expect, beforeAll, beforeEach } from '@jest/globals';
+/* eslint-disable camelcase */
+import { describe, test, beforeAll, beforeEach } from '@jest/globals';
 import { algorandFixture } from '@algorandfoundation/algokit-utils/testing';
 import * as algokit from '@algorandfoundation/algokit-utils';
-import { WecoopFilePostClient } from '../contracts/clients/WecoopFilePostClient';
-import { TransactionSignerAccount } from '@algorandfoundation/algokit-utils/types/account';
 import algosdk, { Algodv2, encodeAddress } from 'algosdk';
+import { TransactionSignerAccount } from '@algorandfoundation/algokit-utils/types/account';
+import { WecoopFilePostClient } from '../contracts/clients/WecoopFilePostClient';
 
 const fixture = algorandFixture();
 algokit.Config.configure({ populateAppCallResources: true });
@@ -19,12 +20,12 @@ let user_account: TransactionSignerAccount;
 let allInvolvedAccounts: TransactionSignerAccount[];
 
 //------------------------------------------------------------
-//Involved clients
+// Involved clients
 let algorandClient: algokit.AlgorandClient;
 let algodClient: Algodv2;
 //------------------------------------------------------------
 
-//Involved assets
+// Involved assets
 let communityCoin: number | bigint | undefined;
 
 describe('WecoopFilePost', () => {
@@ -38,8 +39,8 @@ describe('WecoopFilePost', () => {
     algorandClient = algorand;
     algodClient = algorand.client.algod;
 
-    //Set important accounts
-    //1- append variable values
+    // Set important accounts
+    // 1- append variable values
     wecoop_manager_account = testAccount;
     user_account = await algorandClient.account.kmd.getOrCreateWalletAccount('devs-account', algokit.algos(100));
 
@@ -54,7 +55,7 @@ describe('WecoopFilePost', () => {
 
     //------------------------------------------------------------
 
-    //2 - Creating the asset that will be used to represent the community coin that will be used as effort1
+    // 2 - Creating the asset that will be used to represent the community coin that will be used as effort1
     communityCoin = (
       await algorand.send.assetCreate({ sender: wecoop_manager_account.addr, total: BigInt(10_000_000), decimals: 6 })
     ).confirmation.assetIndex;
@@ -74,7 +75,7 @@ describe('WecoopFilePost', () => {
   test('App account should opt-in to the asset', async () => {
     const { appAddress } = await appClient.appClient.getAppReference();
 
-    //Create mbr transaction to opt contract to the poll asset
+    // Create mbr transaction to opt contract to the poll asset
     const mbrTxn = algorandClient.send.payment({
       sender: wecoop_manager_account.addr,
       amount: algokit.algos(0.1 + 0.047),
@@ -82,7 +83,7 @@ describe('WecoopFilePost', () => {
       extraFee: algokit.algos(0.001),
     });
 
-    const result = await appClient.optinToAsset({ assetId: communityCoin!, mbrTxn: mbrTxn });
+    const result = await appClient.optinToAsset({ assetId: communityCoin!, mbrTxn });
 
     console.log('result of optin in', result);
   });
@@ -116,7 +117,7 @@ describe('WecoopFilePost', () => {
     algokit.sendTransaction({ transaction: fundTransaction, from: wecoop_manager_account }, algodClient);
 
     const result = await appClient.createFilePost({
-      mbrTxn: mbrTxn,
+      mbrTxn,
       text: 'My name is arthur rabelo and I dont care about shit anymore',
       cid: 'QmWKHPo5oBLciKERd6NGrjsjHbQror89tLxqiE9ZyJLoCF',
       country: 'BR',
@@ -130,6 +131,7 @@ describe('WecoopFilePost', () => {
   test('get all file posts', async () => {
     const { appId } = await appClient.appClient.getAppReference();
 
+    // eslint-disable-next-line no-use-before-define
     const result = await getAllFilePosts(Number(appId));
     console.log('File posts:', result);
   });
@@ -215,7 +217,7 @@ describe('WecoopFilePost', () => {
         const text = decoder.decode(textBytes).trim();
 
         // Construct the PostData object
-        const postData: any = {
+        const postData: unknown = {
           creator_address: creatorAddress,
           timestamp: Number(timestamp),
           likes: Number(likes),
@@ -225,7 +227,7 @@ describe('WecoopFilePost', () => {
           country: countryCode,
           file_cid: fileCid,
           file_format: fileFormat,
-          text: text, // Include the text field
+          text, // Include the text field
         };
 
         // Add the post data to the list
@@ -275,7 +277,7 @@ describe('WecoopFilePost', () => {
     });
 
     const result = await appClient.likeFilePost({
-      mbrTxn: mbrTxn,
+      mbrTxn,
       filePostId: [1],
       platformAlgoFeeTxn,
       platformCommunityFeeTxn,
@@ -319,7 +321,7 @@ describe('WecoopFilePost', () => {
     });
 
     const result = await appClient.replyFilePost({
-      mbrTxn: mbrTxn,
+      mbrTxn,
       filePostId: [1],
       platformAlgoFeeTxn,
       platformCommunityFeeTxn,
