@@ -1,5 +1,4 @@
 import { Contract } from '@algorandfoundation/tealscript';
-import PaymentTransaction from 'algosdk/dist/types/types/transactions/payment';
 
 type FilePostId = { nonce: uint64 };
 
@@ -17,35 +16,19 @@ type FilePostData = {
 };
 
 //-------------------------------------------------------------------------------------------------------------
-// MBR Calculations for File Posts and Likes
-// 0.0025 Algo per box base
-// 0.0004 Algo per byte in the box
-
-// Poll_mbr
-// => (8) fields => (32 + 8 + 8 + 8 + 8 + 8 + 8 + 8 + 8) = 96 bytes
-// MBR = (96 * 0.0004) + 0.0025 = 0.0422 + 0.0025 = 0.0447 Algo
-
 const filePostMbr = 4470; // Represents 0.0447 Algo in microAlgos
 //-------------------------------------------------------------------------------------------------------------
 
-type FilePostLikeId = { postId: FilePostId };
+type FilePostLikeId = { postId: FilePostId; nonce: uint64 };
 
 type FilePostLikeInfo = { userAddress: Address; timestamp: uint64 };
-
-// Like_mbr
-// => (8) fields => (8 + 32) = 40 bytes
-// MBR = (48 * 0.0004) + 0.0025 = 0.0192 + 0.0025 = 0.0217 Algo
 
 const likeMbr = 2_170; // Represents 0.0185 Algo in microAlgos
 //-------------------------------------------------------------------------------------------------------------
 
-type FilePostReplyId = { postId: FilePostId };
+type FilePostReplyId = { postId: FilePostId; nonce: uint64 };
 
 type FilePostReplyInfo = { userAddress: Address; timestamp: uint64; country: string; asset_id: AssetID; text: string };
-
-// Reply_mbr
-// => Fields = (32 + 8 + 32 + 8 + 32) = 112 bytes
-// MBR = (112 * 0.0004) + 0.0025 = 0.0448 + 0.0025 = 0.0473 Algo
 
 const replyMbr = 4730; // Represents 0.0473 Algo in microAlgos
 //-------------------------------------------------------------------------------------------------------------
@@ -53,6 +36,7 @@ const replyMbr = 4730; // Represents 0.0473 Algo in microAlgos
 export class WecoopFilePost extends Contract {
   totalFilePosts = GlobalStateKey<uint64>();
   totalLikes = GlobalStateKey<uint64>();
+  totalReplies = GlobalStateKey<uint64>();
   manager_address = GlobalStateKey<Address>();
 
   // Setting boxes for file posts and likes
@@ -124,11 +108,10 @@ export class WecoopFilePost extends Contract {
   ) {
     assert(this.filePosts(filePostId).exists, 'File post that is trying to be liked does not exist');
     // User can like only once
-    assert(!this.filePostLikes({ postId: filePostId }).exists, 'User already liked this File post');
     const likedFilePost: FilePostData = this.filePosts(filePostId).value;
 
     // Ensure that the mbrTxn is at least the amount needed to create the box
-    verifyPayTxn(mbrTxn, { amount: { greaterThanEqualTo: mbrTxn.amount } });
+    verifyPayTxn(mbrTxn, { amount: { greaterThanEqualTo: likeMbr } });
 
     //Ensure that the Algo fee is going to the manager address
     verifyPayTxn(platformAlgoFeeTxn, { receiver: this.manager_address.value });
@@ -145,11 +128,14 @@ export class WecoopFilePost extends Contract {
       'Community coin payment is not being made to the manager address on liking file post'
     );
 
+    const currentNonce: uint64 = this.totalLikes.value;
+    const newNonce: uint64 = currentNonce + 1;
+
     this.totalLikes.value += 1;
 
     this.filePosts(filePostId).value.likes += 1;
 
-    this.filePostLikes({ postId: filePostId }).value = {
+    this.filePostLikes({ postId: filePostId, nonce: newNonce }).value = {
       userAddress: this.txn.sender,
       timestamp: globals.latestTimestamp,
     };
@@ -174,6 +160,7 @@ export class WecoopFilePost extends Contract {
     );
 
     verifyPayTxn(platformAlgoFeeTxn, { receiver: this.manager_address.value });
+    verifyPayTxn(platformAlgoFeeTxn, { amount: { greaterThanEqualTo: replyMbr } });
     verifyPayTxn(mbrTxn, { receiver: this.app.address });
 
     // Ensure that the receiver of the community payment fee and the algo fee is the manager address
@@ -184,7 +171,12 @@ export class WecoopFilePost extends Contract {
 
     assert(this.filePosts(filePostId).exists, 'Trying to reply to a non existing file post');
 
-    this.filePostReplies({ postId: filePostId }).value = {
+    const currentNonce: uint64 = this.totalReplies.value;
+    const newNonce: uint64 = currentNonce + 1;
+
+    this.totalReplies.value += 1;
+
+    this.filePostReplies({ postId: filePostId, nonce: newNonce }).value = {
       userAddress: this.txn.sender,
       timestamp: globals.latestTimestamp,
       country: country,

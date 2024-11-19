@@ -431,15 +431,14 @@ likeFilePost:
 	frame_bury 0 // storage key//likedFilePost
 
 	// contracts/WecoopFilePost.algo.ts:131
-	// verifyPayTxn(mbrTxn, { amount: { greaterThanEqualTo: mbrTxn.amount } })
+	// verifyPayTxn(mbrTxn, { amount: { greaterThanEqualTo: likeMbr } })
 	// verify amount
 	frame_dig -2 // mbrTxn: PayTxn
 	gtxns Amount
-	frame_dig -2 // mbrTxn: PayTxn
-	gtxns Amount
+	pushint 2170
 	>=
 
-	// transaction verification failed: {"txn":"mbrTxn","field":"amount","condition":"greaterThanEqualTo","expected":">=mbrTxn.amount"}
+	// transaction verification failed: {"txn":"mbrTxn","field":"amount","condition":"greaterThanEqualTo","expected":">=likeMbr"}
 	assert
 
 	// contracts/WecoopFilePost.algo.ts:134
@@ -673,6 +672,17 @@ replyFilePost:
 	assert
 
 	// contracts/WecoopFilePost.algo.ts:177
+	// verifyPayTxn(platformAlgoFeeTxn, { amount: { greaterThanEqualTo: replyMbr } })
+	// verify amount
+	frame_dig -6 // platformAlgoFeeTxn: PayTxn
+	gtxns Amount
+	pushint 4730
+	>=
+
+	// transaction verification failed: {"txn":"platformAlgoFeeTxn","field":"amount","condition":"greaterThanEqualTo","expected":">=replyMbr"}
+	assert
+
+	// contracts/WecoopFilePost.algo.ts:178
 	// verifyPayTxn(mbrTxn, { receiver: this.app.address })
 	// verify receiver
 	frame_dig -5 // mbrTxn: PayTxn
@@ -683,7 +693,7 @@ replyFilePost:
 	// transaction verification failed: {"txn":"mbrTxn","field":"receiver","expected":"this.app.address"}
 	assert
 
-	// contracts/WecoopFilePost.algo.ts:180
+	// contracts/WecoopFilePost.algo.ts:181
 	// assert(
 	//       platformCommunityFeeTxn.assetReceiver == this.manager_address.value,
 	//       'Community coin payment is not being made to the manager address on replying file post'
@@ -697,7 +707,7 @@ replyFilePost:
 	// Community coin payment is not being made to the manager address on replying file post
 	assert
 
-	// contracts/WecoopFilePost.algo.ts:185
+	// contracts/WecoopFilePost.algo.ts:186
 	// assert(this.filePosts(filePostId).exists, 'Trying to reply to a non existing file post')
 	bytec 0 //  "filePost_"
 	frame_dig -1 // filePostId: FilePostId
@@ -709,7 +719,7 @@ replyFilePost:
 	// Trying to reply to a non existing file post
 	assert
 
-	// contracts/WecoopFilePost.algo.ts:187
+	// contracts/WecoopFilePost.algo.ts:188
 	// this.filePostReplies({ postId: filePostId }).value = {
 	//       userAddress: this.txn.sender,
 	//       timestamp: globals.latestTimestamp,
@@ -755,6 +765,18 @@ replyFilePost:
 	box_put
 	retsub
 
+// flagFilePost()void
+*abi_route_flagFilePost:
+	// execute flagFilePost()void
+	callsub flagFilePost
+	intc 0 // 1
+	return
+
+// flagFilePost(): void
+flagFilePost:
+	proto 0 0
+	retsub
+
 // getFilePostByPostId((uint64))(address,uint64,uint64,uint64,uint64,uint64,string,string,string,string)
 *abi_route_getFilePostByPostId:
 	// The ABI return prefix
@@ -781,7 +803,7 @@ replyFilePost:
 getFilePostByPostId:
 	proto 1 1
 
-	// contracts/WecoopFilePost.algo.ts:198
+	// contracts/WecoopFilePost.algo.ts:201
 	// assert(this.filePosts(postId).exists, 'File post does not exist')
 	bytec 0 //  "filePost_"
 	frame_dig -1 // postId: FilePostId
@@ -793,7 +815,7 @@ getFilePostByPostId:
 	// File post does not exist
 	assert
 
-	// contracts/WecoopFilePost.algo.ts:199
+	// contracts/WecoopFilePost.algo.ts:202
 	// return this.filePosts(postId).value;
 	bytec 0 //  "filePost_"
 	frame_dig -1 // postId: FilePostId
@@ -817,9 +839,10 @@ getFilePostByPostId:
 	pushbytes 0x9556f63c // method "createFilePost(pay,axfer,string,string,string,string)void"
 	pushbytes 0xc068db37 // method "likeFilePost((uint64),pay,pay,axfer,axfer)void"
 	pushbytes 0x84373eeb // method "replyFilePost((uint64),string,uint64,string,pay,pay,axfer,axfer)void"
+	pushbytes 0xcab9f96a // method "flagFilePost()void"
 	pushbytes 0x436b8775 // method "getFilePostByPostId((uint64))(address,uint64,uint64,uint64,uint64,uint64,string,string,string,string)"
 	txna ApplicationArgs 0
-	match *abi_route_optinToAsset *abi_route_createFilePost *abi_route_likeFilePost *abi_route_replyFilePost *abi_route_getFilePostByPostId
+	match *abi_route_optinToAsset *abi_route_createFilePost *abi_route_likeFilePost *abi_route_replyFilePost *abi_route_flagFilePost *abi_route_getFilePostByPostId
 
 	// this contract does not implement the given ABI method for call NoOp
 	err

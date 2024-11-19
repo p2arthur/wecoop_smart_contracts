@@ -126,6 +126,13 @@
       }
     },
     {
+      "name": "flagFilePost",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
       "name": "getFilePostByPostId",
       "args": [
         {
