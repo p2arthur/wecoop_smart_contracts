@@ -1,0 +1,148 @@
+{
+  "name": "WecoopFilePost",
+  "desc": "",
+  "methods": [
+    {
+      "name": "createApplication",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "optinToAsset",
+      "args": [
+        {
+          "name": "assetId",
+          "type": "uint64"
+        },
+        {
+          "name": "mbrTxn",
+          "type": "pay"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "createFilePost",
+      "args": [
+        {
+          "name": "mbrTxn",
+          "type": "pay"
+        },
+        {
+          "name": "axfer",
+          "type": "axfer"
+        },
+        {
+          "name": "country",
+          "type": "string"
+        },
+        {
+          "name": "cid",
+          "type": "string"
+        },
+        {
+          "name": "fileFormat",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "likeFilePost",
+      "args": [
+        {
+          "name": "filePostId",
+          "type": "(uint64)"
+        },
+        {
+          "name": "mbrTxn",
+          "type": "pay"
+        },
+        {
+          "name": "platformAlgoFeeTxn",
+          "type": "pay"
+        },
+        {
+          "name": "creatorPayTxn",
+          "type": "axfer"
+        },
+        {
+          "name": "platformCommunityFeeTxn",
+          "type": "axfer"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "replyFilePost",
+      "args": [
+        {
+          "name": "filePostId",
+          "type": "(uint64)"
+        },
+        {
+          "name": "country",
+          "type": "string"
+        },
+        {
+          "name": "assetId",
+          "type": "uint64"
+        },
+        {
+          "name": "text",
+          "type": "string"
+        },
+        {
+          "name": "mbrTxn",
+          "type": "pay"
+        },
+        {
+          "name": "platformAlgoFeeTxn",
+          "type": "pay"
+        },
+        {
+          "name": "creatorPayTxn",
+          "type": "axfer"
+        },
+        {
+          "name": "platformCommunityFeeTxn",
+          "type": "axfer"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "flagFilePost",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "getFilePostByPostId",
+      "args": [
+        {
+          "name": "postId",
+          "type": "(uint64)"
+        }
+      ],
+      "returns": {
+        "type": "(address,uint64,uint64,uint64,uint64,uint64,string,string,string,string)"
+      }
+    }
+  ]
+}

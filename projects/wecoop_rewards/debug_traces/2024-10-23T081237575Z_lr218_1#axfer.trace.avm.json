@@ -1,0 +1,380 @@
+{
+  "last-round": 218,
+  "txn-groups": [
+    {
+      "txn-results": [
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "aamt": 1,
+                "arcv": "oIEbX2qXpOWW9+vXereA4fe67rHTspXH5Zk4alp061s=",
+                "fee": 1000,
+                "fv": 218,
+                "gen": "dockernet-v1",
+                "gh": "dOe0eBEmZEcUxpl2UZYkgBs1SJ9xWuBzIRR6wxo6PvY=",
+                "grp": "g73e+uOXJpNnxsupwc0EQuue43LmzqCFcoeFXYIgqvc=",
+                "lv": 1218,
+                "snd": "oIEbX2qXpOWW9+vXereA4fe67rHTspXH5Zk4alp061s=",
+                "type": "axfer",
+                "xaid": 1270
+              }
+            }
+          }
+        },
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "apaa": [
+                  "tBCz3Q=="
+                ],
+                "apid": 1271,
+                "fee": 1000,
+                "fv": 218,
+                "gen": "dockernet-v1",
+                "gh": "dOe0eBEmZEcUxpl2UZYkgBs1SJ9xWuBzIRR6wxo6PvY=",
+                "grp": "g73e+uOXJpNnxsupwc0EQuue43LmzqCFcoeFXYIgqvc=",
+                "lv": 1218,
+                "snd": "oIEbX2qXpOWW9+vXereA4fe67rHTspXH5Zk4alp061s=",
+                "type": "appl"
+              }
+            }
+          },
+          "app-budget-consumed": 40,
+          "exec-trace": {
+            "approval-program-hash": "BDZPXFPxeB3ZMf9MBnpfpb1DNuI3qS1/vSiuU+sVk6A=",
+            "approval-program-trace": [
+              {
+                "pc": 1
+              },
+              {
+                "pc": 4
+              },
+              {
+                "pc": 47,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1271
+                  }
+                ]
+              },
+              {
+                "pc": 49,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ],
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 50,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 6
+                  }
+                ]
+              },
+              {
+                "pc": 52,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 53,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 55,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 56,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 388,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "HjIBmg=="
+                  }
+                ]
+              },
+              {
+                "pc": 394,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "0gtBUA=="
+                  }
+                ]
+              },
+              {
+                "pc": 400,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "tBCz3Q=="
+                  }
+                ]
+              },
+              {
+                "pc": 406,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "tBCz3Q=="
+                  }
+                ]
+              },
+              {
+                "pc": 409,
+                "stack-pop-count": 4
+              },
+              {
+                "pc": 308,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ]
+              },
+              {
+                "pc": 310,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ]
+              },
+              {
+                "pc": 312,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 313,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  },
+                  {
+                    "type": 2
+                  }
+                ],
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 314,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 4
+                  }
+                ],
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 316,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 4
+                  }
+                ]
+              },
+              {
+                "pc": 318,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 319,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 320
+              },
+              {
+                "pc": 326
+              },
+              {
+                "pc": 329,
+                "stack-additions": [
+                  {
+                    "type": 1
+                  }
+                ]
+              },
+              {
+                "pc": 331,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ]
+              },
+              {
+                "pc": 333,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ],
+                "stack-pop-count": 2
+              },
+              {
+                "pc": 335
+              },
+              {
+                "pc": 336,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 4
+                  }
+                ]
+              },
+              {
+                "pc": 338,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 340,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "oIEbX2qXpOWW9+vXereA4fe67rHTspXH5Zk4alp061s="
+                  }
+                ]
+              },
+              {
+                "pc": 342,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 344,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1
+                  }
+                ]
+              },
+              {
+                "pc": 346,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 348,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "d2Vjb29wX3Rva2Vu"
+                  }
+                ]
+              },
+              {
+                "pc": 362,
+                "stack-additions": [
+                  {
+                    "type": 2,
+                    "uint": 1270
+                  }
+                ],
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 363,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 365,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 367,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 369
+              }
+            ]
+          }
+        }
+      ],
+      "app-budget-added": 700,
+      "app-budget-consumed": 40,
+      "failed-at": [
+        1
+      ],
+      "failure-message": "transaction TUT2GRLYNKKVXRYOFIPLQK3VPPW7SHFFMNVT32IONRYZCXYHLWBQ: logic eval error: fee too small []transactions.SignedTxnWithAD{transactions.SignedTxnWithAD{_struct:struct {}{}, SignedTxn:transactions.SignedTxn{_struct:struct {}{}, Sig:crypto.Signature{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, Msig:crypto.MultisigSig{_struct:struct {}{}, Version:0x0, Threshold:0x0, Subsigs:[]crypto.MultisigSubsig(nil)}, Lsig:transactions.LogicSig{_struct:struct {}{}, Logic:[]uint8(nil), Sig:crypto.Signature{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, Msig:crypto.MultisigSig{_struct:struct {}{}, Version:0x0, Threshold:0x0, Subsigs:[]crypto.MultisigSubsig(nil)}, Args:[][]uint8(nil)}, Txn:transactions.Transaction{_struct:struct {}{}, Type:\"axfer\", Header:transactions.Header{_struct:struct {}{}, Sender:basics.Address{0xd1, 0x58, 0x84, 0xae, 0x42, 0xdb, 0xff, 0xcf, 0xca, 0x2, 0xa, 0x12, 0xed, 0x4f, 0xa9, 0x1, 0xe0, 0xd9, 0x71, 0x78, 0xfa, 0x5b, 0x34, 0x60, 0xb1, 0xfd, 0xc1, 0x27, 0xa0, 0x29, 0xf1, 0xa6}, Fee:basics.MicroAlgos{Raw:0x0}, FirstValid:0xda, LastValid:0x4c2, Note:[]uint8(nil), GenesisID:\"\", GenesisHash:crypto.Digest{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, Group:crypto.Digest{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, Lease:[32]uint8{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, RekeyTo:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}, KeyregTxnFields:transactions.KeyregTxnFields{_struct:struct {}{}, VotePK:crypto.OneTimeSignatureVerifier{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, SelectionPK:crypto.VrfPubkey{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, StateProofPK:merklesignature.Commitment{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, VoteFirst:0x0, VoteLast:0x0, VoteKeyDilution:0x0, Nonparticipation:false}, PaymentTxnFields:transactions.PaymentTxnFields{_struct:struct {}{}, Receiver:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, Amount:basics.MicroAlgos{Raw:0x0}, CloseRemainderTo:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}, AssetConfigTxnFields:transactions.AssetConfigTxnFields{_struct:struct {}{}, ConfigAsset:0x0, AssetParams:basics.AssetParams{_struct:struct {}{}, Total:0x0, Decimals:0x0, DefaultFrozen:false, UnitName:\"\", AssetName:\"\", URL:\"\", MetadataHash:[32]uint8{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, Manager:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, Reserve:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, Freeze:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, Clawback:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}}, AssetTransferTxnFields:transactions.AssetTransferTxnFields{_struct:struct {}{}, XferAsset:0x4f6, AssetAmount:0x1, AssetSender:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, AssetReceiver:basics.Address{0xa0, 0x81, 0x1b, 0x5f, 0x6a, 0x97, 0xa4, 0xe5, 0x96, 0xf7, 0xeb, 0xd7, 0x7a, 0xb7, 0x80, 0xe1, 0xf7, 0xba, 0xee, 0xb1, 0xd3, 0xb2, 0x95, 0xc7, 0xe5, 0x99, 0x38, 0x6a, 0x5a, 0x74, 0xeb, 0x5b}, AssetCloseTo:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}, AssetFreezeTxnFields:transactions.AssetFreezeTxnFields{_struct:struct {}{}, FreezeAccount:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}, FreezeAsset:0x0, AssetFrozen:false}, ApplicationCallTxnFields:transactions.ApplicationCallTxnFields{_struct:struct {}{}, ApplicationID:0x0, OnCompletion:0x0, ApplicationArgs:[][]uint8(nil), Accounts:[]basics.Address(nil), ForeignApps:[]basics.AppIndex(nil), Boxes:[]transactions.BoxRef(nil), ForeignAssets:[]basics.AssetIndex(nil), LocalStateSchema:basics.StateSchema{_struct:struct {}{}, NumUint:0x0, NumByteSlice:0x0}, GlobalStateSchema:basics.StateSchema{_struct:struct {}{}, NumUint:0x0, NumByteSlice:0x0}, ApprovalProgram:[]uint8(nil), ClearStateProgram:[]uint8(nil), ExtraProgramPages:0x0}, StateProofTxnFields:transactions.StateProofTxnFields{_struct:struct {}{}, StateProofType:0x0, StateProof:stateproof.StateProof{_struct:struct {}{}, SigCommit:crypto.GenericDigest(nil), SignedWeight:0x0, SigProofs:merklearray.Proof{_struct:struct {}{}, Path:[]crypto.GenericDigest(nil), HashFactory:crypto.HashFactory{_struct:struct {}{}, HashType:0x0}, TreeDepth:0x0}, PartProofs:merklearray.Proof{_struct:struct {}{}, Path:[]crypto.GenericDigest(nil), HashFactory:crypto.HashFactory{_struct:struct {}{}, HashType:0x0}, TreeDepth:0x0}, MerkleSignatureSaltVersion:0x0, Reveals:map[uint64]stateproof.Reveal(nil), PositionsToReveal:[]uint64(nil)}, Message:stateproofmsg.Message{_struct:struct {}{}, BlockHeadersCommitment:[]uint8(nil), VotersCommitment:[]uint8(nil), LnProvenWeight:0x0, FirstAttestedRound:0x0, LastAttestedRound:0x0}}}, AuthAddr:basics.Address{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}, ApplyData:transactions.ApplyData{_struct:struct {}{}, ClosingAmount:basics.MicroAlgos{Raw:0x0}, AssetClosingAmount:0x0, SenderRewards:basics.MicroAlgos{Raw:0x0}, ReceiverRewards:basics.MicroAlgos{Raw:0x0}, CloseRewards:basics.MicroAlgos{Raw:0x0}, EvalDelta:transactions.EvalDelta{_struct:struct {}{}, GlobalDelta:basics.StateDelta(nil), LocalDeltas:map[uint64]basics.StateDelta(nil), SharedAccts:[]basics.Address(nil), Logs:[]string(nil), InnerTxns:[]transactions.SignedTxnWithAD(nil)}, ConfigAsset:0x0, ApplicationID:0x0}}}. Details: app=1271, pc=369, opcodes=pushint 0; itxn_field Fee; itxn_submit"
+    }
+  ],
+  "version": 2,
+  "eval-overrides": {
+    "allow-empty-signatures": true,
+    "max-log-calls": 2048,
+    "max-log-size": 65536
+  },
+  "exec-trace-config": {
+    "enable": true,
+    "scratch-change": true,
+    "stack-change": true,
+    "state-change": true
+  },
+  "initial-states": {
+    "app-initial-states": [
+      {
+        "id": 1271,
+        "app-globals": {
+          "kvs": [
+            {
+              "key": "d2Vjb29wX3Rva2Vu",
+              "value": {
+                "type": 2,
+                "uint": 1270
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

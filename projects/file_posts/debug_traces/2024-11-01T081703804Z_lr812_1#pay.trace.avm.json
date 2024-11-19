@@ -1,0 +1,44 @@
+{
+  "last-round": 812,
+  "txn-groups": [
+    {
+      "txn-results": [
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "amt": 4470,
+                "fee": 2000,
+                "fv": 811,
+                "gen": "dockernet-v1",
+                "gh": "xwTLtoqTTY+dqSKXwvaSHVOXpENeOBYCnl1VACax11g=",
+                "lv": 1811,
+                "rcv": "hjz52+fNG6s6/HdqCyxbzaAEUfv1ba8acSKiJMWNuA0=",
+                "snd": "ZtJU27umTnkkXABkhDy/uyH2szS3vZ4bU/dToFGddXw=",
+                "type": "pay"
+              }
+            }
+          }
+        }
+      ],
+      "failed-at": [
+        0
+      ],
+      "failure-message": "transaction already in ledger: B36XQ64AU3YA2IPVDBZVQYHIE77OR6QX2BDBP3IUCRAXQSA5LXUQ"
+    }
+  ],
+  "version": 2,
+  "eval-overrides": {
+    "allow-empty-signatures": true,
+    "max-log-calls": 2048,
+    "max-log-size": 65536
+  },
+  "exec-trace-config": {
+    "enable": true,
+    "scratch-change": true,
+    "stack-change": true,
+    "state-change": true
+  },
+  "initial-states": {}
+}

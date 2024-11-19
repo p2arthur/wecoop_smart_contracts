@@ -264,7 +264,43 @@ describe('WecoopDao', () => {
       assetIndex: Number(daoAsset),
     });
 
-    const result = await appClient.makeVote({ pollId: [1], axfer, mbrTxn, inFavor: true }, { sender: daoVoter });
+    const baseVotePrice = 1;
+
+    const platformMultiplier = 1;
+    const platformFeePrice = baseVotePrice! * platformMultiplier!;
+
+    //User pays 1.5 cents to the platform in order to vote
+    const platformFeeTxn = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+      from: daoVoter.addr,
+      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
+      to: appAddress,
+      amount: platformFeePrice!,
+      assetIndex: Number(daoAsset),
+    });
+
+    //User pays 2 times the platform fee to the poll creator in order to vote
+    const pollCreatorMultiplier = 2;
+    const pollCreatorPrice = baseVotePrice! * pollCreatorMultiplier;
+
+    const pollCreatorPaymentTxn = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+      from: daoVoter.addr,
+      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
+      to: assetCreator.addr,
+      amount: pollCreatorPrice + 1,
+      assetIndex: Number(daoAsset),
+    });
+
+    const result = await appClient.makeVote(
+      {
+        pollId: [1],
+        axfer,
+        mbrTxn,
+        inFavor: true,
+        platrformFeeTxn: platformFeeTxn,
+        creatorFeeTxn: pollCreatorPaymentTxn,
+      },
+      { sender: daoVoter }
+    );
     const appAccountAfter = await algodClient.accountInformation(appAddress).do();
 
     const assetHoldingAfter = appAccountAfter.assets.find((asset: any) => asset['asset-id'] == daoAsset);
@@ -273,65 +309,65 @@ describe('WecoopDao', () => {
   //--------------------------------------------------------------------------------------
 
   //--------------------------------------------------------------------------------------
-  test.skip('Negative - Creator cant vote', async () => {
-    const { appAddress } = await appClient.appClient.getAppReference();
+  // test.skip('Negative - Creator cant vote', async () => {
+  //   const { appAddress } = await appClient.appClient.getAppReference();
 
-    const mbrTxn = algorandClient.send.payment({
-      sender: assetCreator.addr,
-      amount: algokit.microAlgos(3_450),
-      receiver: appAddress,
-    });
+  //   const mbrTxn = algorandClient.send.payment({
+  //     sender: assetCreator.addr,
+  //     amount: algokit.microAlgos(3_450),
+  //     receiver: appAddress,
+  //   });
 
-    // Create the asset funding transaction (axfer)
-    const axfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
-      from: assetCreator.addr,
-      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
-      to: appAddress,
-      amount: 1,
-      assetIndex: Number(daoAsset),
-    });
+  //   // Create the asset funding transaction (axfer)
+  //   const axfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+  //     from: assetCreator.addr,
+  //     suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
+  //     to: appAddress,
+  //     amount: 1,
+  //     assetIndex: Number(daoAsset),
+  //   });
 
-    expect(
-      await appClient.makeVote({ pollId: [1], axfer, mbrTxn, inFavor: true }, { sender: assetCreator })
-    ).rejects.toThrow();
-  });
+  //   expect(
+  //     await appClient.makeVote({ pollId: [1], axfer, mbrTxn, inFavor: true }, { sender: assetCreator })
+  //   ).rejects.toThrow();
+  // });
   //--------------------------------------------------------------------------------------
 
   //--------------------------------------------------------------------------------------
-  test.skip('Negative - dao voter cant vote with wrong coin', async () => {
-    const { appAddress } = await appClient.appClient.getAppReference();
+  // test.skip('Negative - dao voter cant vote with wrong coin', async () => {
+  //   const { appAddress } = await appClient.appClient.getAppReference();
 
-    // Create mbr transaction to opt contract to the poll asset (using the correct asset initially)
-    const mbrOptinTxn = algorandClient.send.payment({
-      sender: assetCreator.addr,
-      amount: algokit.algos(0.1 + 0.1),
-      receiver: appAddress,
-      extraFee: algokit.algos(0.001),
-    });
+  //   // Create mbr transaction to opt contract to the poll asset (using the correct asset initially)
+  //   const mbrOptinTxn = algorandClient.send.payment({
+  //     sender: assetCreator.addr,
+  //     amount: algokit.algos(0.1 + 0.1),
+  //     receiver: appAddress,
+  //     extraFee: algokit.algos(0.001),
+  //   });
 
-    // Opt the contract into the fake asset (daoFakeAsset) instead of the correct one
-    await appClient.optinToAsset({ mbrTxn: mbrOptinTxn, asset: daoFakeAsset });
+  //   // Opt the contract into the fake asset (daoFakeAsset) instead of the correct one
+  //   await appClient.optinToAsset({ mbrTxn: mbrOptinTxn, asset: daoFakeAsset });
 
-    const mbrTxn = algorandClient.send.payment({
-      sender: assetCreator.addr,
-      amount: algokit.microAlgos(3_450),
-      receiver: appAddress,
-    });
+  //   const mbrTxn = algorandClient.send.payment({
+  //     sender: assetCreator.addr,
+  //     amount: algokit.microAlgos(3_450),
+  //     receiver: appAddress,
+  //   });
 
-    // Create the asset funding transaction (axfer) using the wrong asset (daoFakeAsset)
-    const axfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
-      from: daoVoter.addr,
-      suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
-      to: appAddress,
-      amount: 1,
-      assetIndex: Number(daoFakeAsset), // Using the fake asset here
-    });
+  //   // Create the asset funding transaction (axfer) using the wrong asset (daoFakeAsset)
+  //   const axfer = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+  //     from: daoVoter.addr,
+  //     suggestedParams: await algokit.getTransactionParams(undefined, algodClient),
+  //     to: appAddress,
+  //     amount: 1,
+  //     assetIndex: Number(daoFakeAsset), // Using the fake asset here
+  //   });
 
-    // Expect the makeVote call to fail with the wrong asset
-    await expect(
-      appClient.makeVote({ pollId: [1], axfer, mbrTxn, inFavor: true }, { sender: assetCreator })
-    ).rejects.toThrow();
-  });
+  //   // Expect the makeVote call to fail with the wrong asset
+  //   await expect(
+  //     appClient.makeVote({ pollId: [1], axfer, mbrTxn, inFavor: true }, { sender: assetCreator })
+  //   ).rejects.toThrow();
+  // });
 
   //--------------------------------------------------------------------------------------
 

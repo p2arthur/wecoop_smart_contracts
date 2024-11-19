@@ -1,0 +1,91 @@
+{
+  "last-round": 123,
+  "txn-groups": [
+    {
+      "txn-results": [
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "amt": 200000,
+                "fee": 2000,
+                "fv": 122,
+                "gen": "dockernet-v1",
+                "gh": "xwTLtoqTTY+dqSKXwvaSHVOXpENeOBYCnl1VACax11g=",
+                "grp": "4eqsasx/ezVYBHxTtZKC/7gt0qzaWwu6EEuR4mVkfmg=",
+                "lv": 1122,
+                "rcv": "143av6J6s7jpCwXyfqpzitep7afBbv639aa0f9Bums4=",
+                "snd": "2kroytxJ1IhKOKgm9zc3a3RtWnExhcrHAZ2Q2DZdF7w=",
+                "type": "pay"
+              }
+            }
+          }
+        },
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "aamt": 1,
+                "arcv": "143av6J6s7jpCwXyfqpzitep7afBbv639aa0f9Bums4=",
+                "fee": 1000,
+                "fv": 122,
+                "gen": "dockernet-v1",
+                "gh": "xwTLtoqTTY+dqSKXwvaSHVOXpENeOBYCnl1VACax11g=",
+                "grp": "4eqsasx/ezVYBHxTtZKC/7gt0qzaWwu6EEuR4mVkfmg=",
+                "lv": 1122,
+                "snd": "2kroytxJ1IhKOKgm9zc3a3RtWnExhcrHAZ2Q2DZdF7w=",
+                "type": "axfer",
+                "xaid": 1139
+              }
+            }
+          }
+        },
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "apaa": [
+                  "lVb2PA==",
+                  "AAJDQQ==",
+                  "AA1zYXNkYXNkYXNkYWFk",
+                  "AANwbmc=",
+                  "AA1OZXcgZmlsZSBwb3N0"
+                ],
+                "apid": 1140,
+                "fee": 1000,
+                "fv": 123,
+                "gen": "dockernet-v1",
+                "gh": "xwTLtoqTTY+dqSKXwvaSHVOXpENeOBYCnl1VACax11g=",
+                "grp": "4eqsasx/ezVYBHxTtZKC/7gt0qzaWwu6EEuR4mVkfmg=",
+                "lv": 1123,
+                "snd": "2kroytxJ1IhKOKgm9zc3a3RtWnExhcrHAZ2Q2DZdF7w=",
+                "type": "appl"
+              }
+            }
+          }
+        }
+      ],
+      "app-budget-added": 700,
+      "failed-at": [
+        1
+      ],
+      "failure-message": "transaction N3HS6HJQIUF4JQ64UL53SCQYTPRMMB36ARVDCBXCGKEO6Q3AZM6A: receiver error: must optin, asset 1139 missing from 26G5VP5CPKZ3R2ILAXZH5KTTRLL2T3NHYFXP5N7VU22H7UDOTLHFR3XYSQ"
+    }
+  ],
+  "version": 2,
+  "eval-overrides": {
+    "allow-empty-signatures": true,
+    "max-log-calls": 2048,
+    "max-log-size": 65536
+  },
+  "exec-trace-config": {
+    "enable": true,
+    "scratch-change": true,
+    "stack-change": true,
+    "state-change": true
+  },
+  "initial-states": {}
+}

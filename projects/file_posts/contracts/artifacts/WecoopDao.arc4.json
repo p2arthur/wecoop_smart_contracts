@@ -1,0 +1,61 @@
+{
+  "name": "WecoopDao",
+  "desc": "",
+  "methods": [
+    {
+      "name": "createApplication",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "createFilePost",
+      "args": [
+        {
+          "name": "mbrTxn",
+          "type": "pay"
+        },
+        {
+          "name": "axfer",
+          "type": "axfer"
+        },
+        {
+          "name": "country",
+          "type": "string"
+        },
+        {
+          "name": "cid",
+          "type": "string"
+        },
+        {
+          "name": "expires_in",
+          "type": "uint64"
+        },
+        {
+          "name": "fileFormat",
+          "type": "string"
+        },
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "getFilePostByPostId",
+      "args": [
+        {
+          "name": "postId",
+          "type": "(uint64)"
+        }
+      ],
+      "returns": {
+        "type": "(address,uint64,uint64,uint64,uint64,uint64,string,string,string,string)"
+      }
+    }
+  ]
+}

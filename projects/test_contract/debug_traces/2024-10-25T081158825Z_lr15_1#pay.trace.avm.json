@@ -1,0 +1,110 @@
+{
+  "last-round": 15,
+  "txn-groups": [
+    {
+      "txn-results": [
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "amt": 3450,
+                "fee": 1000,
+                "fv": 14,
+                "gen": "dockernet-v1",
+                "gh": "kjL1S11PjG6i4JsbWV5MhVjYxHNqhuKTG5PklsmlVQM=",
+                "grp": "WJOyY+1NiMkWM/bKa2D8u4YSer6W1umYt0auWKTZQew=",
+                "lv": 1014,
+                "rcv": "3fgA2olwcVujxxa51uLR7XFxsKgEBqgttem2aHyxtkE=",
+                "snd": "MmleVlzRq0n0DRYTCq4XW718bEBV+mydTkOEScDLc84=",
+                "type": "pay"
+              }
+            }
+          }
+        },
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "aamt": 2,
+                "arcv": "3fgA2olwcVujxxa51uLR7XFxsKgEBqgttem2aHyxtkE=",
+                "fee": 1000,
+                "fv": 14,
+                "gen": "dockernet-v1",
+                "gh": "kjL1S11PjG6i4JsbWV5MhVjYxHNqhuKTG5PklsmlVQM=",
+                "grp": "WJOyY+1NiMkWM/bKa2D8u4YSer6W1umYt0auWKTZQew=",
+                "lv": 1014,
+                "snd": "MmleVlzRq0n0DRYTCq4XW718bEBV+mydTkOEScDLc84=",
+                "type": "axfer",
+                "xaid": 1010
+              }
+            }
+          }
+        },
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "aamt": 2,
+                "arcv": "Hn2VA9Kb6zeKZm6G7qetpghJ2cgP71fJPC7bqGYTbLc=",
+                "fee": 1000,
+                "fv": 14,
+                "gen": "dockernet-v1",
+                "gh": "kjL1S11PjG6i4JsbWV5MhVjYxHNqhuKTG5PklsmlVQM=",
+                "grp": "WJOyY+1NiMkWM/bKa2D8u4YSer6W1umYt0auWKTZQew=",
+                "lv": 1014,
+                "snd": "MmleVlzRq0n0DRYTCq4XW718bEBV+mydTkOEScDLc84=",
+                "type": "axfer",
+                "xaid": 1010
+              }
+            }
+          }
+        },
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "apaa": [
+                  "6AqlJA==",
+                  "ADRJcyB0aGlzIHRoZSBmaXJzdCBldmVyIHF1ZXN0aW9uIG9uIHdlY29vcC54eXogcG9sbHM/",
+                  "AAJCUg==",
+                  "AAAAAAAAASw="
+                ],
+                "apid": 1012,
+                "fee": 3000,
+                "fv": 15,
+                "gen": "dockernet-v1",
+                "gh": "kjL1S11PjG6i4JsbWV5MhVjYxHNqhuKTG5PklsmlVQM=",
+                "grp": "WJOyY+1NiMkWM/bKa2D8u4YSer6W1umYt0auWKTZQew=",
+                "lv": 1015,
+                "snd": "MmleVlzRq0n0DRYTCq4XW718bEBV+mydTkOEScDLc84=",
+                "type": "appl"
+              }
+            }
+          }
+        }
+      ],
+      "app-budget-added": 700,
+      "failed-at": [
+        2
+      ],
+      "failure-message": "transaction DIQCHR4HC2D3K2HRTKFLX6WH2HGA4IPNXUTR52FLIQW5X42P7VLA: receiver error: must optin, asset 1010 missing from DZ6ZKA6STPVTPCTGN2DO5J5NUYEETWOIB7XVPSJ4F3N2QZQTNS3Q7VIXCM"
+    }
+  ],
+  "version": 2,
+  "eval-overrides": {
+    "allow-empty-signatures": true,
+    "max-log-calls": 2048,
+    "max-log-size": 65536
+  },
+  "exec-trace-config": {
+    "enable": true,
+    "scratch-change": true,
+    "stack-change": true,
+    "state-change": true
+  },
+  "initial-states": {}
+}

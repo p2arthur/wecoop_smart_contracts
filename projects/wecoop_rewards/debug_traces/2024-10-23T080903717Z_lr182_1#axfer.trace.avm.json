@@ -1,0 +1,68 @@
+{
+  "last-round": 182,
+  "txn-groups": [
+    {
+      "txn-results": [
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "aamt": 1,
+                "arcv": "Hn2VA9Kb6zeKZm6G7qetpghJ2cgP71fJPC7bqGYTbLc=",
+                "fee": 1000,
+                "fv": 182,
+                "gen": "dockernet-v1",
+                "gh": "dOe0eBEmZEcUxpl2UZYkgBs1SJ9xWuBzIRR6wxo6PvY=",
+                "grp": "u2cUbG3prjK9tQzxP/gRY+aGyHAdMF9DRw0x+ZKraV0=",
+                "lv": 1182,
+                "snd": "6uqNkYxd/HWA2ZQodmSLBLQX4iN2oQoJiphKBzdUEmU=",
+                "type": "axfer",
+                "xaid": 1222
+              }
+            }
+          }
+        },
+        {
+          "txn-result": {
+            "pool-error": "",
+            "txn": {
+              "txn": {
+                "apaa": [
+                  "tBCz3Q=="
+                ],
+                "apid": 1223,
+                "fee": 1000,
+                "fv": 182,
+                "gen": "dockernet-v1",
+                "gh": "dOe0eBEmZEcUxpl2UZYkgBs1SJ9xWuBzIRR6wxo6PvY=",
+                "grp": "u2cUbG3prjK9tQzxP/gRY+aGyHAdMF9DRw0x+ZKraV0=",
+                "lv": 1182,
+                "snd": "EWxtq6YAte9AaVWrdUIOsLC9sd8G2p5PMTIaXZrTuF0=",
+                "type": "appl"
+              }
+            }
+          }
+        }
+      ],
+      "app-budget-added": 700,
+      "failed-at": [
+        0
+      ],
+      "failure-message": "transaction HG7RCE7SJUNQFCASWGALTVZV5UOY65X7RMPBPE4HFECUKVPCNSBA: asset 1222 missing from 5LVI3EMMLX6HLAGZSQUHMZELAS2BPYRDO2QQUCMKTBFAON2UCJS3QCTIKA"
+    }
+  ],
+  "version": 2,
+  "eval-overrides": {
+    "allow-empty-signatures": true,
+    "max-log-calls": 2048,
+    "max-log-size": 65536
+  },
+  "exec-trace-config": {
+    "enable": true,
+    "scratch-change": true,
+    "stack-change": true,
+    "state-change": true
+  },
+  "initial-states": {}
+}
