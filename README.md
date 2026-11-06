@@ -1,22 +1,50 @@
-# test_contract
+# WeCoop Smart Contracts
 
-Welcome to your new AlgoKit project!
+**On-chain posting, polls, and reward experiments for WeCoop.**
 
-This is your workspace root. A `workspace` in AlgoKit is an orchestrated collection of standalone projects (backends, smart contracts, frontend apps and etc).
+This AlgoKit workspace contains the TEALScript contracts behind WeCoop's social and community features. It keeps TypeScript contract source alongside generated TEAL, application specifications, typed clients, and Jest integration tests.
 
-By default, `projects_root_path` parameter is set to `projects`. Which instructs AlgoKit CLI to create a new directory under `projects` directory when new project is instantiated via `algokit init` at the root of the workspace.
+The companion [WeCoop client](https://github.com/p2arthur/wecoop_client) provides the user interface.
 
-## Getting Started
+## Contract modules
 
-To get started refer to `README.md` files in respective sub-projects in the `projects` directory.
+| Project | Contract | Implemented surface |
+| --- | --- | --- |
+| [`projects/file_posts/`](projects/file_posts/) | `WecoopFilePost` | Create file posts, record likes and replies, and read post data from boxes |
+| [`projects/test_contract/`](projects/test_contract/) | `WecoopDao` | Create polls, accept votes, track participation, and withdraw poll shares |
+| [`projects/wecoop_rewards/`](projects/wecoop_rewards/) | `WecoopRewards` | Configure a reward asset, initiate cycles, and experiment with posting rewards |
 
-To learn more about algokit, visit [documentation](https://github.com/algorandfoundation/algokit-cli/blob/main/docs/algokit.md).
+The `test_contract` folder is the poll/DAO implementation despite its original scaffold name. Some methods, including file-post flagging and reward voting, remain empty. This is historical development code, without a claim of audit coverage or deployment readiness.
 
-### GitHub Codespaces
+## Read the source
 
-To get started execute:
+Start with each project's `contracts/*.algo.ts`, then its `__test__/` folder. Contract artifacts and generated clients live under `contracts/artifacts/` and `contracts/clients/` respectively.
 
-1. `algokit generate devcontainer` - invoking this command from the root of this repository will create a `devcontainer.json` file with all the configuration needed to run this project in a GitHub codespace. [Run the repository inside a codespace](https://docs.github.com/en/codespaces/getting-started/quickstart) to get started.
-2. `algokit init` - invoke this command inside a github codespace to launch an interactive wizard to guide you through the process of creating a new AlgoKit project
+File-post records include the creator, timestamp, asset, content identifier, format, text, and interaction counts. Poll records track the question, selected asset, timing, votes, and deposited value. The tests show transaction-group construction and expected contract behavior.
 
-Powered by [Copier templates](https://copier.readthedocs.io/en/stable/).
+## Build a module
+
+Use Node.js/npm and the AlgoKit CLI. Each subproject has its own dependency lockfile and build scripts.
+
+```sh
+git clone https://github.com/p2arthur/wecoop_smart_contracts.git
+cd wecoop_smart_contracts/projects/file_posts
+npm ci
+npm run build
+```
+
+`build` compiles TEALScript and generates TypeScript clients. Run the same commands in `projects/test_contract` or `projects/wecoop_rewards` to work on another module.
+
+| Command | Purpose |
+| --- | --- |
+| `npm run compile-contract` | Compile contract source into artifacts |
+| `npm run generate-client` | Generate typed clients from application specifications |
+| `npm run build` | Compile and regenerate clients |
+| `npm test` | Build and run Jest integration tests |
+| `npm run lint` | Check TypeScript formatting and lint rules |
+
+Integration tests require an appropriately configured Algorand LocalNet and test accounts. Read each module's README and test setup before running them. No network deployment is necessary to inspect or compile the source.
+
+## Historical tooling
+
+These contracts use **TEALScript** and the AlgoKit utilities versions recorded in their lockfiles. They are not a PuyaTs migration. Preserve that distinction when comparing the code with newer Algorand tooling or regenerating artifacts.
